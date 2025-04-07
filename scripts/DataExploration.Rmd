@@ -1,0 +1,862 @@
+---
+title: data exploration
+author: grace acton
+output: html_output
+---
+
+# Background on the collection's processing
+
+Jeff Place of the Smithsonian Folklife Center (email):
+
+"I did most all of the audio cataloging. Bit unusual for an archivist but I lived at his house ,he told me about everything I brought to the archive. I created all the metadata. There were only 2 of us then.
+
+I created almost all of the authority terms in our databases. From information Ralph told me.  Used LOC when they existed. They exist for people who have published something. A good deal of Ralph's tapes are people who haven't, craftspeople, cooks, obscure musicians. I created them with birth and death dates where known. Used LOC for other subject terms,, but also Art and Architecture Thesaurus. Again we have many subcategories in each authority list  of those that don't exist in these lists. Same with Geography used LOC but created ones for towns not in there. Or had a list marked local terms where I might include a no longer used historical name. Rinzler was assistant secretary of the Smithsonian, not an archivist but a scholar
+
+As for revision , its gone through many forms. When I made it the 90s it was a Word document. Its now in the Smithsonian SOVA system all our archives use. Thats probably the 2021. Unless something new was found the info was mine. I did recently listen to all the tapes there that were not properly identified and added info so it will change again.
+
+The staff list is mainly people who worked on the non-audio, mostly short-term interns. Dave Walker, Cathy Hardman and I worked on audio."
+
+```{r data-import}
+library(tidyverse)
+
+rinz <- read.csv("~/Desktop/smithsonian/data/rinzler-full-reconciled.csv")
+```
+
+# Prevalence of ethnic identifiers
+
+```{r coding-ethnicity}
+subjects <- as.data.frame(rinz$subjects) %>% 
+  mutate(subjects = rinz$subjects) %>% 
+  select(subjects) %>% 
+  separate_longer_delim(cols=subjects, delim=",") %>% 
+  distinct(subjects)
+
+write.csv(subjects, "~/Desktop/smithsonian/data/rinz_subjects.csv")
+```
+
+Subjects were hand-coded for whether they were an ethnic or racial identifier.
+
+```{r ethic-subjects}
+subjects_coded <- read.csv("~/Desktop/smithsonian/subjects_backup.csv")
+
+subjects <- subjects %>% 
+  rowid_to_column()
+
+subjects_ethnic <- left_join(subjects, subjects_coded, by=c("rowid" = "X")) %>% 
+  select(-subjects.y) %>% 
+  mutate(subjects = subjects.x) %>% 
+  select(-subjects.x) %>% 
+  filter(is.na(is_ethnic)==F)
+
+ethnicities <- subjects_ethnic %>% 
+  filter(is_ethnic == T) 
+
+ethn_list <- ethnicities$subjects
+```
+
+Code each observation for whether it contains an ethnic subject:
+
+```{r items-ethnic}
+rinz_coded <- rinz
+for(i in 1:nrow(rinz_coded)){
+  subject_list <- as.vector(strsplit(rinz_coded$subjects[i], split=","))[[1]]
+  rinz_coded$has_ethnicity[i] <- any(ethn_list %in% subject_list)
+}
+
+## stats
+
+rinz_coded %>% 
+  group_by(has_ethnicity) %>% 
+  summarize(n())
+
+```
+
+Determine most prevalent ethic identifiers:
+```{r common-ethnicities}
+rinz_eth <- as_tibble(rinz_coded) %>% 
+  filter(has_ethnicity == T) %>% 
+  mutate(subjects = as.vector(strsplit(subjects, split=","))) %>% 
+  mutate(ethnicities = list(""))
+
+for(i in 1:nrow(rinz_eth)){
+  subjs <- rinz_eth$subjects[i][[1]]
+  ethnicities <- subjs[subjs %in% ethn_list]
+  rinz_eth$ethnicities[i] <- list(ethnicities)
+}
+
+rinz_eth_long <- rinz_eth %>% 
+  unnest_longer(ethnicities)
+
+eth_stats <- rinz_eth_long %>% 
+  group_by(ethnicities) %>% 
+  summarize(n())
+
+eth_stats_2 <- rinz_eth_long %>% 
+  distinct(ethnicities, ID) %>% 
+  group_by(ethnicities) %>% 
+  summarize(n())
+```
+
+Average number of places per catalog entry for each ethnic group:
+
+```{r cat-entries}
+cat_entries <- rinz_eth_long %>% 
+  distinct(ethnicities, ID, place) %>% 
+  group_by(ethnicities, ID) %>% 
+  summarize(count = n()) %>% 
+  group_by(ethnicities) %>% 
+  summarize(mean(count), count=n()) 
+
+ggplot(cat_entries, aes(x=count, y=`mean(count)`)) +
+  geom_point() +
+  geom_smooth(method="lm")
+```
+
+There is a slightly negative correlation between the number of instances of an ethnicity and the mean number of places mentioned in catalog entries tagged with that ethnicity. However, when outliers are removed, the correlation becomes slightly positive. 
+
+# Average lat/long by ethnicity
+
+```{r overall-avg}
+rinz_latlon <- rinz %>% 
+  filter(coordinates != "") %>% 
+  separate_wider_delim(coordinates, delim = ",", names = c("lat", "lon")) %>% 
+  mutate(lat = as.double(lat),
+         lon = as.double(lon))
+
+avg_latlon <- rinz_latlon %>% 
+  distinct(ID, lat, lon) %>% 
+  summarize(avg_lat = mean(lat),
+            avg_lon = mean(lon),
+            sd_lat = sd(lat),
+            sd_lon = sd(lon))
+```
+
+The point of average of the entire corpus (with repeats removed) is in Delaware. 
+
+```{r ethnicity-avg}
+eth_latlon <- rinz_eth_long %>% 
+  distinct(ID, coordinates, ethnicities) %>% 
+  filter(coordinates != "") %>% 
+  separate_wider_delim(coordinates, delim = ",", names = c("lat", "lon")) %>% 
+  mutate(lat = as.double(lat),
+         lon = as.double(lon))
+
+# group and calculate avgs
+
+eth_latlon_group <- eth_latlon %>% 
+  group_by(ethnicities) %>% 
+  summarize(count = n(),
+            avg_lat = mean(lat),
+            avg_lon = mean(lon),
+            sd_lat = sd(lat),
+            sd_lon = sd(lon))
+
+ggplot(eth_latlon_group, aes(x=avg_lon, y=avg_lat)) +
+  geom_point() 
+```
+Some notable average locations:
+
+  - African Americans: western Kentucky (near Bowling Green)
+  - Anglo-American: southern Indiana (between Evansville and Louisville)
+  - Cajuns: Arkansas (near Jonesboro)
+  - French-Canadians: in Lake Huron
+  - "Jewish" is on the border of Virginia and West Virginia, but "Jews" is in central Virginia
+  - Mormons: western Colorado, almost on the Utah border
+  - Scottish Americans: In IRELAND (near Clifden)
+  - Canadians: in Quebec
+  - Irish-Americans: in the Atlantic, close to Nova Scotia
+  - Puerto Ricans is in Puerto Rico 
+  
+Considering variation (standard deviation)
+  - "Spaniards" has a very low SD and its mean point is in Spain
+  - "Australians" has the highest SD and its mean point is nowhere near Australia (it's in the north Atlantic)
+
+# Leaflet
+
+```{r library}
+library(leaflet)
+```
+
+```{r avg-locations}
+map <- leaflet(data = filter(eth_latlon_group, count>20)) %>% 
+  addTiles() %>% 
+  addMarkers(lng = eth_latlon_group$avg_lon, lat=eth_latlon_group$avg_lat, label = eth_latlon_group$ethnicities)
+```
+
+Some filtered maps:
+
+```{r african-american-map}
+rinz_aa <- rinz_eth %>% 
+  filter(str_detect(ethnicities, "African Americans") == T) %>% 
+  filter(coordinates != "") %>% 
+  separate_wider_delim(coordinates, delim = ",", names = c("lat", "lon")) %>% 
+  mutate(lat = as.double(lat),
+         lon = as.double(lon))
+
+aa_map <- leaflet(data = rinz_aa) %>% 
+  addTiles() %>% 
+  addCircles()
+```
+
+```{r country-map}
+rinz_country <- rinz_eth %>% 
+  filter(str_detect(subjects, "Country music") == T) %>% 
+  filter(coordinates != "") %>% 
+  separate_wider_delim(coordinates, delim = ",", names = c("lat", "lon")) %>% 
+  mutate(lat = as.double(lat),
+         lon = as.double(lon))
+
+country_map <- leaflet(rinz_country) %>% 
+  addTiles() %>% 
+  addCircles()
+
+black_country <- rinz_country %>% 
+  filter(str_detect(ethnicities, "African Americans") == T)
+
+other_country <- rinz_country %>% 
+  filter(str_detect(ethnicities, "African Americans") == F)
+
+black_country_map <- leaflet(black_country) %>% 
+  addTiles() %>% 
+  addCircles()
+
+country_map_race <- leaflet() %>% 
+  addTiles() %>% 
+  addCircles(data = other_country, color = "red") %>% 
+  addCircles(data = black_country, color = "blue")
+```
+```{r bluegrass}
+rinz_eth_latlon <- rinz_eth %>% 
+  filter(coordinates != "") %>% 
+  separate_wider_delim(coordinates, delim = ",", names = c("lat", "lon")) %>% 
+  mutate(lat = as.double(lat),
+         lon = as.double(lon))
+
+bluegrass <- rinz_eth_latlon %>% 
+  filter(str_detect(subjects, "Bluegrass") == T)
+
+bg_map <- leaflet(bluegrass) %>% 
+  addTiles() %>% 
+  addCircles()
+
+bg_black <- bluegrass %>% 
+  filter(str_detect(ethnicities, "African Americans") == T)
+
+bg_other <- bluegrass %>% 
+  filter(str_detect(ethnicities, "African Americans") == F)
+
+bg_map <- leaflet() %>% 
+  addTiles() %>% 
+  addCircles(data = bg_black, color = "blue") %>% 
+  addCircles(data = bg_other, color = "red")
+```
+```{r blues}
+blues <- rinz_eth_latlon %>% 
+  filter(str_detect(subjects, "Blues") == T)
+
+blues_map <- leaflet(blues) %>% 
+  addTiles() %>% 
+  addCircles()
+
+blues_black <- blues %>% 
+  filter(str_detect(ethnicities, "African Americans") == T)
+
+blues_other <- blues %>% 
+  filter(str_detect(ethnicities, "African Americans") == F)
+
+blues_map <- leaflet() %>% 
+  addTiles() %>% 
+  addCircles(data = blues_black, color = "blue") %>% 
+  addCircles(data = blues_other, color = "red")
+```
+
+
+# World Music
+
+```{r world-music}
+world_music <- rinz_eth_latlon %>% 
+  filter(str_detect(subjects, "World music") == T)
+
+world_music_map <- leaflet(world_music) %>% 
+  addTiles() %>% 
+  addCircles()
+```
+
+# Prison Music
+
+```{r prison-music}
+prison <- rinz_eth_latlon %>% 
+  filter(str_detect(subjects, "Prison") == T | str_detect(subjects, "prison") == T) 
+
+prison_map <- leaflet(prison) %>% 
+  addTiles() %>% 
+  addCircles()
+
+
+```
+
+# Can I make a network?
+
+```{r rinz-names-sep}
+rinz_names <- rinz_eth_latlon %>% 
+  mutate(names = str_replace_all(names, ",\\s", "_")) %>% 
+  separate_wider_delim(cols = names, 
+                       delim = ",",
+                       names_sep = ".",
+                       names_repair = "unique",
+                       too_few = "align_start") %>% 
+  select(starts_with("names"), ID)
+```
+
+Combinations
+
+```{r rinz-name-combos}
+library(DescTools)
+
+name_combos <- as.data.frame(matrix(nrow=1, ncol=2))
+colnames(name_combos) <- c("V1", "V2")
+
+for(i in 1:nrow(rinz_names)){
+  active_row <- rinz_names[i, 1:41]
+  row_vec <- unique(discard(as.vector(active_row), is.na))
+  if(length(row_vec) >= 2){
+    active_df <- as.data.frame(CombSet(row_vec, 2, repl=F, ord=F))
+    name_combos <- rbind(name_combos, active_df)
+  }
+}
+```
+
+```{r rinz-network}
+library(tidygraph)
+library(ggraph)
+library(igraph)
+
+collabs <- name_combos %>% 
+  mutate(from = V1, to = V2) %>% 
+  select(-V1, -V2) %>% 
+  group_by(from, to) %>% 
+  summarise(count = n()) %>% 
+  filter(is.na(from) == F) %>% 
+  filter(is.na(to) == F)
+
+rinz.nodes <- rinz %>% 
+  mutate(names = str_replace_all(names, ",\\s", "_")) %>% 
+  separate_longer_delim(cols = names, 
+                       delim = ",") %>% 
+  group_by(names) %>% 
+  summarize(count = n()) %>% 
+  mutate(id = names)
+
+rinz.links <- collabs 
+
+north_america_people <- rinz %>% 
+  mutate(names = str_replace_all(names, ",\\s", "_")) %>% 
+  separate_longer_delim(cols = names, 
+                       delim = ",") %>% 
+  distinct(names, place, coordinates) %>% 
+  filter(coordinates != "") %>% 
+  separate_wider_delim(coordinates, delim = ",", names = c("lat", "lon")) %>% 
+  mutate(lat = as.double(lat), 
+         lon = as.double(lon)) %>% 
+  filter(lat > 7 & lat < 83 & lon < -20 & lon > -170) %>% 
+  distinct(names) %>% 
+  filter(names != "")
+
+bluegrass_names <- bluegrass %>% 
+  mutate(names = str_replace_all(names, ",\\s", "_")) %>% 
+  separate_longer_delim(cols = names, 
+                       delim = ",") %>% 
+  group_by(names) %>% 
+  summarise(count = n()) %>% 
+  filter(names != "") %>% 
+  mutate(id=names)
+
+north_am_names_list <- as.vector(north_america_people$names)
+
+north_america_collabs <- collabs %>% 
+  filter(from %in% north_am_names_list & to %in% north_am_names_list)
+
+bluegrass_collabs <- collabs %>% 
+  filter(from %in% bluegrass_names$names, to %in% bluegrass_names$names)
+
+# net <- graph_from_data_frame(d = collabs, vertices = nodes)
+
+net_north_america <- graph_from_data_frame(d=north_america_collabs, vertices=north_america_people, directed=F)
+
+net_bluegrass <- graph_from_data_frame(d=bluegrass_collabs, vertices=bluegrass_names, directed=F)
+
+# circle_graph <- layout_in_circle(net_simple)
+
+```
+
+Interactive?
+
+```{r vis-network}
+library(visNetwork)
+# int_net <- visNetwork(nodes=bluegrass_names, edges=bluegrass_collabs)
+
+bg.nodes <- bluegrass_names
+bg.links <- bluegrass_collabs
+
+bg_net_igraph <- graph_from_data_frame(d=bg.links, vertices=bg.nodes, directed=F)
+
+bg.nodes$shape  <- "dot"  
+bg.nodes$shadow <- F # Nodes will drop shadow
+bg.nodes$title  <- bg.nodes$id # Text on click
+bg.nodes$size   <- 5*log(bg.nodes$count) # Node size
+bg.links$width <- 1+2*log(bg.links$count)
+
+bg_net <- visNetwork(bg.nodes, bg.links)
+```
+
+
+Measuring betweenness and centrality:
+
+```{r measures}
+# Compute the degree centrality
+degr_cent <- centr_degree(bg_net_igraph, mode = 'all')
+degr_cent <- degr_cent$res
+
+# Compute the eigenvector centrality 
+eign_cent <- eigen_centrality(bg_net_igraph)
+eign_cent <- eign_cent$vector
+
+# Compute the closeness centraility
+clos_cent <- igraph::closeness(bg_net_igraph)
+
+# Compute betweeness centrality
+betw_cent <- igraph::betweenness(bg_net_igraph)
+
+data <- data.frame(vertex = bg.nodes$id,
+                   degree = degr_cent, 
+                   eigen = eign_cent, 
+                   closeness = clos_cent, 
+                   betweeness = betw_cent) %>% 
+  arrange(desc(degree))
+
+head(data)
+
+# reduce graph to only include members with non-zero betweenness
+
+betweens <- data %>% 
+  filter(betweeness > 0) %>% 
+  select(vertex) 
+
+bg.links.between <- bg.links %>% 
+  filter(from %in% betweens$vertex & to %in% betweens$vertex)
+
+bg.nodes.between <- bg.nodes %>% 
+  filter(id %in% betweens$vertex)
+
+bg_net_simple <- visNetwork(bg.nodes.between, bg.links.between)
+```
+
+```{r betweeness-full}
+
+graph_data <- function(edges, nodes){
+  # generate iGraph
+  net <- graph_from_data_frame(d = edges, vertices = nodes, directed = F)
+  
+  # Compute the degree centrality
+  degr_cent <- centr_degree(net, mode = 'all')
+  degr_cent <- degr_cent$res
+
+  # Compute the eigenvector centrality 
+  eign_cent <- eigen_centrality(net)
+  eign_cent <- eign_cent$vector
+
+  # Compute the closeness centraility
+  clos_cent <- igraph::closeness(net)
+
+  # Compute betweeness centrality
+  betw_cent <- igraph::betweenness(net)
+
+  data <- data.frame(vertex = nodes$id,
+                     # type = nodes$type,
+                     degree = degr_cent, 
+                     eigen = eign_cent, 
+                     closeness = clos_cent, 
+                     betweeness = betw_cent) %>% 
+    arrange(desc(degree))
+  
+  data
+}
+
+rinz_net_data <- graph_data(rinz.links, rinz.nodes)
+```
+
+What if places and genres act as nodes?
+
+```{r place-genre-nodes}
+place.genre.nodes.wide <- rinz %>% 
+  select(place, subjects) %>% 
+  filter(is.na(place) == F & place != "") %>% 
+  separate_wider_delim(cols = subjects, 
+                       delim = ",",
+                       names_sep = ".",
+                       names_repair = "unique",
+                       too_few = "align_start") %>% 
+  filter(subjects.1 != "" & is.na(subjects.1) ==F)
+
+# generate all combinations 
+
+# initialize df
+place_genre_combos <- as.data.frame(matrix(nrow=1, ncol=2))
+colnames(place_genre_combos) <- c("V1", "V2")
+
+for(i in 1:nrow(place.genre.nodes.wide)){
+  active_row <- place.genre.nodes.wide[i,]
+  row_vec <- unique(discard(as.vector(active_row), is.na))
+  if(length(row_vec) >= 2){
+    active_df <- as.data.frame(CombSet(row_vec, 2, repl=F, ord=F))
+    place_genre_combos <- rbind(place_genre_combos, active_df)
+  }
+}
+
+places <- rinz %>% 
+  select(place) %>% 
+  distinct(place) %>% 
+  mutate(id = place) %>% 
+  select(-place) %>% 
+  mutate(type = "place")
+
+subjects <- rinz %>% 
+  select(subjects) %>% 
+  separate_longer_delim(cols = subjects,
+                        delim = ",") %>% 
+  distinct(subjects) %>% 
+  mutate(id = subjects) %>% 
+  select(-subjects) %>% 
+  mutate(type = "subject")
+
+place.genre.links <- place_genre_combos %>% 
+  filter(V1 %in% places$id | V2 %in% places$id) %>% 
+  mutate(from = V1, to = V2) %>% 
+  select(-V1, -V2) %>% 
+  group_by(from, to) %>% 
+  summarize(count = n())
+
+place.genre.types <- rbind(places, subjects) %>% 
+  filter(id != "")
+
+repeats <- place.genre.types %>% 
+  group_by(id) %>% 
+  summarise(count = n()) %>% 
+  filter(count >1)
+
+place.genre.types[239, 2] <- "place/subject"
+place.genre.types[874, 2] <- "place/subject"
+place.genre.types[315, 2] <- "place/subject"
+place.genre.types[1026, 2] <- "place/subject"
+place.genre.types[257, 2] <- "place/subject"
+place.genre.types[1025, 2] <- "place/subject"
+
+place.genre.nodes <- place.genre.types %>% 
+  distinct(id, type) 
+  
+
+place_genre_data <- graph_data(place.genre.links, place.genre.nodes)
+```
+
+Visualize more-connected nodes
+
+```{r higher-degress}
+# 3rd quart. value for degree = 27
+higher_degree <- place_genre_data %>% 
+  filter(degree >= 27)
+
+pg.viz.nodes <- place.genre.nodes %>% 
+  filter(id %in% higher_degree$vertex)
+
+pg.viz.links <- place.genre.links %>% 
+  filter(from %in% higher_degree$vertex & to %in% higher_degree$vertex)
+
+pg.highdegree.viz <- visNetwork(nodes=pg.viz.nodes, pg.viz.links)
+
+# still too many things!!
+# reduce to only north american places
+
+north_america_places <- rinz %>% 
+  filter(coordinates != "") %>% 
+  separate_wider_delim(coordinates, delim = ",", names = c("lat", "lon")) %>% 
+  mutate(lat = as.double(lat), 
+         lon = as.double(lon)) %>% 
+  filter(lat > 7 & lat < 83 & lon < -20 & lon > -170) %>% 
+  distinct(place) %>% 
+  filter(place != "")
+
+northam.pg.viz.links <- pg.viz.links %>% 
+  filter(from %in% north_america_places$place | to %in% north_america_places$place)
+
+northam.pg.viz.nodes <- pg.viz.nodes %>% 
+  filter(ifelse(type == "place" | type == "place/subject", id %in% north_america_places$place, id %in% subjects$id))
+
+northam.pg.highdegree.viz <- visNetwork(nodes=northam.pg.viz.nodes, northam.pg.viz.links)
+
+# still too many!! reducing to connections that occur more than 7 times
+
+northam.pg.viz.links <- northam.pg.viz.links %>% 
+  filter(count > 7)
+
+northam.pg.highdegree.viz <- visNetwork(nodes=northam.pg.viz.nodes, northam.pg.viz.links)
+
+northam.pg.viz.nodes$shape  <- "dot"  
+northam.pg.viz.nodes$shadow <- F # Nodes will drop shadow
+northam.pg.viz.nodes$title  <- northam.pg.viz.nodes$id # Text on click
+# northam.pg.viz.nodes$size   <- 5*log(northam.pg.viz.nodes$count) # Node size
+northam.pg.viz.nodes$color <- ifelse(northam.pg.viz.nodes$type == "subject", "pink", "blue")
+northam.pg.viz.links$width <- 1+2*log(northam.pg.viz.links$count)
+
+```
+
+Overlay on a geographical map
+
+```{r net-map}
+places_coords <- rinz_latlon %>% 
+  select(place, lat, lon) %>% 
+  distinct(place, lat, lon)
+
+node.info <- pg.viz.nodes %>% 
+  left_join(places_coords, c("id" = "place")) %>% 
+  mutate(num_id = row_number())
+
+id_key <- node.info %>% 
+  select(id, num_id)
+
+edge.info <- pg.viz.links %>% 
+  mutate(from = as.character(from),
+         to = as.character(to)) %>% 
+  left_join(id_key, by = c("from" = "id")) %>% 
+  left_join(id_key, by = c("to" = "id")) %>% 
+  mutate(from_label = from, 
+         to_label = to,
+         from = num_id.x,
+         to = num_id.y) %>% 
+  select(-num_id.x, -num_id.y)
+
+northam_tidygraph <- tidygraph::tbl_graph(nodes = node.info, edges = edge.info) %>% 
+  activate(nodes)
+
+library(ggmap)
+library("rnaturalearth")
+library("rnaturalearthdata")
+
+world <- ne_countries(scale = "medium", returnclass = "sf")
+
+ggraph(northam_tidygraph, layout = 'stress') +
+  geom_edge_density() +
+  geom_node_point(aes(color = type))
+```
+
+Overlay on a world map?
+
+```{r geo-graph}
+ggraph(northam_tidygraph, "manual", x = node.info$lon, y = node.info$lat) +
+  geom_sf(data = world) +
+  geom_node_point(aes(color = type)) +
+  geom_edge_link()
+
+# fails bc subjects don't have geographical positions --> could be calculating using the average lat/lon like I did earlier, or potentially filled using network model?
+
+```
+
+Using `sfnetworks`
+
+I clearly need a location for each subject for any of these approaches to work -- I will calculate the average position of each place tag used for each subject tag.
+
+```{r avg_locations}
+subjects <- subjects %>% 
+  filter(id != "") %>% 
+  mutate(lat = 0) %>% 
+  mutate(lon = 0) %>% 
+  mutate(count = 0)
+
+for(i in 1:nrow(subjects)){
+  active_subject <- subjects$id[i]
+  if(str_detect(active_subject, "\\(") == T){
+    active_subject <- str_remove(active_subject, "\\(.*\\)")
+  }
+  filtered_df <- rinz_latlon %>% 
+    filter(str_detect(subjects, active_subject) == T) %>% 
+    filter(is.na(lat) == F & is.na(lon) == F)
+  subjects$lat[i] <- mean(filtered_df$lat)
+  subjects$lon[i] <- mean(filtered_df$lon)
+  subjects$count[i] <- nrow(filtered_df)
+}
+
+
+subjects <- subjects %>% 
+  filter(lat != "NaN" & lon != "NaN")
+
+node.info.geo <- node.info %>% 
+  left_join(subjects, by = c("id")) %>% 
+  mutate(lat.x = ifelse(is.na(lat.x), lat.y, lat.x)) %>% 
+  mutate(lon.x = ifelse(is.na(lon.x), lon.y, lon.x)) %>% 
+  mutate(lat = lat.x, lon = lon.x, type = type.x) %>% 
+  select(-lat.y, -lon.y, -type.y, -lat.x, -lon.x, -type.x) %>% 
+  filter(is.na(lat) == F & is.na(lon) == F)
+
+edge.info.geo <- edge.info %>% 
+  right_join(node.info.geo, by = c("from" = "num_id")) %>% 
+  right_join(node.info.geo, by = c("to" = "num_id")) %>% 
+  mutate(from_lat = lat.x,
+         from_lon = lon.x,
+         to_lat = lat.y,
+         to_lon = lon.y,
+         from_type = type.x,
+         to_type = type.y) %>% 
+  select(-ends_with("x"), -ends_with("y"), -starts_with("count")) %>% 
+  filter(is.na(from_lat) == F & is.na(from_lon) == F & is.na(to_lat) == F & is.na(to_lon) == F) %>% 
+  filter(from_label != "" & to_label != "")
+
+geo_net <- tbl_graph(nodes = node.info.geo, edges = edge.info.geo, directed=F)
+
+# the following code DOES NOT WORK
+ggraph(geo_net, layout = "stress") +
+  geom_sf(data = world) +
+  geom_node_point(aes(x = node.info.geo$lon, y = node.info.geo$lat, color = type), size = 0.5) +
+  geom_edge_density() +
+  coord_sf(xlim = c(-180, -30), ylim = c(10, 90), expand = FALSE)
+```
+
+```{r sfnetwork}
+library(sfnetworks)
+library(sf)
+library(tidyverse)
+
+# node IDs have to be character values bc if they are numeric, then tidygraph expects to see every integer value within the range (and not every integer is present bc nodes missing information have gotten filtered out)
+
+node.info.sf <- sf::st_as_sf(node.info.geo, coords = c("lon", "lat")) %>% 
+  mutate(text_id = id,
+        id = as.character(num_id)) %>% 
+  select(-num_id)
+
+edge.info.sf <- sf::st_as_sf(edge.info.geo, coords = c("from_lon", "from_lat", "to_lon", "to_lat")) %>% 
+  mutate(from = as.character(from),
+         to = as.character(to)) 
+
+edge.info.sf <- st_cast(edge.info.sf, to = "LINESTRING")
+
+
+sf_net <- sfnetworks::sfnetwork(nodes = node.info.sf, 
+                                edges = edge.info.sf, 
+                                directed = F,
+                                force = T)
+```
+
+```{r plot-sfnet}
+net = sf_net %>%
+  activate("nodes") %>%
+  mutate(bc = centrality_betweenness())
+
+# ggplot() +
+#   geom_sf(data = st_as_sf(net, "edges"), col = "grey50") +
+#   geom_sf(data = st_as_sf(net, "nodes"), aes(col = bc, size = bc)) +
+#   coord_sf(xlim = c(-180, -30), ylim = c(10, 90), expand = FALSE)
+
+# Function from Lore Abad
+
+layout_sf = function(graph){
+  # Extract X and Y coordinates from the nodes
+  graph = activate(graph, "nodes")
+  x = sf::st_coordinates(graph)[,"X"]
+  y = sf::st_coordinates(graph)[,"Y"]
+  data.frame(x, y)
+}
+
+ggraph(net, layout = layout_sf) +
+  geom_sf(data = world) +
+  geom_edge_density() + 
+  geom_node_point(aes(color = type, size = bc)) +
+  geom_edge_link(width = 0.05) + 
+  coord_sf(xlim = c(-92, -73), ylim = c(27, 42), expand = FALSE)
+  
+```
+
+```{r save-data}
+library(sf)
+st_write(node.info.sf, "node_info.shp")
+st_write(edge.info.sf, "edge_info.shp")
+```
+# Get name info for Shiny
+
+```{r names-prep}
+write.csv(north_america_people, "~/Desktop/smithsonian/data/northam_people.csv")
+
+people_latlon <- rinz_latlon %>% 
+  mutate(names = str_replace_all(names, ",\\s", "_")) %>% 
+  separate_longer_delim(cols = names, 
+                       delim = ",") %>% 
+  distinct(ID, lat, lon, place, names) %>% 
+  filter(names != "") %>% 
+  group_by(names) %>% 
+  summarize(avg_lat = mean(lat), 
+            avg_lon = mean(lon), 
+            count = n()) %>% 
+  mutate(avg_lat = as.numeric(avg_lat),
+         avg_lon = as.numeric(avg_lon)) %>% 
+  st_as_sf(coords = c("avg_lon", "avg_lat"))
+
+people.sf <- sf::st_as_sf(people_latlon, coords = c("avg_lon", "avg_lat")) %>% 
+  mutate(text_id = names) %>% 
+  select(-names) %>% 
+  mutate(type = "person")
+
+node.sf <- node.info.sf %>% 
+  select(-id) 
+
+nodes.sf <- rbind(node.sf, people.sf) %>% 
+  mutate(id = row_number())
+
+st_write(people_latlon, "~/Desktop/smithsonian/data/people_enriched.shp")
+st_write(nodes.sf, "~/Desktop/smithsonian/data/all_nodes.shp") 
+
+# Name/place combos
+
+name_place_combo <- rinz_latlon %>% 
+  mutate(names = str_replace_all(names, ",\\s", "_")) %>% 
+  separate_longer_delim(cols = names, 
+                       delim = ",") %>% 
+  distinct(ID, lat, lon, place, names) %>% 
+  filter(names != "") %>% 
+  select(names, place) %>% 
+  distinct(names, place) %>% 
+  left_join(nodes.sf, by = c("names" = "text_id")) %>% 
+  mutate(from_point = geometry,
+         from = id) %>% 
+  select(-geometry, -id) %>% 
+  left_join(nodes.sf, by = c("place" = "text_id")) %>% 
+  mutate(to_point = geometry,
+         to = id, 
+         person_count = count.x,
+         from_label = names,
+         to_label = place,
+         from_type = type.x,
+         to_type = type.y) %>% 
+  select(-geometry, -id, -starts_with("count"), -names, -place,
+         -starts_with("type")) %>% 
+  na.omit() 
+
+names.places.sf <- name_place_combo %>% 
+  mutate(combined_geo = paste0(from_point, to_point)) %>% 
+  mutate(combined_geo = str_replace_all(combined_geo, "c", "")) %>% 
+  mutate(combined_geo = str_replace_all(combined_geo, "\\(", "")) %>% 
+  mutate(combined_geo = str_replace_all(combined_geo, "\\)", ";")) %>% 
+  mutate(combined_geo = str_replace_all(combined_geo, ";\\S", ", ")) %>%
+  mutate(combined_geo = str_replace_all(combined_geo, ";", "")) %>%
+  filter(is.na(combined_geo) == F & combined_geo != "") %>% 
+  separate_wider_delim(cols = "combined_geo", delim = ", ", names = c("from_lon", "from_lat", "to_lon", "to_lat")) %>% 
+  mutate(from_lon = as.numeric(from_lon),
+         from_lat = as.numeric(from_lat),
+         to_lon = as.numeric(to_lon),
+         to_lat = as.numeric(to_lat)) %>% 
+  select(-from_point, -to_point) %>% 
+  filter(is.na(from_lon) == F &
+           is.na(to_lon) == F) %>% 
+  st_as_sf(coords = c("from_lon", "from_lat", "to_lon", "to_lat")) %>% 
+  st_cast(to = "LINESTRING")
+
+st_write(names.places.sf, "~/Desktop/smithsonian/data/name_place_edges.shp")
+```
+
+

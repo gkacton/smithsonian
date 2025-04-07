@@ -7,7 +7,7 @@ library(XML)
 
 # read XML ----------------------------------------------------------------
 
-page <- read_xml("Rinzler_full.xml")
+page <- read_xml("data/Rinzler_full.xml")
 
 page_nsStrip <- page %>% xml_ns_strip()
 
@@ -33,6 +33,8 @@ df_2 <- as_tibble_col(list_2) %>%
   unnest_longer(col = value, names_repair = "unique") %>% 
   filter(value_id != "did") %>% 
   unnest_wider(col = value, names_repair = "unique")
+
+df_1 <- make_table(subseries_1)
 
 df_1_reg <- df_1 %>% select(did, controlaccess)
 df_2_reg <- df_2 %>% select(did, controlaccess)
