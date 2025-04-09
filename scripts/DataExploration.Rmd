@@ -858,5 +858,287 @@ names.places.sf <- name_place_combo %>%
 
 st_write(names.places.sf, "~/Desktop/smithsonian/data/name_place_edges.shp")
 ```
+# Fix node and edge lists
+
+```{r net-fixes}
+nodes_combined <- st_read("~/Desktop/smithsonian/data/all_nodes.shp")
+edges_1 <- st_read("~/Desktop/smithsonian/data/edge_info.shp")
+edges_2 <- st_read("~/Desktop/smithsonian/data/name_place_edges.shp")
+
+colnames(edges_2) <- c("from", "to", "person_count", "from_label", "to_label", "from_type", "to_type", "geometry")
+
+edges_2 <- edges_2 %>% 
+  select(-person_count)
+
+edges_combined <- rbind(edges_1, edges_2)
+
+node_key <- nodes_combined %>% 
+  select(id, text_id) %>% 
+  as.data.frame() %>% 
+  separate_wider_delim(cols = geometry, delim = ", ", names = c("lon", "lat")) %>% 
+  mutate(lon = str_remove_all(lon, pattern = "c\\(")) %>% 
+  mutate(lat = str_remove_all(lat, pattern = "\\)"))
+
+edges_combined <- edges_combined %>% 
+  select(-from, -to, -geometry) %>% 
+  left_join(node_key, by = c("to_label" = "text_id")) %>% 
+  mutate(to = id,
+         to_lon = lon,
+         to_lat = lat) %>% 
+  select(-id, -lon, -lat) %>% 
+  left_join(node_key, by = c("from_label" = "text_id")) %>% 
+  mutate(from = id,
+         from_lon = lon,
+         from_lat = lat) %>% 
+  select(-id, -lon, -lat) %>% 
+  select(from, to, from_label, to_label, from_type, to_type, to_lon, to_lat, from_lon, from_lat) 
+
+edges_sf <- st_as_sf(edges_combined, coords = c("from_lon",
+                                                "from_lat",
+                                                "to_lon",
+                                                "to_lat")) %>% 
+  st_cast(to = "POLYGON")
+#edges_combined <- st_cast(edges_combined, "POLYGON")
+
+st_write(edges_sf, "~/Desktop/smithsonian/data/edges_combo.shp", append=F)
+  
+```
+```{r net-test}
+
+subject_input <-  "Monroe_Bill_1911-1996"
+
+edges_nongeo = edges
+
+st_geometry(edges_nongeo) = NULL
+
+edges_filtered_2 <- edges_nongeo %>% 
+    filter(str_detect(subject_input, from_label) == T) %>% 
+  mutate(from = as.character(from),
+         to = as.character(to))
+  
+nodes_filtered_2 <- nodes %>% 
+    filter(id %in% edges_filtered_2$to | id %in% edges_filtered_2$from) %>%
+  select(id, text_id, geometry) %>% 
+  mutate(id = as.character(id))
+  
+test_graph <- tbl_graph(nodes = nodes_filtered_2, edges = edges_filtered_2, node_key = "id", directed = F)
+
+ggraph(sfnetwork(nodes = nodes_filtered_2,
+                 edges = edges_filtered_2,
+                 directed = F,
+                 node_key = "id",
+                 force = T), 
+                 layout = layout_sf) +
+  geom_sf(data = basemap) +
+  geom_edge_density() +
+  geom_edge_link(width = 0.05) +
+  geom_node_point() +
+  coord_sf(xlim = c(-180, -30), 
+           ylim = c(10, 90), 
+           expand = FALSE)
+```
+
+
+Graph Analysis: Full dataset
+
+```{r full-graph}
+full_graph <- tbl_graph(nodes = nodes, edges = edges, directed = F, node_key = "id")
+
+full_graph <- full_graph %>% 
+  activate(nodes) %>% 
+  mutate(between = centrality_betweenness())
+```
+
+Generate genre lists:
+
+```{r country}
+country_places <- rinz %>% 
+  filter(str_detect(subjects, "Country") == T) %>% 
+  filter(place != "") %>% 
+  distinct(place)
+
+country_places <- country_places$place
+
+country_people <- rinz %>% 
+  select(names, subjects) %>% 
+  mutate(names = str_replace_all(names, ",\\s", "_")) %>% 
+  separate_longer_delim(cols = names, 
+                       delim = ",") %>%
+  filter(str_detect(subjects, "Country") == T) %>% 
+  distinct(names)
+
+country_people <- country_people$names
+```
+
+```{r bluegrass}
+bluegrass_places <- rinz %>% 
+  filter(str_detect(subjects, "Bluegrass") == T) %>% 
+  filter(place != "") %>% 
+  distinct(place)
+
+bluegrass_places <- bluegrass_places$place
+
+bluegrass_people <- rinz %>% 
+  select(names, subjects) %>% 
+  mutate(names = str_replace_all(names, ",\\s", "_")) %>% 
+  separate_longer_delim(cols = names, 
+                       delim = ",") %>%
+  filter(str_detect(subjects, "Bluegrass") == T) %>% 
+  distinct(names)
+
+bluegrass_people <- bluegrass_people$names
+```
+
+```{r blues}
+blues_places <- rinz %>% 
+  filter(str_detect(subjects, "Blues") == T) %>% 
+  filter(place != "") %>% 
+  distinct(place)
+
+blues_places <- blues_places$place
+
+blues_people <- rinz %>% 
+  select(names, subjects) %>% 
+  mutate(names = str_replace_all(names, ",\\s", "_")) %>% 
+  separate_longer_delim(cols = names, 
+                       delim = ",") %>%
+  filter(str_detect(subjects, "Blues") == T) %>% 
+  distinct(names)
+
+blues_people <- blues_people$names
+```
+
+```{r jazz}
+jazz_places <- rinz %>% 
+  filter(str_detect(subjects, "Jazz") == T | str_detect(subjects, "jazz") == T) %>% 
+  filter(place != "") %>% 
+  distinct(place)
+
+jazz_places <- jazz_places$place
+
+jazz_people <- rinz %>% 
+  select(names, subjects) %>% 
+  mutate(names = str_replace_all(names, ",\\s", "_")) %>% 
+  separate_longer_delim(cols = names, 
+                       delim = ",") %>%
+  filter(str_detect(subjects, "Jazz") == T | str_detect(subjects, "jazz") == T) %>% 
+  distinct(names)
+
+jazz_people <- jazz_people$names
+```
+
+```{r folk}
+folk_places <- rinz %>% 
+  filter(str_detect(subjects, "Folk") == T | str_detect(subjects, "folk") == T) %>% 
+  filter(place != "") %>% 
+  distinct(place)
+
+folk_places <- folk_places$place
+
+folk_people <- rinz %>% 
+  select(names, subjects) %>% 
+  mutate(names = str_replace_all(names, ",\\s", "_")) %>% 
+  separate_longer_delim(cols = names, 
+                       delim = ",") %>%
+  filter(str_detect(subjects, "Folk") == T | str_detect(subjects, "Folk") == T) %>% 
+  distinct(names)
+
+folk_people <- folk_people$names
+
+max_length = 993
+
+length(bluegrass_people) <- 993
+length(bluegrass_places) <- 993
+length(blues_people) <- 993
+length(blues_places) <- 993
+length(country_people) <- 993
+length(country_places) <- 993
+length(folk_people) <- 993
+length(folk_places) <- 993
+length(jazz_people) <- 993
+length(jazz_places) <- 993
+
+genre_info <- as.data.frame(cbind(bluegrass_people, bluegrass_places,
+                    blues_people, blues_places,
+                    country_people, country_places,
+                    folk_people, folk_places,
+                    jazz_people, jazz_places))
+
+write.csv(genre_info, "~/Desktop/smithsonian/data/genre_info.csv")
+```
+
+```{r genre-filt-test}
+genre_input <- "folk"
+people_list_col <- paste0(genre_input, "_people")
+place_list_col <- paste0(genre_input, "_places")
+people_list <- genre_info[,people_list_col] %>% na.omit()
+place_list <- genre_info[,place_list_col] %>% na.omit()
+edges_test <- edges_nongeo %>% 
+      filter(to_type != "subject") %>% 
+      filter(from_label %in% people_list |
+               to_label %in% people_list |
+               from_label %in% place_list |
+               to_label %in% people_list) %>% 
+      mutate(from = as.character(from),
+             to = as.character(to))
+
+nodes_test <- nodes %>% 
+      filter(id %in% edges_filtered_3()$to | id %in% edges_filtered_3()$from) %>% 
+      mutate(id = as.character(id))
+```
+# Rinzler's travels by date
+
+```{r calc-avg-loc-date}
+rinz <- read.csv("~/Desktop/smithsonian/data/rinzler-full-reconciled.csv")
+
+ralph <- rinz %>% 
+  mutate(names = str_replace_all(names, ",\\s", "_")) %>% 
+  filter(str_detect(names, "Rinzler_Ralph")) %>% 
+  filter(coordinates != "") %>% 
+  separate_wider_delim(coordinates, delim = ",", names = c("lat", "lon")) %>% 
+  mutate(lat = as.numeric(lat),
+         lon = as.numeric(lon)) %>% 
+  group_by(date) %>% 
+  mutate(date = as.numeric(date)) %>% 
+  summarize(avg_lat = mean(lat),
+            avg_lon = mean(lon),
+            count = n())
+  
+ralph_geo <- st_as_sf(ralph, coords = c("avg_lon", "avg_lat"), crs = st_crs(4326))
+
+all_by_date <- rinz %>% 
+  mutate(names = str_replace_all(names, ",\\s", "_")) %>% 
+  filter(coordinates != "") %>% 
+  separate_wider_delim(coordinates, delim = ",", names = c("lat", "lon")) %>% 
+  mutate(lat = as.numeric(lat),
+         lon = as.numeric(lon)) %>% 
+  group_by(date) %>% 
+  summarize(avg_lat = mean(lat),
+            avg_lon = mean(lon),
+            count = n()) %>% 
+  mutate(date = as.numeric(date)) %>% 
+  filter(is.na(date) == F)
+
+date_geo <- st_as_sf(all_by_date, coords = c("avg_lon", "avg_lat"), crs = st_crs(4326))
+basemap <- st_as_sf(rnaturalearthdata::map_units110, crs = st_crs(4326))
+
+
+ggplot() +
+  geom_sf(data = basemap) +
+  geom_sf(data = date_geo, color = "brown") + 
+  geom_sf(data = ralph_geo, color = "green") +
+  facet_wrap(vars(date))
+```
+
+Network by year?
+
+```{r}
+date_nodes <- rinz %>% 
+  mutate(names = str_replace_all(names, ",\\s", "_")) %>% 
+  group_by(date) %>% 
+  summarize(names = paste0(names, collapse = ","),
+            places = paste0(place, collapse=",")) 
+```
+
 
 

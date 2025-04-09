@@ -1,0 +1,994 @@
+"","bluegrass_people","bluegrass_places","blues_people","blues_places","country_people","country_places","folk_people","folk_places","jazz_people","jazz_places"
+"1","Monroe_Bill_1911-1996","United States","Sayles_Charlie","United States","Rinzler_Ralph","United States","","United States","Dolphy_Eric","United States"
+"2","Rinzler_Ralph","California","Rinzler_Ralph","Washington, D.C.","Carter_Maybelle_1909-1978","New York","Cantwell_Robert_1945-","California","","California"
+"3","Jackson_John_1924-2002","New York","Monroe_Bill_1911-1996","Montreal","McGee_Kirk_1899-1983","New Jersey","Abrahams_Roger D.","Chicago","Harris_Bill_1925-1988","Washington, D.C."
+"4","Williams_Bill_1897-1973","Kentucky","Jackson_John_1924-2002","Quebec","McGee_Sam_1894-1975","Connecticut","Seitel_Peter","Washington, D.C.","Apollon_Dave","Illinois"
+"5","Stanley_Ralph","Indiana","Williams_Bill_1897-1973","Canada","Smith_Arthur_1898-1971","Virginia","Rinzler_Ralph","Eagle Rock","Reinhardt_Django_1910-1953","Tennessee"
+"6","Herald_John","Montreal","Lightfoot_Bill","Kentucky","Jones_Ramona","Tennessee","Green_Archie","New York","Grappelli_Stéphane","Chicago"
+"7","Cooke_Jack_1936-2009","Quebec","Leadbelly_1885-1949","Virginia","Watson_Doc","Massachusetts","Hunt_Marjorie_1954-","Louisiana","Rinzler_Ralph","New York"
+"8","Kuykendall_Pete_1938-2017","Canada","Hurt_Mississippi John_1894-1966","New York","Scruggs_Earl","Appalachia","Seeger_Anthony","West Virginia","Vaughan_Sarah_1924-1990","New York City"
+"9","Rinzler_Kate_1937-2010","Virginia","Cephas_John","Lorton","Clifford_Denny","North Carolina","Houston_Cisco","Nova Scotia","Hines_Earl_1903-1983","France"
+"10","Dickens_Hazel_1935-2011","Coeburn","Wiggins_Phil","Louisiana","","Wilkesboro","Wilgus_D. K.","Canada","Gillespie_Dizzy_1917-1993","Paris"
+"11","","Tennessee","Reagon_Toshi","Mississippi","Maddox_Rose","Oklahoma","Leadbelly_1885-1949","Great Britain","Knight_Lucille","Appalachia"
+"12","Watson_Doc","West Virginia","Harris_Bill_1925-1988","Springfield","Jamieson_Robert Stuart_1922-2008","California","Dickens_Hazel_1935-2011","Cape Breton Island","Perkins_Mr.","Virginia"
+"13","Scruggs_Earl","Washington, D.C.","Brown_Charles_1922-1999","Rhode Island","Monroe_Bill_1911-1996","Pennsylvania","Cotten_Elizabeth","Scotland","David_Lloyd","Indiana"
+"14","Terry_Sonny","Pennsylvania","","Illinois","Stoneman_Ernest V.","Kentucky","Sayles_Charlie","North Carolina","Reagon_Bernice Johnson_1942-2024","Ragtime"
+"15","Hartford_John","Philadelphia","Terry_Sonny","Tennessee","Seeger_Mike_1933-2009","Indiana","MacColl_Ewan","Pennsylvania","Ewitt_Don","Louisiana"
+"16","Howard_Mark","Johnson City","Professor Longhair_1918-1980","Chicago","Wheeler_Billy Edd","Falls Church","Nicholas_General Custer_1895-1979","Philadelphia","Kirkpatrick_Frederick Douglass","New Orleans"
+"17","Martin_Jimmy","Appalachia","Lockwood_Robert Jr._1915-2006","North Carolina","Driftwood_Jimmie","Arkansas","Clifford_Denny","Ohio","Blesh_Rudi_1899-1985","Scotland"
+"18","McCoury_Del_1939-","North Carolina","House_Son","Indiana","Jones_George_1931-2013","Texas","Rinzler_Kate_1937-2010_Rinzler_Ralph","Tennessee","Sayles_Charlie","Great Britain"
+"19","Beck_Horace Palmer_1920-","Wilkesboro","Felton_Ron","New Orleans","Smith_Connie_1941-","Louisiana","Nahwooksy_Clydia_1933-2009","Oklahoma","Hasse_John Edward_1948-","San Francisco"
+"20","Britton_Maynard","Georgia","Stovall_Babe_1907-1974","Ohio","Smith_Blaine","Nashville","Nahwooksy_Fred","Maryland","Wasserman_Rob","Ohio"
+"21","Pendleton_Silas","Rabun Gap","Wallace_Sippie","Rochester","Jones_Grandpa_1913-1998","Austin","Rinzler_Kate_1937-2010","Takoma Park","Scott_James_1885-1938","Berkeley"
+"22","Stuart_Joe","Rhode Island","Watson_Doc","Cuba","Newman_Jimmy C.","France","Hutton_Bruce","Georgia","Roberts_Jay","New Jersey"
+"23","Baker_Kenny_1926-2011","Maryland","Wilkins_Robert_1896-1987","California","Clark_Guy","Mississippi","Asch_John","Rabun Gap","Northup_Joseph","Camden"
+"24","Keith_Bill_1939-2015","Musicians","Evans_Butch","Tollentown (Miss.)","Caranhac_Gilbert","Nova Scotia","Vowell_G. D.","New Hampshire","Danmark_Ribe","Galax"
+"25","Rooney_Jim_1938-","Massachusetts","Parker_Knocky_1918-1986","Appalachia","Arthur_Charlie","Canada","Proffitt_Frank","Woodsville","Meyer_G.W.","Los Angeles"
+"26","Greene_Richard_violinist","Cambridge","Williams_Robert Pete_1914-1980","Georgia","Lone Pine_Hal","Georgia","Seeger_Pete_1919-2014","Appalachia","Wenrich_Percy_1887-1952","Minnesota"
+"27","Rowan_Peter_1942-","Nashville","Seeger_Mike_1933-2009","Texas","Cody_Betty","Alberta","Wikham_Lew","Kentucky","Fischler_H.A.","Saint Paul"
+"28","Sheehan_Juanita","Los Angeles","Wise_Larry (Harmonica player)","Houston","Hill_Eddie","Hollywood","Mason_Tony","Harlan","Grisman_David","Richmond"
+"29","Rosenbaum_Art","Oberlin","Thomas_Jesse_1911-1995","Shreveport","Hawkins_Hawkshaw_1921-1963","Arizona","Watson_Doc","New Mexico","McCoury_Del_1939-","Texas"
+"30","Sheehan_Shorty","Ohio","Seeger_Peggy_1935-","Massachusetts","Snow_Hank","Meridian","Carlton_Gaither_1901-1972","Santa Fe","Byrd_Donald","Dallas"
+"31","Monroe_James","Culpeper","Solseng_Ed","Deep Gap","Nelson_Willie_1933-","Alabama","Watson_Rosa Lee","Deep Gap","Ellington_Duke_1899-1974","Ukraine"
+"32","Baez_Joan","New York City","Carr_Leroy_1905-1935","France","Rogers_Kenny","Norton","Ashley_Clarence_1895-1967","Virginia","Russell_Luis","Italy"
+"33","Jamieson_Robert Stuart_1922-2008","Fincastle","Harpo_Slim_1924-1970","Newport, R.I.","Ledford_Lily May_1917-1985","West Virginia","Price_Fred_1915-1987","Los Angeles","Bechet_Sidney_1897-1959","Sicily"
+"34","Stoneman_Ernest V.","Deep Gap","Brown_Buster","Michigan","Scott_Tommy_1917-2013","Bakersfield","Carter_Maybelle_1909-1978","Indiana","Armstrong_Louis_1901-1971","Hawaii"
+"35","Stanley_Carter","Mississippi","Gray_Henry_1925-2020","Detroit","Seckler_Curley_1919-2017","Corsicana","McGee_Sam_1894-1975","Chevy Chase","Baker_Josephine_1906-1975","Sweden"
+"36","Rector_Red","Vienna","Watson_Merle","Brownsville","Arnold_Eddy_1918-2008","Tupelo","Smith_Arthur_1898-1971","Rhode Island","Lauder_Harry_Sir_1870-1950.","Kentucky"
+"37","Edmondson_Dian","New Jersey","Milteau_Jean-Jacques","Avalon","Burns_Jethro","Quebec","McGee_Kirk_1899-1983","England","Charles_Ray_1930-2004","Louisville"
+"38","Ashley_Clarence_1895-1967","Rising Sun","Strickland_Napoleon","South Carolina","Britt_Elton_1917-1972","Montreal","Baez_Joan","Florida","Weston_Randy_1927-2018","Arkansas"
+"39","Wiseman_Mac","Todd","Maxwell_Clyde","Alabama","Gibson_Don (Donald Eugene)_1928-2003","Missouri","Bartók_Béla_1881-1945","Arkansas","Moore_Tiny",NA
+"40","Lyle_Rudy","France","Williams_Big Joe_1903-1982","Ireland","Reeves_Jim","Springfield","Jamieson_Robert Stuart_1922-2008","Mountain View","Burns_Jethro",NA
+"41","Moody_Clyde_1917-1989","Roanoke","Nixon_Hammie_1908-1984","Arkansas","King_Pee Wee_1914-2000","Timbo","Monroe_Bill_1911-1996","Black Mountain","Souchon_Edmond",NA
+"42","Smiley_Red_1925-1972","Bristol","Nelson_Sonny Boy_1909-1998","Viper","Stewart_Redd","Boyd's Cave (N.C.)","Stoneman_Ernest V.","Salisbury","Pierce_De De_1904-1973",NA
+"43","Martin_Benny","Colorado","Chatmon_Sam","West Virginia","Tanner_Gid","Atlanta","Havens_Richie","Australia","Dorsey_Tommy_1905-1956",NA
+"44","Grier_Lamar","Alabama","Shines_Johnny","Memphis","Wagoner_Porter","New Orleans","Jackson_Bruce_1936-","New Brunswick","Berigan_Bunny_1908-1942",NA
+"45","Lester_Bobby","Oklahoma","Myers_Sam_1936-2006","Dallas","Montana Slim_1904-1996","Richmond","Jones_Michael Owens","Saltville","Pierce_Billie_1907-1974",NA
+"46","Robison_Gene","New Hampshire","Sylvia_Queen","England","Boyd_Bill_1910-1977","San Antonio","Lloyd_A. L. (Albert Lancaster)_1908-1982","Shouns","Randolph_Brother",NA
+"47","Lyle_Andy","Hollywood","Fikes_Betty Mae","Great Britain","Pyle_Pete","Ohio","Ritchie_Jean","New York City","Bridges_Lucius",NA
+"48","Reno_Don","Iowa","Dizz_Lefty","Austin","Skaggs_Ricky","Hazard","White_Josh","Chilhowie","Morath_Max",NA
+"49","Richardson_Larry_banjo player","South Carolina","Davis_Gary_1896-1972","East St. Louis","Horton_Johnny","Saltville","Levy_Herbert","Spain","Dodds_Johnny_1892-1940",NA
+"50","Edwards_Billy","Michigan","Lee_Bill_1928-","Florida","Callahan_Gene_1932-","Asheville","Romaine_Anne","Fincastle","Dutrey_Honore_1894-1935",NA
+"51","Burris_Gene","Savannah","Hooker_John Lee","Atlanta","Hamblen_Stuart_1908-1989","Camden","Meyers_Ted","Coeburn","Johnson_Bill",NA
+"52","Reno_Ronnie","Texas","Lipscomb_Mance_1895-1976","Missouri","Williams_Benny","Illinois","Martin_Edsel","Newport, R.I.","Armstrong_Lil Hardin_1898-1971",NA
+"53","Osborne_Sonny","Dallas","Estes_Sleepy John_1899-1977","St. Louis","Drusky_Roy","Chicago","Shepherd_Dewey_1906-1996","Mississippi","Alexander_Charlie_ca. 1904-ca. 1970",NA
+"54","Dees_David","Illinois","Reese_Dock","Bowling Green","Raney_Wayne_1920-1993","Charlotte","Seeger_Peggy_1935-","Maine","McDonald_Earl",NA
+"55","Campbell_Sid","Chicago","James_Skip_1902-1969","Los Angeles","Wright_Johnnie_1914-2011","Memphis","Thomas_Keith","Grand Lake Stream Plantation","Shaw_Artie_1910-2004",NA
+"56","Rice_Bernie","Richmond","Doss_Willie","Greenup","Rodgers_Jimmie_1897-1933.","Houston","Grainger_Ross","Rocky Harbour","Spottswood_Richard K. (Richard Keith) (liner notes)",NA
+"57","Beverly_Bonnie","San Antonio","McDowell_Fred","Nashville","Bolick_Earl","Washington, D.C.","Edmondson_Dian","Newfoundland and Labrador","Pizio_Josef",NA
+"58","Burroughs_Gene","Sumter (N.C.)","Hopkins_Lightnin'_1912-1982","Bakersfield","Tarlton_Jimmie_1892-1979","Bristol","Sewall_Jay","Connecticut","Papariello_Antonio",NA
+"59","Grisman_David","Florida","White_Josh","Corsicana","Walsh_Dock","South Carolina","Winns_John","Guilford","Lentine_Michiele",NA
+"60","Williams_Sam","Atlanta","Rinzler_Ralph (liner notes)","Tupelo","Foster_Garley","Rock Hill","Smith_Hobart_1897-1965","Carrboro","Iona_Andy",NA
+"61","Schiffler_George","Ragtime","Balfa_Dewey","Hazard","Boggs_Dock_1898-1971","Florida","Riddle_Almeda","London","Turner_Charlie",NA
+"62","Watson_Merle","Clinch Mountain","Thibodeaux_Gladdy","Saltville","Hutchison_Frank_1897-1945","East St. Louis","Howard_Clint_1930-2011","Ireland","Hayes_Clifford",NA
+"63","Emerson_Bill","Great Britain","LeJeune_Louis","San Antonio","Justice_Dick_1906-1962","Galax","Moore_Tommy","Alabama","Davis_Genevieve_1889-1950",NA
+"64","Martin_Timothy","Scotland","Gunning_Sarah Ogan_1910-1983","Asheville","Roberts_Fiddlin' Doc_1897-1978.","Maryland","Johnson_Jack","Ashford","Lewis_Sammie",NA
+"65","Atkins_Bobby","England","Benfield_Kenneth","Richmond","Greene_Clarence","Silver Spring","Gilbert_Stella","South Carolina","Wills_Bob_1905-1975",NA
+"66","Lineberger_Don_1929-2010","Japan","Benfield_Neriah","Connecticut","O'Day_Molly_1923-1987","New York City","Moore_Eva Ashley","Pulaski","Byrd_Charlie_1925-1999",NA
+"67","Tobert_Bill","Newport, R.I.","Patterson_Joe","Savannah","Kincaid_Bradley","Washington","Earle_Eugene","Massachusetts","Miller_John",NA
+"68","Barker_Red","Egypt","Parker_Chet_1891-1975","New York City","Puckett_Riley_1894-1946","Kahlotus","Bird_Annie","Blowing Rock",NA,NA
+"69","Lowinger_Gene","Vermont","Hickok_Elgia","Sumter (N.C.)","Cash_Johnny","Columbia","Burchett_Jack","Qatar",NA,NA
+"70","Pyle_Pete","Madison","Thatcher_Bill","Ragtime","Pomeroy_Douglas","Hickory","Watson_Arnold","Salisbury Chapel (Ky.)",NA,NA
+"71","Hembree_Mark","Charlotte","Watson_Arnold","Egypt","Frizzell_Lefty_1928-1975","Darlington","Greer_Sophronie Miller","Naushon Island",NA,NA
+"72","Cantwell_Robert_1945-","Bluefield","Carlton_Gaither_1901-1972","Minnesota","Price_Ray_1926-2013","Kerrville","Rinzler_Richard","Cataumet",NA,NA
+"73","Logan_Tex","Wytheville","McMichen_Clayton_1900-1970","Boston","Wells_Kitty","Cincinnati","Watson_Annie","Vermont",NA,NA
+"74","Stuart_Marty","Missouri","Wakefield_Frank","Hawaii","Tubb_Ernest_1914-1984","Wisconsin","Watson_Merle","Newport",NA,NA
+"75","Monroe_Charlie","Lexington","Ennis_Seamus","San Francisco","Cline_Patsy_1932-1963","Grafton","Greer_Dolly","Washington",NA,NA
+"76","Sparks_Larry","Rock Hill","Jones_Bessie_1902-1984","Germany","Atkins_Chet","Zachary","Greer_Dwight","Seattle",NA,NA
+"77","Story_Carl","Louisiana","Proffitt_Frank","Maryland","Presley_Elvis_1935-1977","Dallas","Greer_Tina","Iowa",NA,NA
+"78","Clifton_Bill","San Francisco","Ohrlin_Glenn_1926-2015","Takoma Park","Robbins_Marty","Trinidad and Tobago","Yance_Stewart","Wilkesboro",NA,NA
+"79","Allen_Red","Raytown","Ritchie_Jean","Vermont","Lynn_Loretta","Shreveport","Carlton_John","Falls Church",NA,NA
+"80","Wakefield_Frank","Berea","Riddle_Almeda","Morgan City","Owens_Buck_1929-2006","Gadsden","Collier_Jimmy","Texas",NA,NA
+"81","Greene_Clarence","Kerrville","Parsons_Phoeba_1908-2001","Clarksdale","Miller_Roger_1936-1992","Ukraine","Reagon_Bernice Johnson_1942-2024","Belfast",NA,NA
+"82","Green_Armolee","Delaware","Parsons_Roscoe_1943-","Searcy","Haggard_Merle","Gastonia","Walton_Ed","Todd",NA,NA
+"83","Weissberg_Eric_1939-2020","Berkeley","Jones_Willie","Wilkesboro","Kristofferson_Kris","Eatonville","Molton_Norman","New Jersey",NA,NA
+"84","Stover_Don_1928-1996","Wisconsin","Lomax_Alan_1915-2002","Boone","Parton_Dolly","Monticello","Sinclair_Robert","Quebec",NA,NA
+"85","Jackson_Tommy","Keshena","Hall_Vera_1906-1964","Minneapolis","Robinson_Leighton","Birmingham","Thornton_James","Montreal",NA,NA
+"86","Carlton_Gaither_1901-1972","Central Unit","Pratcher_Bob","Oklahoma","Wolfe_Charles K.","James River Correctional Center","Carawan_Guy","Hyde Park",NA,NA
+"87","Howard_Clint_1930-2011","Memphis","Pratcher_Miles","Kerrville","Estes_Red Buck","Montana","Hamilton_Frank_1934-","Cincinnati",NA,NA
+"88","Price_Fred_1915-1987","James River Correctional Center","Lewis_Ed","Cincinnati","Riddle_Jimmy","Butte","Williams_Sam","Mexico",NA,NA
+"89","Milteau_Jean-Jacques","Camden","Carter_James","Wisconsin","Clear_Lindy","Prince Edward Island","Stanley_Ralph","Ontario",NA,NA
+"90","Washington_Jackie","Arkansas","Moore_Johnny Lee","Grafton","Rice_Ben","South Pekin","Schiffler_George","Toronto",NA,NA
+"91","West_Hedy","Fayetteville","Armstrong_Joe","Zachary","Everidge_Charlie_1894-1969","Charleston","Jenkins_Oscar","Utah",NA,NA
+"92","Gude. David_1940-","New Orleans","Davis_John","Trinidad and Tobago","Morris_Neil_folk singer","Hyattsville","Jarrell_Tommy_1901-1985","Paw Paw",NA,NA
+"93","Seeger_Peggy_1935-","Galax","Pugh_Joe B.","Gadsden","Denoon_Ray","St. Louis","Cockerham_Fred_1905-1980","Berkeley",NA,NA
+"94","Seeger_Mike_1933-2009","Champaign","Hayes_Roland_1887-1977","Ukraine","Marlor_I.N.","Labor unions","Phipps_Sherman","Michigan",NA,NA
+"95","Scott_Tommy_1917-2013","Grafton","Smith_Hobart_1897-1965","Gastonia","Hamilton_Goldie","Poland","Saletan_Tony","Avalon",NA,NA
+"96","Seckler_Curley_1919-2017","Taylor","Shorty_James","Eatonville","Sutterfield_Barry","Utah","Rosmini_Dick","Viper",NA,NA
+"97","Cline_Charlie","Brownsville","Gardner_Denise","Monticello","Barr_Alex_1910-1976","St. George","Seeger_Mike_1933-2009","Colorado",NA,NA
+"98","Flatt_Lester","Delcambre","Gardner_Mattie","Birmingham","Brodeur_Arthur Gilchrist_1888-","Delaware","Glatzer_Bob","Minnesota",NA,NA
+"99","Ukelson_Lou","Trinidad and Tobago","Beauregard_Nathan_ca. 1890-1970","James River Correctional Center","Caldwell_Lola","Frederica","Glatzer_Paula","Labor unions",NA,NA
+"100","Eanes_Jim","West Liberty","Clark_Sam","Montana","Caldwell_Walter","Los Angeles","Wilkins_Robert_1896-1987","Nacogdoches",NA,NA
+"101","Woolum_Dave","Syracuse","Bell_Earlan","Butte","Darby_Tom_1890-ca. 1971","Sweden","Seeger_Penny_1943-1993","The Bahamas",NA,NA
+"102","Skaggs_Ricky",NA,"Vinson_Mose_1917-2002","Hollywood","Delmore_Alton","Fresno","Cameron_Isla","Braeholm",NA,NA
+"103","Coleman_T. Michael",NA,"Peeples_Charlene","Prince Edward Island","Delmore_Rabon_1916-1952","Greece","James_Willis_1900-1966","New Kensington",NA,NA
+"104","Poss_Barry",NA,"Lewis_Furry_1893-1981","Columbia","Ritchie_Isom","Athens","MacArthur_George","Finleyville",NA,NA
+"105","Roderick_Judy",NA,"Dobbins_Joe_1901-1970","South Pekin","Falcon_Joe_1900-1965","Calhoun","Walters_Mrs.","Steubenville",NA,NA
+"106","Connell_Dudley",NA,"Cannon_Gus_1883-1979","Charleston","Wilson_Mark","Armenia","Walters_Annie","Welch",NA,NA
+"107","Stubbs_Eddie",NA,"Corley_Dewey_1898-1974","Hyattsville","Pickard_Obed",NA,"Davis_Fred_Mrs.","Kenvir",NA,NA
+"108","Parker_Byron_1911-1948",NA,"Cowley_John","Labor unions","Stamper_I.D.",NA,"Vina_Angelo_1914-2003","Glomawr",NA,NA
+"109","Jenkins_Snuffy_1908-1990",NA,"Stroller_Jessie","Poland","Judd_Mrs.",NA,"Kirkpatrick_Frederick Douglass","Norton",NA,NA
+"110","Sherrill_Pappy_1915-2001",NA,"Ezell_Buster Buzz","Utah","Judd_Vernon",NA,"Ross_Mark","Lochgelly",NA,NA
+"111","Pyle_Dwanna",NA,"Gibson_Gus","St. George","Steele_Pete_1891-1985",NA,"Knight_Lucille","Shamrock Mountain (Ky.)",NA,NA
+"112","Cooper_Wilma Lee_1921-2011",NA,"Ellis_Charles","Delaware","Begley_Justis",NA,"Perkins_Mr.","Price Hill",NA,NA
+"113","Cooper_Stoney_1918-1977",NA,"Chestian_Sonny","Frederica","Hughes_Lena",NA,"David_Lloyd","Trafford",NA,NA
+"114","Tucker_George_1917-",NA,"Sanders_Alvin","Charlotte","Smith_Hobart_1897-1965",NA,"Ewitt_Don","Pursglove",NA,NA
+"115","Monroe_Bill_1911-1996_McKinley_William_1843-1901",NA,"Duffy_J.F.","Galax","Benfield_Kenneth",NA,"Evans_Butch","Man",NA,NA
+"116","Mainer_J. E. (Joseph E.)_1898-1971",NA,"Sneed_James_Roosevelt_Franklin D. (Franklin Delano)_1882-1945","Sweden","Benfield_Neriah",NA,"Gorman_Michael_1895-1970","Vivian",NA,NA
+"117","Mainer_Wade_1907-2011",NA,"Memphis Minnie_1897-1973","Fresno","McAbee_Palmer.",NA,"Heaney_Joe_1919-1984","Illinois",NA,NA
+"118","Bolick_Bill",NA,"Cohn_Lawrence_1932- (liner notes)","Greece","Breaux_Cleoma_d. 1940",NA,"Hopkins_Bill","Dallas",NA,NA
+"119","Bolick_Earl",NA,"Lester_Julius","Athens","Hawkins_Ezra",NA,"Herald_John","Petersburg",NA,NA
+"120","Duffey_John",NA,"Hogg_Smokey_1914-1960","Calhoun","Strong_Luther",NA,"Ashley_John Henry","West Copake",NA,NA
+"121","Harvey_Roy",NA,"Spottswood_Richard K. (Richard Keith)","Armenia","Greene_Alva",NA,"Patterson_Joe","Nashville",NA,NA
+"122","Cohn_Lawrence_1932-",NA,"Barbecue Bob_1902-1931","New Jersey","Gillum_Francis",NA,"Turner_Hunt","Allen",NA,NA
+"123","Jones_Coley",NA,"Dupree_Champion Jack_-1992","Camden","Walter_Draper",NA,"Ashley_Bertha May","Ararat",NA,NA
+"124","Harris_Sam",NA,"Johnson_Lonnie","Arizona","Burckhart_Jacob",NA,"Goodson_Pete","Visalia",NA,NA
+"125","Blind Blake",NA,"Nelson_Red_1907-1970","Prescott","Sisson_Allen",NA,"Cohen_John_1932-2019","Swannanoa",NA,NA
+"126","Fuller_Blind Boy_1909-1941",NA,"Williams_Bert_1874-1922","Knoxville","McGee_Dennis",NA,"Watson_Varney","Hamilton",NA,NA
+"127","Davenport_Cow Cow_1894-1955",NA,"Burleson_Hattie","Hamilton","Frugé_Ernest",NA,"Kelly_Larry and Nancy Cole","Gorham",NA,NA
+"128","McTell_Blind Willie",NA,"Jordan_Charley_ca. 1890-1954","Lula","Propps_Louis H.",NA,"Clement_Bob","Hot Springs",NA,NA
+"129","Johnson_Bunk_1879-1949",NA,"Alexander_Texas_1900-1954","Tunica Resorts","Dilleshaw_John",NA,"Murphey_Michael C.","La Jolla",NA,NA
+"130","Cuffee_Ed_1902-1959",NA,"Moore_Alice",NA,"Acuff_Roy",NA,"Rogers_Gamble","Missouri",NA,NA
+"131","Bushell_Garvin_1902-1991",NA,"Smith_Pine Top_1904-1929",NA,"McMichen_Clayton_1900-1970",NA,"Smith_Betty","Bradleyville",NA,NA
+"132","Tarlton_Jimmie_1892-1979",NA,"Crudup_Arthur_1905-1974",NA,"O'Neal_Waldo",NA,"York_Charles","Cane Hill Township",NA,NA
+"133","Tanner_Gid",NA,"Piano Red_1911-1985",NA,"Sonnier_Lennis",NA,"Guillette_Wilfred","Walnut Shade",NA,NA
+"134","Johnson_Jess_musician",NA,"Hegamin_Lucille_1894-1970",NA,"Darbone_Luderin_1913-2008",NA,"Wheeler_Billy Edd","McMinnville",NA,NA
+"135","Davis_Art",NA,"Mayall_John",NA,"Autry_Gene_1907-1998",NA,"Emmy_Cousin_1903-1980","Reed",NA,NA
+"136","Boyd_Bill_1910-1977",NA,"Muddy Waters_1915-1983",NA,"Monroe_Charlie",NA,"Driftwood_Jimmie","Northumberland",NA,NA
+"137","Kirkes_Walter",NA,"Little Walter_1930-1968",NA,"Brown_Milton",NA,"Davenport_Bob","Shreveport",NA,NA
+"138","Poplin_China_1903-1979",NA,"Reed_Jimmy_1925-1976",NA,"Bolick_Bill",NA,"Briggs_Anne_1944-","Austin",NA,NA
+"139","Travis_Merle",NA,"Bogan_Ted_1910-1990",NA,"Montana_Patsy",NA,"Rodgers_Jimmy_Mrs.","Union Grove",NA,NA
+"140","Davis_Gary_1896-1972",NA,"Vinson_Walter_1901-1975",NA,"Choates_Harry_1922-1951",NA,"Lomax_Alan_1915-2002","Asheboro",NA,NA
+"141","Baker_Bill",NA,"Wheatstraw_Peetie_1902-1941",NA,"Daffan_Ted",NA,"Seeger_Barbara","Reese Mountain",NA,NA
+"142","Waller_Charlie",NA,"Arnold_Kokomo",NA,"Travis_Merle",NA,"Dylan_Bob_1941-","Israel",NA,NA
+"143","Waldron_Cliff",NA,"McCoy_Ethel",NA,"Wills_Bob_1905-1975",NA,"McCaslin_Mary","San Francisco",NA,NA
+"144","MacColl_Ewan",NA,"McCoy_George",NA,"Duncan_Tommy",NA,"Rooney_Jim_1938-","Quebec City",NA,NA
+"145","Seeger_Penny_1943-1993",NA,"Rosenthal_Gene",NA,"Gimble_Johnny",NA,"Greene_Richard_violinist","Charlottesville",NA,NA
+"146","Rea_David",NA,"Brown_Jimmie",NA,"Dickens_Hazel_1935-2011",NA,"Weissberg_Eric_1939-2020","Queens",NA,NA
+"147","Seeger_Pete_1919-2014",NA,"Firk_Backwards Sam",NA,"Gunning_Sarah Ogan_1910-1983",NA,"Rinzler_Ralph (liner notes)","Northeastern United States",NA,NA
+"148","Muldaur_Maria",NA,"White_Bukka",NA,"Reece_Florence_1900-1986",NA,"Vernon_Bill (liner notes)","Springfield",NA,NA
+"149","Cotten_Elizabeth",NA,"Jefferson_Blind Lemon_1897-1929",NA,"Brumfield_Deacon",NA,"Gimble_Johnny","Timbo",NA,NA
+"150","Riddle_Lesley",NA,"Blind Blake",NA,"Carlisle_Cliff_1904-1983",NA,"Kahn_Hank","Boyd's Cave (N.C.)",NA,NA
+"151","Holcomb_Roscoe",NA,"Eaglin_Snooks_1936-2009",NA,"Lunn_Robert",NA,"Perkins_Al_guitarist","Atlanta",NA,NA
+"152","Snow_Kilby_1905-1980",NA,"Bridges_Lucius",NA,"Forrester_Howdy_1922-1987",NA,"Bush_Sam_1952-","New Orleans",NA,NA
+"153","Schwarz_Tracy",NA,"Randolph_Percy",NA,"Williams_Hank_1923-1953",NA,"Stover_Don_1928-1996","Richmond",NA,NA
+"154","Fuller_Jesse",NA,"Johnson_Larry_1938-",NA,"Fox_Curly",NA,"Jackson_Tommy","San Antonio",NA,NA
+"155","El Din_Hamza",NA,"McTell_Blind Willie",NA,"Collins_Charlie",NA,"Chase_Richard_1904-1988","Hazard",NA,NA
+"156","Ringer_Jim",NA,"Weston_Arthur",NA,"Bush_Sam_1952-",NA,"Clayton_Paul_1931-1967","Asheville",NA,NA
+"157","Mitchum_Johnny",NA,"Roberson_George",NA,"Blake_Norman_1938-",NA,"Ritchie_Jean (liner notes)","Savannah",NA,NA
+"158","Davis_Eva",NA,"Brown_Henry",NA,"Green_Archie (liner notes)",NA,"Darlington_Sandy","Sumter (N.C.)",NA,NA
+"159","Bumgarner_Samantha_1880-1960",NA,"Cauthen_Andrew",NA,"Ashley_Clarence_1895-1967",NA,"Bikel_Theodore","Ragtime",NA,NA
+"160","Stanley_Roba_1910-1986",NA,"Johnson_Clarence",NA,"McClintock_Harry K. (Harry Kirby)_1882-1957.",NA,"Brand_Oscar (liner notes)","Cerro",NA,NA
+"161","Maxwell_Billie",NA,"Rachell_Yank",NA,"Reed_Blind Alfred",NA,"Felix_Julie","El Rancho",NA,NA
+"162","Moonshine Kate_1909-1992",NA,"Montgomery_Little Brother_1906-1985",NA,"Davis_Jimmie_1899-2000",NA,"Lanigan_Pat","Egypt",NA,NA
+"163","Montana_Patsy",NA,"Carroll_Jeanne",NA,"Robison_Carson",NA,"Makem_Tommy","Madison",NA,NA
+"164","Ledford_Lily May_1917-1985",NA,"Smith_Dan J._1911-1994",NA,"Dalhart_Vernon_1883-1948",NA,"Guthrie_Woody_1912-1967","Glover",NA,NA
+"165","Morris_Zeke_1916-1999",NA,"Fuller_Jesse",NA,"Grayson_G.B.",NA,"Wakefield_Frank","Woodstock",NA,NA
+"166","Price_Bill",NA,"Fuller_Blind Boy_1909-1941",NA,"Whitter_Henry_1892-1941",NA,"Daglish_Malcolm","Hawaii",NA,NA
+"167","Busby_Buzz",NA,"Johnson_Robert_1911-1938",NA,"Parker_Byron_1911-1948",NA,"Larsen_Grey","Bristol",NA,NA
+"168","Harrell_Bill",NA,"Blackwell_Scrapper_1903-1962",NA,"Jenkins_Snuffy_1908-1990",NA,"Parker_Charles_1919-1980","Charlotte",NA,NA
+"169","Grayson_Shannon",NA,"Long_Wesley",NA,"Sherrill_Pappy_1915-2001",NA,"Fariña_Richard","Rock Hill",NA,NA
+"170","Wright_Phebel_1916-2003",NA,"Justice_Dick_1906-1962",NA,"Spottswood_Richard K. (Richard Keith)",NA,"Fariña_Mimi","Morganton",NA,NA
+"171","Neaves_Glen",NA,"McGee_Sam_1894-1975",NA,"McCoy_Ethel",NA,"Carignan_Jean","Italy",NA,NA
+"172","Pack_Buster and the Lonesome Pine Boys",NA,"Hensley_Larry",NA,"Polak_Wladyslaw",NA,"McBride_Owen_1941-","Arizona",NA,NA
+"173","Parker_Curley",NA,"Copeland_Leonard",NA,"Ward_Fields_1911-1987",NA,"Ginandes_Shep","Moab",NA,NA
+"174","Lambert_Pee Wee",NA,"Harvey_Roy",NA,"Maddux_Pewee",NA,"Brand_Oscar","Nephi",NA,NA
+"175","Surratt_Cecil",NA,"Walker_Phillip_1937-2010",NA,"McCoy_George",NA,"Gooding_Cynthia","Atascadero",NA,NA
+"176","Cline_Curly Ray",NA,"Charles_Roosevelt_1919-",NA,"Cephas_John",NA,"Cooper_Clarence","Snowflake",NA,NA
+"177","Whitley_Keith",NA,"Williamson_Sonny Boy_1899-1965",NA,"Harter_George",NA,"Elliott_Jack_1931-","Salt Lake City",NA,NA
+"178","Taylor_Earl_1929-1984",NA,"Hutchison_Frank_1897-1945",NA,"Inman_John",NA,"Adams_Derroll","Brigham City",NA,NA
+"179","McCall_Jim",NA,"Cash_Johnny",NA,"Houston_Dave",NA,"West_Harry_1926-2014","Ogden",NA,NA
+"180","Berline_Byron",NA,"Pomeroy_Douglas",NA,"Red River Dave_1914-2002",NA,"West_Jeanie_1933-","Monroe",NA,NA
+"181","Lawson_Doyle",NA,"Arnold_Eddy_1918-2008",NA,"Moeller_Dee",NA,"Asch_Moses","Tucson",NA,NA
+"182","Crowe_J.D.",NA,"Frizzell_Lefty_1928-1975",NA,"Bonner_Juke Boy_1932-1978",NA,"Terry_Sonny","St. George",NA,NA
+"183","Rice_Larry_singer",NA,"Price_Ray_1926-2013",NA,"Earle_Steve",NA,"Morton_Craig_Taylor_Zachary_1784-1850","Hurricane",NA,NA
+"184","Parker_Bill",NA,"Snow_Hank",NA,"Cisneros_Carol",NA,"Armstrong_Frankie","Clearfield",NA,NA
+"185","Fraley_J. P.",NA,"Wells_Kitty",NA,"Thornton_T. Gozney",NA,"Kerr_Sandra","Champaign",NA,NA
+"186","Brock_Dan",NA,"Tubb_Ernest_1914-1984",NA,"Stein_Rick",NA,"Redpath_Jean","East St. Louis",NA,NA
+"187","Brock_Louise",NA,"Cline_Patsy_1932-1963",NA,"Damron_Allen Wayne",NA,"Benford_Mac","Galax",NA,NA
+"188","Parker_Mary Nell",NA,"Atkins_Chet",NA,"Van Zandt_Townes",NA,"Thompson_Eric_1946-","Silver Spring",NA,NA
+"189","Fraley_Annadeene",NA,"Presley_Elvis_1935-1977",NA,"Bridger_Bobby",NA,"Bradley_Sandy_1947-","Kahlotus",NA,NA
+"190","Lissman_Pete",NA,"Reeves_Jim",NA,"Fromholz_Steven",NA,"Russell_Linda","Columbia",NA,NA
+"191","Yarbrough_Rual",NA,"Robbins_Marty",NA,"Holland_Travis",NA,"Balfa_Dewey","Hickory",NA,NA
+"192","McAbee_Palmer.",NA,"Lynn_Loretta",NA,"Hester_Carolyn",NA,"Thibodeaux_Gladdy","Darlington",NA,NA
+"193","Green_Archie (liner notes)",NA,"Owens_Buck_1929-2006",NA,"Shaw_Robert_1908 August 9-1985",NA,"LeJeune_Louis","Morgan City",NA,NA
+"194","Walsh_Dock",NA,"Miller_Roger_1936-1992",NA,"Hearne_Bill",NA,"Doss_Willie","Memphis",NA,NA
+"195","McClintock_Harry K. (Harry Kirby)_1882-1957.",NA,"Haggard_Merle",NA,"Sanders_Don R._1930-",NA,"Gunning_Sarah Ogan_1910-1983","Clarksdale",NA,NA
+"196","Reed_Blind Alfred",NA,"Kristofferson_Kris",NA,"Hearne_Bonnie",NA,"Benfield_Kenneth","Searcy",NA,NA
+"197","Davis_Jimmie_1899-2000",NA,"Parton_Dolly",NA,"Threadgill_Kenneth",NA,"Benfield_Neriah","Boone",NA,NA
+"198","Robison_Carson",NA,"Falcon_Joe_1900-1965",NA,"Waldo_Terry.",NA,"Parker_Chet_1891-1975","Minneapolis",NA,NA
+"199","Dalhart_Vernon_1883-1948",NA,"Wilson_Mark",NA,"Hubbard_Ray Wylie",NA,"Hickok_Elgia","Accokeek",NA,NA
+"200","Grayson_G.B.",NA,"Pickard_Obed",NA,"Meyers_Augie",NA,"Thatcher_Bill","Catalonia",NA,NA
+"201","Whitter_Henry_1892-1941",NA,"Stamper_I.D.",NA,"Flatt_Lester",NA,"McDowell_Fred","New Zealand",NA,NA
+"202","Kahn_Ed_1938-2002",NA,"Judd_Mrs.",NA,"Houdini_Wilmoth_1895-1973",NA,"McMichen_Clayton_1900-1970","France",NA,NA
+"203","Ledford_Steve",NA,"Judd_Vernon",NA,"Coleman_Dutch",NA,"Williams_Robert Pete_1914-1980","Kerrville",NA,NA
+"204","Smith_Arthur_1898-1971",NA,"Steele_Pete_1891-1985",NA,"McGhee_John",NA,"Ennis_Seamus","Cosby",NA,NA
+"205","Puckett_Riley_1894-1946",NA,"Begley_Justis",NA,"McCain_Jerry_1930-2012",NA,"Jones_Bessie_1902-1984","Walton",NA,NA
+"206","Hicks_Bobby",NA,"Hughes_Lena",NA,"Zukowsky_Ewgen",NA,"Hurt_Mississippi John_1894-1966","Brant Lake",NA,NA
+"207","Cash_Johnny",NA,"McAbee_Palmer.",NA,"McCarn_Dave_1905-1964",NA,"Ohrlin_Glenn_1926-2015","Wisconsin",NA,NA
+"208","Harris_Emmylou",NA,"Breaux_Cleoma_d. 1940",NA,"Brown_Gabriel",NA,"Parsons_Phoeba_1908-2001","Keshena",NA,NA
+"209","Mandrell_Barbara",NA,"Hawkins_Ezra",NA,"Cage_Butch",NA,"Parsons_Roscoe_1943-","Central Unit",NA,NA
+"210","Jennings_Waylon",NA,"Puckett_Riley_1894-1946",NA,"Thomas_Willie",NA,"Paley_Tom","James River Correctional Center",NA,NA
+"211","Tillis_Mel",NA,"Strong_Luther",NA,"Lenoir_J. B._1926-1967",NA,"Washington_Jackie","Camden",NA,NA
+"212","Brand_Oscar",NA,"Greene_Alva",NA,"Tucker_Bessie",NA,"West_Hedy","Fayetteville",NA,NA
+"213","White_Clarence_1944-1973",NA,"Gillum_Francis",NA,"Roland_Walter",NA,"Gude. David_1940-","Grafton",NA,NA
+"214","Moore_Tiny",NA,"Walter_Draper",NA,"Growling Tiger (Calypso singer)_1915-1993",NA,"Seeger_Peggy_1935- (liner notes)","Taylor",NA,NA
+"215","Burns_Jethro",NA,"Burckhart_Jacob",NA,"Bumble Bee Slim",NA,"Berggren_Dan","Brownsville",NA,NA
+"216","Warren_Paul",NA,"Sisson_Allen",NA,"Hendley_Fisher_d. 1964",NA,"Grayson_G.B.","Delcambre",NA,NA
+"217","Cockerham_Fred_1905-1980",NA,"McGee_Dennis",NA,"Humeniuk_Pawlo.",NA,"Woodie_Ephraim_b. 1907","Trinidad and Tobago",NA,NA
+"218","Reed_Ola Belle_1916-2002",NA,"Frugé_Ernest",NA,"Johnson_Easy Papa",NA,"Moore_Byrd","Saint Paul",NA,NA
+"219","Gerrard_Alice_1934-",NA,"Propps_Louis H.",NA,"Sykes_Roosevelt",NA,"Carlisle_Cliff_1904-1983","Belle Glade",NA,NA
+"220","Melton_Raymond",NA,"Smith_Arthur_1898-1971",NA,"Ray_Aulton",NA,"Mainer_Wade_1907-2011","Cherry Lane",NA,NA
+"221","Lundy_Ted",NA,"Delmore_Alton",NA,"Wiejski_Grajek",NA,"Smith_Gid","St. Martinville",NA,NA
+"222","Ibbotson_Jimmy",NA,"Dilleshaw_John",NA,"Kallini_Jozef",NA,"McDaniel_Lewis","Fort Worth",NA,NA
+"223","McEuen_John_1945-",NA,"Boyd_Bill_1910-1977",NA,"Smith_Clara",NA,"Cox_Bill_1897-1968","Lindale",NA,NA
+"224","Clements_Vassar",NA,"Cohn_Lawrence_1932-",NA,"Strothers_Jimmie",NA,"Hobbs_Cliff","Opelousas",NA,NA
+"225","Carter_Maybelle_1909-1978",NA,"Jones_Coley",NA,"Duffey_John",NA,"Tarlton_Jimmie_1892-1979","Sweden",NA,NA
+"226","Blake_Norman_1938-",NA,"Harris_Sam",NA,"Walsh_Joseph",NA,"Darby_Tom_1890-ca. 1971","San Jose",NA,NA
+"227","Fadden_Jimmie",NA,"Davenport_Cow Cow_1894-1955",NA,"Dolan_Jimmy",NA,"Bolick_Bill","Evansville",NA,NA
+"228","Acuff_Roy",NA,"Johnson_Bunk_1879-1949",NA,"Trent_Carl",NA,"Bolick_Earl_Roosevelt_Franklin D. (Franklin Delano)_1882-1945","West Liberty",NA,NA
+"229","Huskey_Junior",NA,"Cuffee_Ed_1902-1959",NA,"Ellis_Wilbert_1914-1977",NA,"Phipps_Bonnie","Crossnore",NA,NA
+"230","Thompson_Les",NA,"Bushell_Garvin_1902-1991",NA,"Thompson_Rose",NA,"Maguire_Charlie","Smithville",NA,NA
+"231","Scruggs_Randy",NA,"Tarlton_Jimmie_1892-1979",NA,"Hovington_Frank",NA,"Balls_Ronnie","Banner",NA,NA
+"232","Hanna_Jeff",NA,"Tanner_Gid",NA,"Baxter_Jim_musician",NA,"Larner_Sam_1878-1965","Shafter",NA,NA
+"233","McEuen_William",NA,"Johnson_Jess_musician",NA,"Baxter_Andrew",NA,"Mainer_J. E. (Joseph E.)_1898-1971","Mena",NA,NA
+"234","Smith_Bertha",NA,"Davis_Art",NA,"Davenport_Cow Cow_1894-1955",NA,"Macon_Uncle Dave_1870-1952","Vancleave",NA,NA
+"235","Otsuka_Akira",NA,"Kirkes_Walter",NA,"Reinhart_Dick",NA,"Kline_Michael","Maryville",NA,NA
+"236","Inman_John",NA,"Poplin_China_1903-1979",NA,"O'Dell_Doye",NA,"Cohn_Lawrence_1932- (liner notes)","Deuchars",NA,NA
+"237","Houston_Dave",NA,"Travis_Merle",NA,"Dunford_Uncle Eck_1878-1953",NA,"Lester_Julius","Hillsville",NA,NA
+"238","Red River Dave_1914-2002",NA,"Scruggs_Earl",NA,"Magnusson_Otto",NA,"Stewart_Alek","Newberry",NA,NA
+"239","Moeller_Dee",NA,"Flatt_Lester",NA,"Baboyan_Reuben",NA,"Goldstein_Kenneth S._1927-1995","Crandon",NA,NA
+"240","Bonner_Juke Boy_1932-1978",NA,"Seeger_Pete_1919-2014",NA,"Perdicopoulos_D.",NA,"Coleman_T. Michael","Manchester",NA,NA
+"241","Clark_Guy",NA,"Sainte-Marie_Buffy",NA,NA,NA,"Poss_Barry","Cherry Lake",NA,NA
+"242","Earle_Steve",NA,"Feliciano_José",NA,NA,NA,"Robeson_Paul_1898-1976","Salem",NA,NA
+"243","Cisneros_Carol",NA,"Ochs_Phil",NA,NA,NA,"Roderick_Judy","Central Valley",NA,NA
+"244","Thornton_T. Gozney",NA,"El Din_Hamza",NA,NA,NA,"English_Logan","Antigo",NA,NA
+"245","Stein_Rick",NA,"Baez_Joan",NA,NA,NA,"Spence_Joseph_1910-1984","Salyersville",NA,NA
+"246","Damron_Allen Wayne",NA,"West_Hedy",NA,NA,NA,"Jones_Uncle George","Nellysford",NA,NA
+"247","Van Zandt_Townes",NA,"Paxton_Tom_1937-",NA,NA,NA,"Korson_George Gershon_1899-1967","Pearson",NA,NA
+"248","Bridger_Bobby",NA,"Koerner_Ray_and Glover (Musical group)",NA,NA,NA,"Barry_Michael F.","Wooton",NA,NA
+"249","Fromholz_Steven",NA,"Roderick_Judy",NA,NA,NA,"Morrison_David","St. Louis",NA,NA
+"250","Holland_Travis",NA,"Rinzler_Kate_1937-2010 (liner notes)",NA,NA,NA,"Downer_James T.","Traverse City",NA,NA
+"251","Hester_Carolyn",NA,"Dillingham_J.D.",NA,NA,NA,"Jenks_Orville J.","Mount Pleasant",NA,NA
+"252","Shaw_Robert_1908 August 9-1985",NA,"Grover_Carrie B.",NA,NA,NA,"Lawson_Richard","Sault Ste. Marie",NA,NA
+"253","Hearne_Bill",NA,"Ball_E.C. (Estil Cortez)_1913-1978",NA,NA,NA,"March_William","Munising Township",NA,NA
+"254","Sanders_Don R._1930-",NA,"Atwood_Kenneth",NA,NA,NA,"Glancy_Joe","Greenland",NA,NA
+"255","Hearne_Bonnie",NA,"Rodríguez_Arsenio.",NA,NA,NA,"Davis_George_1906-1992","Elk Park",NA,NA
+"256","Threadgill_Kenneth",NA,"Nye_Pearl R._1872-1950",NA,NA,NA,"Stanley_Jerrel","Greensboro",NA,NA
+"257","Waldo_Terry.",NA,"Guidry_Sabry",NA,NA,NA,"Sizemore_George Curly","Galena",NA,NA
+"258","Hubbard_Ray Wylie",NA,"Dunford_Uncle Eck_1878-1953",NA,NA,NA,"Turner_Wesley J.","Palo Alto",NA,NA
+"259","Meyers_Augie",NA,"Scruggs_Thelma",NA,NA,NA,"Underwood_Charles","Farmington",NA,NA
+"260","Paisley_Bob_guitarist",NA,"Beatrice",NA,NA,NA,"Johnson_Sam_1913-2001","Chandler",NA,NA
+"261","Jones_Ramona",NA,"Iren",NA,NA,NA,"Conway_Archie","Oakland",NA,NA
+"262","Hebert_Didier",NA,"Young_Ed_1910-1972",NA,NA,NA,"Green_Archie (liner notes)","Concord",NA,NA
+"263","Spottswood_Richard K. (Richard Keith) (liner notes)",NA,"Pitchford_Lonnie",NA,NA,NA,"Dorschug_Doug_1946-","Dillsboro",NA,NA
+"264","Platt_Moses",NA,"Gonzales_Covita",NA,NA,NA,"Grisman_David","Biltmore Estate",NA,NA
+"265","Johnson_Lonnie",NA,"Kingbird_James",NA,NA,NA,"Hogg_Smokey_1914-1960","Fletcher",NA,NA
+"266","Mendoza_Lydia",NA,"Kingbird_Albert",NA,NA,NA,"Spottswood_Richard K. (Richard Keith)","Darien",NA,NA
+"267","Jones_Jab",NA,"Kingbird_Vernon",NA,NA,NA,"Barbecue Bob_1902-1931","Rome",NA,NA
+"268","Rachell_Yank",NA,"González_Alicia María",NA,NA,NA,"Dupree_Champion Jack_-1992","Louisville",NA,NA
+"269","Estes_Sleepy John_1899-1977",NA,"Wilson_A. P._Mrs.",NA,NA,NA,"Johnson_Lonnie","Point Pleasant",NA,NA
+"270","Strothers_Jimmie",NA,"Clark_Angie",NA,NA,NA,"Nelson_Red_1907-1970","Senatobia",NA,NA
+"271","White_J.C.",NA,"Miller_Susie",NA,NA,NA,"Williams_Bert_1874-1922","Sledge",NA,NA
+"272","Doyle_Little Buddy",NA,"Hampton_Nell",NA,NA,NA,"Burleson_Hattie","Sardis",NA,NA
+"273","Shade_Will_1898-1966",NA,"Dixon_Samuel Clay",NA,NA,NA,"Jordan_Charley_ca. 1890-1954","Como",NA,NA
+"274","Segura_Dewey",NA,"Powell_Lester",NA,NA,NA,"Alexander_Texas_1900-1954","Ripton",NA,NA
+"275","Dunford_Uncle Eck_1878-1953",NA,"Ancelet_Barry Jean",NA,NA,NA,"Moore_Alice","Reddell",NA,NA
+"276","Arthur_Emry_1900-1966",NA,"Taylor_Larry_1942-",NA,NA,NA,"Smith_Pine Top_1904-1929","Point Coupee",NA,NA
+"277","Thenstead_Adolph",NA,"Mandel_Harvey",NA,NA,NA,"Crudup_Arthur_1905-1974","Jennings",NA,NA
+"278","Manning_Sally",NA,"Szymyczyk_Bill",NA,NA,NA,"Piano Red_1911-1985","Vienna",NA,NA
+"279","Ray_Lost John",NA,"Wolf_Peter_1946-",NA,NA,NA,"Hamilton_George_1937-2014","Delaware",NA,NA
+"280","Greer_Jim",NA,"Musselwhite_Charlie",NA,NA,NA,"Petric_Faith","Frederica",NA,NA
+"281","Martin_Lou",NA,"Page_Jimmy",NA,NA,NA,"Rosen_Roger_singer","Raleigh",NA,NA
+"282",NA,NA,"James_Elmore_1918-1963",NA,NA,NA,"Small_Fred","Booneville",NA,NA
+"283",NA,NA,"Lunn_Robert",NA,NA,NA,"Pelham_Ruth","Tohono O'odham Indian Reservation",NA,NA
+"284",NA,NA,"Riddle_Jimmy",NA,NA,NA,"McKenna_Joe","West Union",NA,NA
+"285",NA,NA,"Forrester_Howdy_1922-1987",NA,NA,NA,"Jones_Steve","Baltimore",NA,NA
+"286",NA,NA,"Arceneaux_Fernest",NA,NA,NA,"Murphy_Luci","San Diego",NA,NA
+"287",NA,NA,"Shaw_Robert_1908 August 9-1985",NA,NA,NA,"Naylor_Ray","Jackson",NA,NA
+"288",NA,NA,"Fahey_John_1939-2001",NA,NA,NA,"Marks_Laurie","Detroit",NA,NA
+"289",NA,NA,"Brewer_Jim",NA,NA,NA,"Kenin_Eliot","Calais",NA,NA
+"290",NA,NA,"Duke of Iron",NA,NA,NA,"Sordill_Willie","Buffalo",NA,NA
+"291",NA,NA,"Smith_Versey",NA,NA,NA,"Antipin_Andy","Chataignier",NA,NA
+"292",NA,NA,"Smith_William",NA,NA,NA,"Kahn_Si","San Xavier",NA,NA
+"293",NA,NA,"Polak_Wladyslaw",NA,NA,NA,"Bachus_Ned","Eunice",NA,NA
+"294",NA,NA,"Houdini_Wilmoth_1895-1973",NA,NA,NA,"Brown_Roy","Poland",NA,NA
+"295",NA,NA,"Syrjaniemi_Antti",NA,NA,NA,"Silverstein_Deborah","Podhale",NA,NA
+"296",NA,NA,"Ford_Oscar",NA,NA,NA,"Gorman-Jacobs_Judy","Zachary",NA,NA
+"297",NA,NA,"Salomma_Hiski",NA,NA,NA,"Paxton_Tom_1937-","Gadsden",NA,NA
+"298",NA,NA,"Jenkins_Hezekiah",NA,NA,NA,"Carter_Janette","Ukraine",NA,NA
+"299",NA,NA,"Acuff_Roy",NA,NA,NA,"Jones_Peter","Gastonia",NA,NA
+"300",NA,NA,"Edwards_Honeyboy",NA,NA,NA,"Luther_Frank_1905-1980","Eatonville",NA,NA
+"301",NA,NA,"Blackwell_Willie (61)",NA,NA,NA,"Hinton_Sam_1917-2009","Monticello",NA,NA
+"302",NA,NA,"Lambert_L.W.",NA,NA,NA,"Martin_Marcus_musician","Birmingham",NA,NA
+"303",NA,NA,"Davis_Jimmie_1899-2000",NA,NA,NA,"Dinwiddie_Wayne","Montana",NA,NA
+"304",NA,NA,"Sprague_Carl T._1895-1979",NA,NA,NA,"Lunsford_Bascom Lamar_1882-1973","Butte",NA,NA
+"305",NA,NA,"Hall Brothers (Atlanta_Ga.)",NA,NA,NA,"Steele_Pete_1891-1985","Hollywood",NA,NA
+"306",NA,NA,"Patterson_Red",NA,NA,NA,"Grover_Carrie B.","Prince Edward Island",NA,NA
+"307",NA,NA,"Kincaid_Bradley",NA,NA,NA,"Long_Maud","South Pekin",NA,NA
+"308",NA,NA,"Harrell_Kelly_1889-1942",NA,NA,NA,"Denoon_Jim","Charleston",NA,NA
+"309",NA,NA,"Broonzy_Big Bill_1893-1958",NA,NA,NA,"Pike_Russ","Hyattsville",NA,NA
+"310",NA,NA,"Gillum_Jazz_1904-1966",NA,NA,NA,"Campbell_Booth","Fresno",NA,NA
+"311",NA,NA,"Cameron_John",NA,NA,NA,"Crisp_Rufus","Greece",NA,NA
+"312",NA,NA,"Poole_Charlie_Jr",NA,NA,NA,"Ingenthron_Charles","Athens",NA,NA
+"313",NA,NA,"Gaines_Newton W.",NA,NA,NA,"Crisp_Palmer","Calhoun",NA,NA
+"314",NA,NA,"Derry_E.J.",NA,NA,NA,"Leslie_Sam","Armenia",NA,NA
+"315",NA,NA,"Hale_Travis",NA,NA,NA,"Devall_Dick","Prescott",NA,NA
+"316",NA,NA,"Jones_Buddy_1906-1956",NA,NA,NA,"Killen_Louis","Mahanoy City",NA,NA
+"317",NA,NA,"Quinn_Snoozer_1906-1947",NA,NA,NA,"Mainer_Julia","Port of Spain",NA,NA
+"318",NA,NA,"Devall_Dick",NA,NA,NA,"Collins_Judy_1939-","Knoxville",NA,NA
+"319",NA,NA,"McClintock_Harry K. (Harry Kirby)_1882-1957.",NA,NA,NA,"Van Ronk_Dave","Platteville",NA,NA
+"320",NA,NA,"Grant_Claud",NA,NA,NA,"Kincaid_Bradley","Beloit",NA,NA
+"321",NA,NA,"Grant_Jack",NA,NA,NA,"Puckett_Riley_1894-1946","Harvard",NA,NA
+"322",NA,NA,"Shelton_B.F.",NA,NA,NA,"Pegram_George_1911-1974","Berlin",NA,NA
+"323",NA,NA,"Washboard Sam_1910-1966",NA,NA,NA,"Siegel_Peter K.","Rice Lake",NA,NA
+"324",NA,NA,"Souchon_Edmond",NA,NA,NA,"Grossman_Stefan","Rhinelander",NA,NA
+"325",NA,NA,"Lucas_Lazy Bill_1918-1982",NA,NA,NA,"Katz_Steve","Black River Falls",NA,NA
+"326",NA,NA,"Dodds_Johnny_1892-1940",NA,NA,NA,"Rifkin_Joshua","Staten Island",NA,NA
+"327",NA,NA,"Dutrey_Honore_1894-1935",NA,NA,NA,"Gurland_Bob","Woodman",NA,NA
+"328",NA,NA,"Johnson_Bill",NA,NA,NA,"Weisz_Fred","Mill Valley",NA,NA
+"329",NA,NA,"Armstrong_Lil Hardin_1898-1971",NA,NA,NA,"Lauffer_Danny","Beaver Island",NA,NA
+"330",NA,NA,"Alexander_Charlie_ca. 1904-ca. 1970",NA,NA,NA,"Jacobson_Pete","Turlock",NA,NA
+"331",NA,NA,"McDonald_Earl",NA,NA,NA,"Kweskin_Jim","Quechee",NA,NA
+"332",NA,NA,"Domino_Fats_1928-2017",NA,NA,NA,"Gellert_Lawrence_1898-1979","Meridian",NA,NA
+"333",NA,NA,"Perls_Nick_1942-1987",NA,NA,NA,"Long_Wesley","Iuka",NA,NA
+"334",NA,NA,"McMullen_Fred",NA,NA,NA,"Justice_Dick_1906-1962","Crowley",NA,NA
+"335",NA,NA,"Carter_George",NA,NA,NA,"Hensley_Larry","Cavendish",NA,NA
+"336",NA,NA,"Howell_Peg Leg_1888-1966",NA,NA,NA,"Copeland_Leonard","Magoffin County",NA,NA
+"337",NA,NA,"Baker_Willie",NA,NA,NA,"Harvey_Roy","Fleming County",NA,NA
+"338",NA,NA,"Lincoln_Charley",NA,NA,NA,"Harrell_Kelly_1889-1942","Pottsville",NA,NA
+"339",NA,NA,"Weaver_Sylvester",NA,NA,NA,"Patterson_Red","Wilkes-Barre",NA,NA
+"340",NA,NA,"Bumble Bee Slim",NA,NA,NA,"Reed_Blind Alfred","Buck Run",NA,NA
+"341",NA,NA,"Sahm_Doug",NA,NA,NA,"Whitter_Henry_1892-1941","Tamaqua",NA,NA
+"342",NA,NA,"Nelson_Paul",NA,NA,NA,"Bailey_Green","Centralia",NA,NA
+"343",NA,NA,"Koerner_John",NA,NA,NA,"Foster_John","Shenandoah",NA,NA
+"344",NA,NA,"Glover_Tony",NA,NA,NA,"Rutherford_Leonard","Livingston",NA,NA
+"345",NA,NA,"Goldstein_Kenneth S._1927-1995",NA,NA,NA,"Shelton_B.F.","Sandy Point",NA,NA
+"346",NA,NA,"Asch_Moses",NA,NA,NA,"Poole_Charlie_1892-1931","Gould",NA,NA
+"347",NA,NA,"Houston_Cisco",NA,NA,NA,"Arthur_Emry_1900-1966","Rugby",NA,NA
+"348",NA,NA,"Guthrie_Woody_1912-1967",NA,NA,NA,"Jenkins_Frank_1888-1945","Gulfport",NA,NA
+"349",NA,NA,"Lieberman_Ernie_1930-",NA,NA,NA,"Baker_J. W.","Guntown",NA,NA
+"350",NA,NA,"Hawes_Bess Lomax_1921-2009",NA,NA,NA,"Baker_J. W. Mrs.","Winchester",NA,NA
+"351",NA,NA,"Hawes_Butch_1919-1971",NA,NA,NA,"Burnett_Dick","Marion",NA,NA
+"352",NA,NA,"Carey_Bob",NA,NA,NA,"Reed_Orville","Clay County",NA,NA
+"353",NA,NA,"Darling_Erik",NA,NA,NA,"Smith_Odell","Mississippi State Penitentiary",NA,NA
+"354",NA,NA,"Sprung_Roger",NA,NA,NA,"Smith_Walter","Clemens Unit",NA,NA
+"355",NA,NA,"McGhee_Brownie_1915-1996",NA,NA,NA,"Hammond_John","Brazoria County",NA,NA
+"356",NA,NA,"Hammond_John _1942-",NA,NA,NA,"Stigall_Alfred","Darrington Unit",NA,NA
+"357",NA,NA,"Van Ronk_Dave",NA,NA,NA,"Rorer_Posey","State Penitentiary",NA,NA
+"358",NA,NA,"Inman_John",NA,NA,NA,"Ungar_Jay","Texas Prison System Central State Farm Main Building",NA,NA
+"359",NA,NA,"Houston_Dave",NA,NA,NA,"Hardy_Lyn","Wiergate",NA,NA
+"360",NA,NA,"Red River Dave_1914-2002",NA,NA,NA,"Coltman_Bob","Greenville",NA,NA
+"361",NA,NA,"Moeller_Dee",NA,NA,NA,"Vanaver_Bill","Edwards",NA,NA
+"362",NA,NA,"Bonner_Juke Boy_1932-1978",NA,NA,NA,"Drapkin_Livia","Burkeville",NA,NA
+"363",NA,NA,"Clark_Guy",NA,NA,NA,"Ringer_Jim","Huntsville",NA,NA
+"364",NA,NA,"Earle_Steve",NA,NA,NA,"Yarbrough_Glenn_1930-2016","Nassau",NA,NA
+"365",NA,NA,"Cisneros_Carol",NA,NA,NA,"Mitchell_Howie_1932-","Adel",NA,NA
+"366",NA,NA,"Thornton_T. Gozney",NA,NA,NA,"Holt_Will","Magee",NA,NA
+"367",NA,NA,"Stein_Rick",NA,NA,NA,"Gill_Geula","Fancy Gap",NA,NA
+"368",NA,NA,"Damron_Allen Wayne",NA,NA,NA,"Waring_Steve","Lubbock",NA,NA
+"369",NA,NA,"Van Zandt_Townes",NA,NA,NA,"Groce_Larry","Brandon",NA,NA
+"370",NA,NA,"Bridger_Bobby",NA,NA,NA,"Hall_Kenny_(Musician)","Lula",NA,NA
+"371",NA,NA,"Fromholz_Steven",NA,NA,NA,"Leventhal_Harold","Belvedere",NA,NA
+"372",NA,NA,"Holland_Travis",NA,NA,NA,"Guthrie_Arlo","Wise",NA,NA
+"373",NA,NA,"Hester_Carolyn",NA,NA,NA,"Maddox_Rose","Clinton",NA,NA
+"374",NA,NA,"Hearne_Bill",NA,NA,NA,"Axton_Hoyt","Springfield (Mont.)",NA,NA
+"375",NA,NA,"Sanders_Don R._1930-",NA,NA,NA,"Murlin_Bob","Heber Springs",NA,NA
+"376",NA,NA,"Hearne_Bonnie",NA,NA,NA,"Near_Holly","San Pedro",NA,NA
+"377",NA,NA,"Threadgill_Kenneth",NA,NA,NA,"Gilbert_Ronnie","Idaho",NA,NA
+"378",NA,NA,"Waldo_Terry.",NA,NA,NA,"Baez_Joan_Guthrie_Woody_1912-1967","Berea",NA,NA
+"379",NA,NA,"Hubbard_Ray Wylie",NA,NA,NA,"Roberts_Robin","Alligator",NA,NA
+"380",NA,NA,"Meyers_Augie",NA,NA,NA,"Hays_Lee_1914-1981",NA,NA,NA
+"381",NA,NA,"Coleman_Dutch",NA,NA,NA,"Carlin_Bob",NA,NA,NA
+"382",NA,NA,"McGhee_John",NA,NA,NA,"Schwarz_Tracy",NA,NA,NA
+"383",NA,NA,"Stoneman_Ernest V.",NA,NA,NA,"Rosenbaum_Art",NA,NA,NA
+"384",NA,NA,"McCain_Jerry_1930-2012",NA,NA,NA,"Jabbour_Alan",NA,NA,NA
+"385",NA,NA,"Zukowsky_Ewgen",NA,NA,NA,"Thompson_Tommy_1937-2003",NA,NA,NA
+"386",NA,NA,"McCarn_Dave_1905-1964",NA,NA,NA,"Martin_Reed_(Banjoist)",NA,NA,NA
+"387",NA,NA,"Brown_Gabriel",NA,NA,NA,"Gerrard_Alice_1934-",NA,NA,NA
+"388",NA,NA,"Cage_Butch",NA,NA,NA,"Cahan_Andy",NA,NA,NA
+"389",NA,NA,"Thomas_Willie",NA,NA,NA,"Sutphin_Kirk",NA,NA,NA
+"390",NA,NA,"Lenoir_J. B._1926-1967",NA,NA,NA,"Holt_David",NA,NA,NA
+"391",NA,NA,"Tucker_Bessie",NA,NA,NA,"Leftwich_Brad",NA,NA,NA
+"392",NA,NA,"Roland_Walter",NA,NA,NA,"Higginbotham_Linda",NA,NA,NA
+"393",NA,NA,"Growling Tiger (Calypso singer)_1915-1993",NA,NA,NA,"Flippen_Benton",NA,NA,NA
+"394",NA,NA,"Hendley_Fisher_d. 1964",NA,NA,NA,"Brown_Paul_1952-",NA,NA,NA
+"395",NA,NA,"Humeniuk_Pawlo.",NA,NA,NA,"MacBride_Larry",NA,NA,NA
+"396",NA,NA,"Johnson_Easy Papa",NA,NA,NA,"Shimberg_Joe and Kathy",NA,NA,NA
+"397",NA,NA,"Sykes_Roosevelt",NA,NA,NA,"Gellert_Dan",NA,NA,NA
+"398",NA,NA,"Ray_Aulton",NA,NA,NA,"Ornstein_Lisa",NA,NA,NA
+"399",NA,NA,"Wiejski_Grajek",NA,NA,NA,"Woodring_Woody",NA,NA,NA
+"400",NA,NA,"Kallini_Jozef",NA,NA,NA,"Stefanini_Rafe",NA,NA,NA
+"401",NA,NA,"Smith_Clara",NA,NA,NA,"Honig_Peter",NA,NA,NA
+"402",NA,NA,"Strothers_Jimmie",NA,NA,NA,"Read_Sue",NA,NA,NA
+"403",NA,NA,"Duffey_John",NA,NA,NA,"Hyman_Judy",NA,NA,NA
+"404",NA,NA,"Walsh_Joseph",NA,NA,NA,"Stearns_Ritchie",NA,NA,NA
+"405",NA,NA,"Dolan_Jimmy",NA,NA,NA,"Niles_John Jacob_1892-1980",NA,NA,NA
+"406",NA,NA,"Trent_Carl",NA,NA,NA,"Seeger_Ruth Crawford_1901-1953",NA,NA,NA
+"407",NA,NA,"Ellis_Wilbert_1914-1977",NA,NA,NA,"Van Arsdale_Sterl_1929-",NA,NA,NA
+"408",NA,NA,"Thompson_Rose",NA,NA,NA,"Paton_Sandy",NA,NA,NA
+"409",NA,NA,"Hovington_Frank",NA,NA,NA,"Lund_Lewis",NA,NA,NA
+"410",NA,NA,"Baxter_Jim_musician",NA,NA,NA,"Mandel_Ben",NA,NA,NA
+"411",NA,NA,"Baxter_Andrew",NA,NA,NA,"Huntington_Gale",NA,NA,NA
+"412",NA,NA,"Reinhart_Dick",NA,NA,NA,"Gilbert_Kay_musician",NA,NA,NA
+"413",NA,NA,"O'Dell_Doye",NA,NA,NA,"Tolman_Newton F.",NA,NA,NA
+"414",NA,NA,"Ward_Fields_1911-1987",NA,NA,NA,"Cleveland_Sara_1905-1987",NA,NA,NA
+"415",NA,NA,"Magnusson_Otto",NA,NA,NA,"Older_Lawrence",NA,NA,NA
+"416",NA,NA,"Baboyan_Reuben",NA,NA,NA,"Austin_Morris_Mrs.",NA,NA,NA
+"417",NA,NA,"Perdicopoulos_D.",NA,NA,NA,"Tolman_Harvey_1938-",NA,NA,NA
+"418",NA,NA,"Jackson_Papa Charlie_ca. 1885-1938",NA,NA,NA,"Tolman_Rose",NA,NA,NA
+"419",NA,NA,"Macon_Uncle Dave_1870-1952",NA,NA,NA,"Van Arsdale_Paul.",NA,NA,NA
+"420",NA,NA,"Byrd_John_1908-",NA,NA,NA,"Van Arsdale_Phil",NA,NA,NA
+"421",NA,NA,"Ardoin_Amadé",NA,NA,NA,"Brown_James",NA,NA,NA
+"422",NA,NA,"Manning_Leola",NA,NA,NA,"Kirby_Edward",NA,NA,NA
+"423",NA,NA,"Maya_Jesus",NA,NA,NA,"Campbell_Maurice",NA,NA,NA
+"424",NA,NA,"Cantú_Timoteo",NA,NA,NA,"Moody_Mack",NA,NA,NA
+"425",NA,NA,"Silent Grove Baptist Church (Clarksdale_Miss.)",NA,NA,NA,"Shaw_Rosalie",NA,NA,NA
+"426",NA,NA,"Church of God in Christ (Lula_Ms.)",NA,NA,NA,"Mulvihill_Brendan_1954-",NA,NA,NA
+"427",NA,NA,"Brown_William",NA,NA,NA,"Rogers_Grant_1907-1979",NA,NA,NA
+"428",NA,NA,"Miller_John",NA,NA,NA,"Taylor_Kevin",NA,NA,NA
+"429",NA,NA,NA,NA,NA,NA,"Logue_Seamus",NA,NA,NA
+"430",NA,NA,NA,NA,NA,NA,"Robinson_Leighton",NA,NA,NA
+"431",NA,NA,NA,NA,NA,NA,"Wolfe_Charles K.",NA,NA,NA
+"432",NA,NA,NA,NA,NA,NA,"Estes_Red Buck",NA,NA,NA
+"433",NA,NA,NA,NA,NA,NA,"Riddle_Jimmy",NA,NA,NA
+"434",NA,NA,NA,NA,NA,NA,"Clear_Lindy",NA,NA,NA
+"435",NA,NA,NA,NA,NA,NA,"Rice_Ben",NA,NA,NA
+"436",NA,NA,NA,NA,NA,NA,"Everidge_Charlie_1894-1969",NA,NA,NA
+"437",NA,NA,NA,NA,NA,NA,"Morris_Neil_folk singer",NA,NA,NA
+"438",NA,NA,NA,NA,NA,NA,"Denoon_Ray",NA,NA,NA
+"439",NA,NA,NA,NA,NA,NA,"Marlor_I.N.",NA,NA,NA
+"440",NA,NA,NA,NA,NA,NA,"Hamilton_Goldie",NA,NA,NA
+"441",NA,NA,NA,NA,NA,NA,"Sutterfield_Barry",NA,NA,NA
+"442",NA,NA,NA,NA,NA,NA,"Barr_Alex_1910-1976",NA,NA,NA
+"443",NA,NA,NA,NA,NA,NA,"Brodeur_Arthur Gilchrist_1888-",NA,NA,NA
+"444",NA,NA,NA,NA,NA,NA,"Caldwell_Lola",NA,NA,NA
+"445",NA,NA,NA,NA,NA,NA,"Caldwell_Walter",NA,NA,NA
+"446",NA,NA,NA,NA,NA,NA,"Delmore_Alton",NA,NA,NA
+"447",NA,NA,NA,NA,NA,NA,"Delmore_Rabon_1916-1952",NA,NA,NA
+"448",NA,NA,NA,NA,NA,NA,"Ritchie_Isom",NA,NA,NA
+"449",NA,NA,NA,NA,NA,NA,"Falcon_Joe_1900-1965",NA,NA,NA
+"450",NA,NA,NA,NA,NA,NA,"Wilson_Mark",NA,NA,NA
+"451",NA,NA,NA,NA,NA,NA,"Pickard_Obed",NA,NA,NA
+"452",NA,NA,NA,NA,NA,NA,"Stamper_I.D.",NA,NA,NA
+"453",NA,NA,NA,NA,NA,NA,"Judd_Mrs.",NA,NA,NA
+"454",NA,NA,NA,NA,NA,NA,"Judd_Vernon",NA,NA,NA
+"455",NA,NA,NA,NA,NA,NA,"Begley_Justis",NA,NA,NA
+"456",NA,NA,NA,NA,NA,NA,"Hughes_Lena",NA,NA,NA
+"457",NA,NA,NA,NA,NA,NA,"McAbee_Palmer.",NA,NA,NA
+"458",NA,NA,NA,NA,NA,NA,"Breaux_Cleoma_d. 1940",NA,NA,NA
+"459",NA,NA,NA,NA,NA,NA,"Hawkins_Ezra",NA,NA,NA
+"460",NA,NA,NA,NA,NA,NA,"Strong_Luther",NA,NA,NA
+"461",NA,NA,NA,NA,NA,NA,"Greene_Alva",NA,NA,NA
+"462",NA,NA,NA,NA,NA,NA,"Gillum_Francis",NA,NA,NA
+"463",NA,NA,NA,NA,NA,NA,"Walter_Draper",NA,NA,NA
+"464",NA,NA,NA,NA,NA,NA,"Burckhart_Jacob",NA,NA,NA
+"465",NA,NA,NA,NA,NA,NA,"Sisson_Allen",NA,NA,NA
+"466",NA,NA,NA,NA,NA,NA,"McGee_Dennis",NA,NA,NA
+"467",NA,NA,NA,NA,NA,NA,"Frugé_Ernest",NA,NA,NA
+"468",NA,NA,NA,NA,NA,NA,"Propps_Louis H.",NA,NA,NA
+"469",NA,NA,NA,NA,NA,NA,"Dilleshaw_John",NA,NA,NA
+"470",NA,NA,NA,NA,NA,NA,"Boyd_Bill_1910-1977",NA,NA,NA
+"471",NA,NA,NA,NA,NA,NA,"Cohn_Lawrence_1932-",NA,NA,NA
+"472",NA,NA,NA,NA,NA,NA,"Jones_Coley",NA,NA,NA
+"473",NA,NA,NA,NA,NA,NA,"Harris_Sam",NA,NA,NA
+"474",NA,NA,NA,NA,NA,NA,"Blind Blake",NA,NA,NA
+"475",NA,NA,NA,NA,NA,NA,"Fuller_Blind Boy_1909-1941",NA,NA,NA
+"476",NA,NA,NA,NA,NA,NA,"Davenport_Cow Cow_1894-1955",NA,NA,NA
+"477",NA,NA,NA,NA,NA,NA,"McTell_Blind Willie",NA,NA,NA
+"478",NA,NA,NA,NA,NA,NA,"Johnson_Bunk_1879-1949",NA,NA,NA
+"479",NA,NA,NA,NA,NA,NA,"Cuffee_Ed_1902-1959",NA,NA,NA
+"480",NA,NA,NA,NA,NA,NA,"Bushell_Garvin_1902-1991",NA,NA,NA
+"481",NA,NA,NA,NA,NA,NA,"Tanner_Gid",NA,NA,NA
+"482",NA,NA,NA,NA,NA,NA,"Johnson_Jess_musician",NA,NA,NA
+"483",NA,NA,NA,NA,NA,NA,"Davis_Art",NA,NA,NA
+"484",NA,NA,NA,NA,NA,NA,"Kirkes_Walter",NA,NA,NA
+"485",NA,NA,NA,NA,NA,NA,"Poplin_China_1903-1979",NA,NA,NA
+"486",NA,NA,NA,NA,NA,NA,"Travis_Merle",NA,NA,NA
+"487",NA,NA,NA,NA,NA,NA,"Scruggs_Earl",NA,NA,NA
+"488",NA,NA,NA,NA,NA,NA,"Davis_Gary_1896-1972",NA,NA,NA
+"489",NA,NA,NA,NA,NA,NA,"Flatt_Lester",NA,NA,NA
+"490",NA,NA,NA,NA,NA,NA,"Rea_David",NA,NA,NA
+"491",NA,NA,NA,NA,NA,NA,"Muldaur_Maria",NA,NA,NA
+"492",NA,NA,NA,NA,NA,NA,"Riddle_Lesley",NA,NA,NA
+"493",NA,NA,NA,NA,NA,NA,"Holcomb_Roscoe",NA,NA,NA
+"494",NA,NA,NA,NA,NA,NA,"Snow_Kilby_1905-1980",NA,NA,NA
+"495",NA,NA,NA,NA,NA,NA,"Logan_Tex",NA,NA,NA
+"496",NA,NA,NA,NA,NA,NA,"Kennedy_John F. (John Fitzgerald)_1917-1963",NA,NA,NA
+"497",NA,NA,NA,NA,NA,NA,"Ochs_Phil",NA,NA,NA
+"498",NA,NA,NA,NA,NA,NA,"Sorrels_Rosalie",NA,NA,NA
+"499",NA,NA,NA,NA,NA,NA,"Phillips_Utah",NA,NA,NA
+"500",NA,NA,NA,NA,NA,NA,"Odetta_1930-2008",NA,NA,NA
+"501",NA,NA,NA,NA,NA,NA,"Reece_Florence_1900-1986",NA,NA,NA
+"502",NA,NA,NA,NA,NA,NA,"Estes_Sleepy John_1899-1977",NA,NA,NA
+"503",NA,NA,NA,NA,NA,NA,"Rachell_Yank",NA,NA,NA
+"504",NA,NA,NA,NA,NA,NA,"Sainte-Marie_Buffy",NA,NA,NA
+"505",NA,NA,NA,NA,NA,NA,"Feliciano_José",NA,NA,NA
+"506",NA,NA,NA,NA,NA,NA,"Fuller_Jesse",NA,NA,NA
+"507",NA,NA,NA,NA,NA,NA,"El Din_Hamza",NA,NA,NA
+"508",NA,NA,NA,NA,NA,NA,"Koerner_Ray_and Glover (Musical group)",NA,NA,NA
+"509",NA,NA,NA,NA,NA,NA,"Larisch_Kathy",NA,NA,NA
+"510",NA,NA,NA,NA,NA,NA,"Clayton_Paul_1931-1967 (liner notes)",NA,NA,NA
+"511",NA,NA,NA,NA,NA,NA,"Rinzler_Kate_1937-2010 (liner notes)",NA,NA,NA
+"512",NA,NA,NA,NA,NA,NA,"Dillingham_J.D.",NA,NA,NA
+"513",NA,NA,NA,NA,NA,NA,"Ball_E.C. (Estil Cortez)_1913-1978",NA,NA,NA
+"514",NA,NA,NA,NA,NA,NA,"Atwood_Kenneth",NA,NA,NA
+"515",NA,NA,NA,NA,NA,NA,"Rodríguez_Arsenio.",NA,NA,NA
+"516",NA,NA,NA,NA,NA,NA,"Nye_Pearl R._1872-1950",NA,NA,NA
+"517",NA,NA,NA,NA,NA,NA,"Guidry_Sabry",NA,NA,NA
+"518",NA,NA,NA,NA,NA,NA,"Dunford_Uncle Eck_1878-1953",NA,NA,NA
+"519",NA,NA,NA,NA,NA,NA,"Scruggs_Thelma",NA,NA,NA
+"520",NA,NA,NA,NA,NA,NA,"Beatrice",NA,NA,NA
+"521",NA,NA,NA,NA,NA,NA,"Iren",NA,NA,NA
+"522",NA,NA,NA,NA,NA,NA,"Young_Ed_1910-1972",NA,NA,NA
+"523",NA,NA,NA,NA,NA,NA,"Pitchford_Lonnie",NA,NA,NA
+"524",NA,NA,NA,NA,NA,NA,"Gonzales_Covita",NA,NA,NA
+"525",NA,NA,NA,NA,NA,NA,"Kingbird_James",NA,NA,NA
+"526",NA,NA,NA,NA,NA,NA,"Kingbird_Albert",NA,NA,NA
+"527",NA,NA,NA,NA,NA,NA,"Kingbird_Vernon",NA,NA,NA
+"528",NA,NA,NA,NA,NA,NA,"González_Alicia María",NA,NA,NA
+"529",NA,NA,NA,NA,NA,NA,"Wilson_A. P._Mrs.",NA,NA,NA
+"530",NA,NA,NA,NA,NA,NA,"Clark_Angie",NA,NA,NA
+"531",NA,NA,NA,NA,NA,NA,"Miller_Susie",NA,NA,NA
+"532",NA,NA,NA,NA,NA,NA,"Hampton_Nell",NA,NA,NA
+"533",NA,NA,NA,NA,NA,NA,"Dixon_Samuel Clay",NA,NA,NA
+"534",NA,NA,NA,NA,NA,NA,"Powell_Lester",NA,NA,NA
+"535",NA,NA,NA,NA,NA,NA,"Hall_Vera_1906-1964",NA,NA,NA
+"536",NA,NA,NA,NA,NA,NA,"Ancelet_Barry Jean",NA,NA,NA
+"537",NA,NA,NA,NA,NA,NA,"Shelton_Robert_1926-2010",NA,NA,NA
+"538",NA,NA,NA,NA,NA,NA,"Cottrell_Jenes",NA,NA,NA
+"539",NA,NA,NA,NA,NA,NA,"Dixon_Dorsey_1897-1968",NA,NA,NA
+"540",NA,NA,NA,NA,NA,NA,"Boggs_Dock_1898-1971",NA,NA,NA
+"541",NA,NA,NA,NA,NA,NA,"Hartford_John",NA,NA,NA
+"542",NA,NA,NA,NA,NA,NA,"Porter_Burt",NA,NA,NA
+"543",NA,NA,NA,NA,NA,NA,"Melanie_1947-",NA,NA,NA
+"544",NA,NA,NA,NA,NA,NA,"Traum_Happy",NA,NA,NA
+"545",NA,NA,NA,NA,NA,NA,"Alger_Pat",NA,NA,NA
+"546",NA,NA,NA,NA,NA,NA,"Traum_Artie",NA,NA,NA
+"547",NA,NA,NA,NA,NA,NA,"Salley_Roy",NA,NA,NA
+"548",NA,NA,NA,NA,NA,NA,"Tyler_Clayton_1909-1986",NA,NA,NA
+"549",NA,NA,NA,NA,NA,NA,"Parker_Bill",NA,NA,NA
+"550",NA,NA,NA,NA,NA,NA,"Fraley_J. P.",NA,NA,NA
+"551",NA,NA,NA,NA,NA,NA,"Brock_Dan",NA,NA,NA
+"552",NA,NA,NA,NA,NA,NA,"Brock_Louise",NA,NA,NA
+"553",NA,NA,NA,NA,NA,NA,"Parker_Mary Nell",NA,NA,NA
+"554",NA,NA,NA,NA,NA,NA,"Fraley_Annadeene",NA,NA,NA
+"555",NA,NA,NA,NA,NA,NA,"Walsh_Dock",NA,NA,NA
+"556",NA,NA,NA,NA,NA,NA,"McClintock_Harry K. (Harry Kirby)_1882-1957.",NA,NA,NA
+"557",NA,NA,NA,NA,NA,NA,"Davis_Jimmie_1899-2000",NA,NA,NA
+"558",NA,NA,NA,NA,NA,NA,"Robison_Carson",NA,NA,NA
+"559",NA,NA,NA,NA,NA,NA,"Dalhart_Vernon_1883-1948",NA,NA,NA
+"560",NA,NA,NA,NA,NA,NA,"Parker_Byron_1911-1948",NA,NA,NA
+"561",NA,NA,NA,NA,NA,NA,"Jenkins_Snuffy_1908-1990",NA,NA,NA
+"562",NA,NA,NA,NA,NA,NA,"Sherrill_Pappy_1915-2001",NA,NA,NA
+"563",NA,NA,NA,NA,NA,NA,"Kahn_Ed_1938-2002",NA,NA,NA
+"564",NA,NA,NA,NA,NA,NA,"Ledford_Steve",NA,NA,NA
+"565",NA,NA,NA,NA,NA,NA,"Morris_Zeke_1916-1999",NA,NA,NA
+"566",NA,NA,NA,NA,NA,NA,"Patterson_Ray",NA,NA,NA
+"567",NA,NA,NA,NA,NA,NA,"Patterson_Ina",NA,NA,NA
+"568",NA,NA,NA,NA,NA,NA,"McLean_Will_1919-1990",NA,NA,NA
+"569",NA,NA,NA,NA,NA,NA,"Langstaff_John M.",NA,NA,NA
+"570",NA,NA,NA,NA,NA,NA,"O'Hara_Mary_1935-",NA,NA,NA
+"571",NA,NA,NA,NA,NA,NA,"Baker_Etta_1913-2006",NA,NA,NA
+"572",NA,NA,NA,NA,NA,NA,"McCurdy_Ed_1919-2000",NA,NA,NA
+"573",NA,NA,NA,NA,NA,NA,"Hammond_David_singer",NA,NA,NA
+"574",NA,NA,NA,NA,NA,NA,"Sacks_Howard L.",NA,NA,NA
+"575",NA,NA,NA,NA,NA,NA,"Lloyd_Timothy_1951-",NA,NA,NA
+"576",NA,NA,NA,NA,NA,NA,"Pennington_Stan",NA,NA,NA
+"577",NA,NA,NA,NA,NA,NA,"Holyoak_Van",NA,NA,NA
+"578",NA,NA,NA,NA,NA,NA,"Pettyjohn_Bunk_b. 1902",NA,NA,NA
+"579",NA,NA,NA,NA,NA,NA,"Kizzar_Tim",NA,NA,NA
+"580",NA,NA,NA,NA,NA,NA,"Rogers_Ralph",NA,NA,NA
+"581",NA,NA,NA,NA,NA,NA,"Goodman_Don",NA,NA,NA
+"582",NA,NA,NA,NA,NA,NA,"Schneyer_Helen",NA,NA,NA
+"583",NA,NA,NA,NA,NA,NA,"Somerville_Andrew",NA,NA,NA
+"584",NA,NA,NA,NA,NA,NA,"Murphy_Otho",NA,NA,NA
+"585",NA,NA,NA,NA,NA,NA,"Carmack_Effie Marquess_1885-1974",NA,NA,NA
+"586",NA,NA,NA,NA,NA,NA,"Kartchner_Kenner Casteel_1886-1970",NA,NA,NA
+"587",NA,NA,NA,NA,NA,NA,"Boyle_Margaret",NA,NA,NA
+"588",NA,NA,NA,NA,NA,NA,"Watkins_Joseph H.",NA,NA,NA
+"589",NA,NA,NA,NA,NA,NA,"Crandall_Myron R.",NA,NA,NA
+"590",NA,NA,NA,NA,NA,NA,"Jones_Lewis",NA,NA,NA
+"591",NA,NA,NA,NA,NA,NA,"Busby_John",NA,NA,NA
+"592",NA,NA,NA,NA,NA,NA,"Busby_Abraham",NA,NA,NA
+"593",NA,NA,NA,NA,NA,NA,"Thompson_George",NA,NA,NA
+"594",NA,NA,NA,NA,NA,NA,"Seegmiller_Ella J.",NA,NA,NA
+"595",NA,NA,NA,NA,NA,NA,"Jepson_James",NA,NA,NA
+"596",NA,NA,NA,NA,NA,NA,"Taggart_George",NA,NA,NA
+"597",NA,NA,NA,NA,NA,NA,"Lee_Buck",NA,NA,NA
+"598",NA,NA,NA,NA,NA,NA,"Fahey_John_1939-2001",NA,NA,NA
+"599",NA,NA,NA,NA,NA,NA,"Bolick_Earl",NA,NA,NA
+"600",NA,NA,NA,NA,NA,NA,"Tubb_Ernest_1914-1984",NA,NA,NA
+"601",NA,NA,NA,NA,NA,NA,"McCoy_Ethel",NA,NA,NA
+"602",NA,NA,NA,NA,NA,NA,"Polak_Wladyslaw",NA,NA,NA
+"603",NA,NA,NA,NA,NA,NA,"Ward_Fields_1911-1987",NA,NA,NA
+"604",NA,NA,NA,NA,NA,NA,"Jones_Grandpa_1913-1998",NA,NA,NA
+"605",NA,NA,NA,NA,NA,NA,"Maddux_Pewee",NA,NA,NA
+"606",NA,NA,NA,NA,NA,NA,"McCoy_George",NA,NA,NA
+"607",NA,NA,NA,NA,NA,NA,"Cephas_John",NA,NA,NA
+"608",NA,NA,NA,NA,NA,NA,"Harter_George",NA,NA,NA
+"609",NA,NA,NA,NA,NA,NA,"Duke of Iron",NA,NA,NA
+"610",NA,NA,NA,NA,NA,NA,"Smith_Versey",NA,NA,NA
+"611",NA,NA,NA,NA,NA,NA,"Smith_William",NA,NA,NA
+"612",NA,NA,NA,NA,NA,NA,"Houdini_Wilmoth_1895-1973",NA,NA,NA
+"613",NA,NA,NA,NA,NA,NA,"Syrjaniemi_Antti",NA,NA,NA
+"614",NA,NA,NA,NA,NA,NA,"Ford_Oscar",NA,NA,NA
+"615",NA,NA,NA,NA,NA,NA,"Salomma_Hiski",NA,NA,NA
+"616",NA,NA,NA,NA,NA,NA,"Jenkins_Hezekiah",NA,NA,NA
+"617",NA,NA,NA,NA,NA,NA,"Acuff_Roy",NA,NA,NA
+"618",NA,NA,NA,NA,NA,NA,"Edwards_Honeyboy",NA,NA,NA
+"619",NA,NA,NA,NA,NA,NA,"Blackwell_Willie (61)",NA,NA,NA
+"620",NA,NA,NA,NA,NA,NA,"Lambert_L.W.",NA,NA,NA
+"621",NA,NA,NA,NA,NA,NA,"Sprague_Carl T._1895-1979",NA,NA,NA
+"622",NA,NA,NA,NA,NA,NA,"Allen_Jules Verne_1883-1944.",NA,NA,NA
+"623",NA,NA,NA,NA,NA,NA,"Farley_J.D.",NA,NA,NA
+"624",NA,NA,NA,NA,NA,NA,"Robertson_Eck_1887-1975",NA,NA,NA
+"625",NA,NA,NA,NA,NA,NA,"Good_Dorothy",NA,NA,NA
+"626",NA,NA,NA,NA,NA,NA,"Good_Mildred",NA,NA,NA
+"627",NA,NA,NA,NA,NA,NA,"Webb_Jack",NA,NA,NA
+"628",NA,NA,NA,NA,NA,NA,"Maxwell_Billie",NA,NA,NA
+"629",NA,NA,NA,NA,NA,NA,"Workman_Nimrod",NA,NA,NA
+"630",NA,NA,NA,NA,NA,NA,"Boyens_Phyllis",NA,NA,NA
+"631",NA,NA,NA,NA,NA,NA,"Nelson_Paul",NA,NA,NA
+"632",NA,NA,NA,NA,NA,NA,"Koerner_John",NA,NA,NA
+"633",NA,NA,NA,NA,NA,NA,"Glover_Tony",NA,NA,NA
+"634",NA,NA,NA,NA,NA,NA,"Reed_Ola Belle_1916-2002",NA,NA,NA
+"635",NA,NA,NA,NA,NA,NA,"Melton_Raymond",NA,NA,NA
+"636",NA,NA,NA,NA,NA,NA,"Lundy_Ted",NA,NA,NA
+"637",NA,NA,NA,NA,NA,NA,"Hickerson_Joseph Charles_1935-",NA,NA,NA
+"638",NA,NA,NA,NA,NA,NA,"Camp_Hamilton",NA,NA,NA
+"639",NA,NA,NA,NA,NA,NA,"Lieberman_Ernie_1930-",NA,NA,NA
+"640",NA,NA,NA,NA,NA,NA,"Hawes_Bess Lomax_1921-2009",NA,NA,NA
+"641",NA,NA,NA,NA,NA,NA,"Hawes_Butch_1919-1971",NA,NA,NA
+"642",NA,NA,NA,NA,NA,NA,"Carey_Bob",NA,NA,NA
+"643",NA,NA,NA,NA,NA,NA,"Darling_Erik",NA,NA,NA
+"644",NA,NA,NA,NA,NA,NA,"Sprung_Roger",NA,NA,NA
+"645",NA,NA,NA,NA,NA,NA,"Harris_Rutha",NA,NA,NA
+"646",NA,NA,NA,NA,NA,NA,"Neblett_Charles_1941-",NA,NA,NA
+"647",NA,NA,NA,NA,NA,NA,"Rowan_Peter_1942-",NA,NA,NA
+"648",NA,NA,NA,NA,NA,NA,"Hinson_Glenn (liner notes)",NA,NA,NA
+"649",NA,NA,NA,NA,NA,NA,"Raimon_1940-",NA,NA,NA
+"650",NA,NA,NA,NA,NA,NA,"Redpath_Jean (liner notes)",NA,NA,NA
+"651",NA,NA,NA,NA,NA,NA,"Mason_Roger_guitarist",NA,NA,NA
+"652",NA,NA,NA,NA,NA,NA,"McGhee_Brownie_1915-1996",NA,NA,NA
+"653",NA,NA,NA,NA,NA,NA,"Hammond_John _1942-",NA,NA,NA
+"654",NA,NA,NA,NA,NA,NA,"Hooker_John Lee",NA,NA,NA
+"655",NA,NA,NA,NA,NA,NA,"Inman_John",NA,NA,NA
+"656",NA,NA,NA,NA,NA,NA,"Houston_Dave",NA,NA,NA
+"657",NA,NA,NA,NA,NA,NA,"Red River Dave_1914-2002",NA,NA,NA
+"658",NA,NA,NA,NA,NA,NA,"Moeller_Dee",NA,NA,NA
+"659",NA,NA,NA,NA,NA,NA,"Bonner_Juke Boy_1932-1978",NA,NA,NA
+"660",NA,NA,NA,NA,NA,NA,"Clark_Guy",NA,NA,NA
+"661",NA,NA,NA,NA,NA,NA,"Earle_Steve",NA,NA,NA
+"662",NA,NA,NA,NA,NA,NA,"Cisneros_Carol",NA,NA,NA
+"663",NA,NA,NA,NA,NA,NA,"Thornton_T. Gozney",NA,NA,NA
+"664",NA,NA,NA,NA,NA,NA,"Stein_Rick",NA,NA,NA
+"665",NA,NA,NA,NA,NA,NA,"Damron_Allen Wayne",NA,NA,NA
+"666",NA,NA,NA,NA,NA,NA,"Van Zandt_Townes",NA,NA,NA
+"667",NA,NA,NA,NA,NA,NA,"Bridger_Bobby",NA,NA,NA
+"668",NA,NA,NA,NA,NA,NA,"Fromholz_Steven",NA,NA,NA
+"669",NA,NA,NA,NA,NA,NA,"Holland_Travis",NA,NA,NA
+"670",NA,NA,NA,NA,NA,NA,"Hester_Carolyn",NA,NA,NA
+"671",NA,NA,NA,NA,NA,NA,"Shaw_Robert_1908 August 9-1985",NA,NA,NA
+"672",NA,NA,NA,NA,NA,NA,"Hearne_Bill",NA,NA,NA
+"673",NA,NA,NA,NA,NA,NA,"Sanders_Don R._1930-",NA,NA,NA
+"674",NA,NA,NA,NA,NA,NA,"Hearne_Bonnie",NA,NA,NA
+"675",NA,NA,NA,NA,NA,NA,"Threadgill_Kenneth",NA,NA,NA
+"676",NA,NA,NA,NA,NA,NA,"Waldo_Terry.",NA,NA,NA
+"677",NA,NA,NA,NA,NA,NA,"Hubbard_Ray Wylie",NA,NA,NA
+"678",NA,NA,NA,NA,NA,NA,"Meyers_Augie",NA,NA,NA
+"679",NA,NA,NA,NA,NA,NA,"Schilling_Jean",NA,NA,NA
+"680",NA,NA,NA,NA,NA,NA,"MacArthur_Margaret_1928-2006",NA,NA,NA
+"681",NA,NA,NA,NA,NA,NA,"Hebert_Didier",NA,NA,NA
+"682",NA,NA,NA,NA,NA,NA,"Spottswood_Richard K. (Richard Keith) (liner notes)",NA,NA,NA
+"683",NA,NA,NA,NA,NA,NA,"Platt_Moses",NA,NA,NA
+"684",NA,NA,NA,NA,NA,NA,"Mendoza_Lydia",NA,NA,NA
+"685",NA,NA,NA,NA,NA,NA,"Jones_Jab",NA,NA,NA
+"686",NA,NA,NA,NA,NA,NA,"Strothers_Jimmie",NA,NA,NA
+"687",NA,NA,NA,NA,NA,NA,"White_J.C.",NA,NA,NA
+"688",NA,NA,NA,NA,NA,NA,"Doyle_Little Buddy",NA,NA,NA
+"689",NA,NA,NA,NA,NA,NA,"Shade_Will_1898-1966",NA,NA,NA
+"690",NA,NA,NA,NA,NA,NA,"Segura_Dewey",NA,NA,NA
+"691",NA,NA,NA,NA,NA,NA,"Thenstead_Adolph",NA,NA,NA
+"692",NA,NA,NA,NA,NA,NA,"Manning_Sally",NA,NA,NA
+"693",NA,NA,NA,NA,NA,NA,"Ray_Lost John",NA,NA,NA
+"694",NA,NA,NA,NA,NA,NA,"Miles_J. Paul",NA,NA,NA
+"695",NA,NA,NA,NA,NA,NA,"Hofner_Adolph",NA,NA,NA
+"696",NA,NA,NA,NA,NA,NA,"Johnson_Edwin W._1905-1984",NA,NA,NA
+"697",NA,NA,NA,NA,NA,NA,"Sapps_Booker T.",NA,NA,NA
+"698",NA,NA,NA,NA,NA,NA,"Flowers_Willy",NA,NA,NA
+"699",NA,NA,NA,NA,NA,NA,"Matthews_Roger",NA,NA,NA
+"700",NA,NA,NA,NA,NA,NA,"Steeley_A.L.",NA,NA,NA
+"701",NA,NA,NA,NA,NA,NA,"Graham_J. W.",NA,NA,NA
+"702",NA,NA,NA,NA,NA,NA,"Amoaku_W. K. (William Komla)_1940-",NA,NA,NA
+"703",NA,NA,NA,NA,NA,NA,"Enis_Marvin_1956-",NA,NA,NA
+"704",NA,NA,NA,NA,NA,NA,"Enis_Mike_1936-",NA,NA,NA
+"705",NA,NA,NA,NA,NA,NA,"Miles_Vernon",NA,NA,NA
+"706",NA,NA,NA,NA,NA,NA,"Miles_Wade",NA,NA,NA
+"707",NA,NA,NA,NA,NA,NA,"Diller_Dwight",NA,NA,NA
+"708",NA,NA,NA,NA,NA,NA,"Hammons_Burl_1908-1993",NA,NA,NA
+"709",NA,NA,NA,NA,NA,NA,"Parker_Maggie Hammons_1899-1987",NA,NA,NA
+"710",NA,NA,NA,NA,NA,NA,"Hammons_Sherman_1903-1988",NA,NA,NA
+"711",NA,NA,NA,NA,NA,NA,"Parks_Oscar",NA,NA,NA
+"712",NA,NA,NA,NA,NA,NA,"Bryant_T.M._Mrs.",NA,NA,NA
+"713",NA,NA,NA,NA,NA,NA,"Gevedon_Monroe",NA,NA,NA
+"714",NA,NA,NA,NA,NA,NA,"Singleton_Kitty Ritchie",NA,NA,NA
+"715",NA,NA,NA,NA,NA,NA,"McCord_May Kennedy",NA,NA,NA
+"716",NA,NA,NA,NA,NA,NA,"Farmer_Mary Franklin",NA,NA,NA
+"717",NA,NA,NA,NA,NA,NA,"McDowell_L.L._Mrs.",NA,NA,NA
+"718",NA,NA,NA,NA,NA,NA,"Womble_Ollie",NA,NA,NA
+"719",NA,NA,NA,NA,NA,NA,"Sullivan_Mary",NA,NA,NA
+"720",NA,NA,NA,NA,NA,NA,"Jackson_Aunt Molly",NA,NA,NA
+"721",NA,NA,NA,NA,NA,NA,"Dusenbury_Emma_1862-1941",NA,NA,NA
+"722",NA,NA,NA,NA,NA,NA,"Watkins_C.L.",NA,NA,NA
+"723",NA,NA,NA,NA,NA,NA,"Harmon_Samuel",NA,NA,NA
+"724",NA,NA,NA,NA,NA,NA,"Hawks_Rayar",NA,NA,NA
+"725",NA,NA,NA,NA,NA,NA,"Barker_Horton_1889-1973",NA,NA,NA
+"726",NA,NA,NA,NA,NA,NA,"Martin_W.L._Mrs.",NA,NA,NA
+"727",NA,NA,NA,NA,NA,NA,"Griffin_G.A._Mrs.",NA,NA,NA
+"728",NA,NA,NA,NA,NA,NA,"Ford_Warde H._1906-1979",NA,NA,NA
+"729",NA,NA,NA,NA,NA,NA,"Styes_Archie",NA,NA,NA
+"730",NA,NA,NA,NA,NA,NA,"Wilson_Slim",NA,NA,NA
+"731",NA,NA,NA,NA,NA,NA,"Beeker_H.J.",NA,NA,NA
+"732",NA,NA,NA,NA,NA,NA,"Davis_Cora",NA,NA,NA
+"733",NA,NA,NA,NA,NA,NA,"Davis_Mary",NA,NA,NA
+"734",NA,NA,NA,NA,NA,NA,"Carr_Bill",NA,NA,NA
+"735",NA,NA,NA,NA,NA,NA,"Robinson_Sunshine",NA,NA,NA
+"736",NA,NA,NA,NA,NA,NA,"Tarwater_Rebecca",NA,NA,NA
+"737",NA,NA,NA,NA,NA,NA,"Borusky_Pearl Jacobs",NA,NA,NA
+"738",NA,NA,NA,NA,NA,NA,"Walters_Clay",NA,NA,NA
+"739",NA,NA,NA,NA,NA,NA,"Small_Dol",NA,NA,NA
+"740",NA,NA,NA,NA,NA,NA,"Morris_Jimmy",NA,NA,NA
+"741",NA,NA,NA,NA,NA,NA,"Jacobs_Ollie",NA,NA,NA
+"742",NA,NA,NA,NA,NA,NA,"Skeens_Lee_Mrs._Child_Francis James_1825-1896",NA,NA,NA
+"743",NA,NA,NA,NA,NA,NA,"Lathrop_Carl",NA,NA,NA
+"744",NA,NA,NA,NA,NA,NA,"McBride_Bill_1864-1952",NA,NA,NA
+"745",NA,NA,NA,NA,NA,NA,"Kirkpatrick_Jim",NA,NA,NA
+"746",NA,NA,NA,NA,NA,NA,"Norman_John",NA,NA,NA
+"747",NA,NA,NA,NA,NA,NA,"Schaffer_Gus",NA,NA,NA
+"748",NA,NA,NA,NA,NA,NA,"Halpert_Herbert",NA,NA,NA
+"749",NA,NA,NA,NA,NA,NA,"Botkin_Benjamin Albert_1901-1975",NA,NA,NA
+"750",NA,NA,NA,NA,NA,NA,"Gladden_Texas_1895-1966",NA,NA,NA
+"751",NA,NA,NA,NA,NA,NA,"Turbyfill_Lena Bare",NA,NA,NA
+"752",NA,NA,NA,NA,NA,NA,"Greer_I. G. (Isaac Garfield)_1881-1967",NA,NA,NA
+"753",NA,NA,NA,NA,NA,NA,"Greer_I.G._Mrs.",NA,NA,NA
+"754",NA,NA,NA,NA,NA,NA,"Emrich_Duncan_1908-1977",NA,NA,NA
+"755",NA,NA,NA,NA,NA,NA,"Lomax_John A. (John Avery)_1867-1948",NA,NA,NA
+"756",NA,NA,NA,NA,NA,NA,"King_Henry",NA,NA,NA
+"757",NA,NA,NA,NA,NA,NA,"Morris_William T.",NA,NA,NA
+"758",NA,NA,NA,NA,NA,NA,"McArthur_Rudger",NA,NA,NA
+"759",NA,NA,NA,NA,NA,NA,"Denoon_Johnny",NA,NA,NA
+"760",NA,NA,NA,NA,NA,NA,"Randolph_Vance_1892-1980",NA,NA,NA
+"761",NA,NA,NA,NA,NA,NA,"Sutton_Lannis F.",NA,NA,NA
+"762",NA,NA,NA,NA,NA,NA,"Carlisle_Irene",NA,NA,NA
+"763",NA,NA,NA,NA,NA,NA,"Galt_Nellie",NA,NA,NA
+"764",NA,NA,NA,NA,NA,NA,"Gordon_Robert Winslow",NA,NA,NA
+"765",NA,NA,NA,NA,NA,NA,"Dillon_John W.",NA,NA,NA
+"766",NA,NA,NA,NA,NA,NA,"Bird_William Ernest",NA,NA,NA
+"767",NA,NA,NA,NA,NA,NA,"Sutton_Julius",NA,NA,NA
+"768",NA,NA,NA,NA,NA,NA,"Holly_A.B.",NA,NA,NA
+"769",NA,NA,NA,NA,NA,NA,"Givens_W.M. (Billy)",NA,NA,NA
+"770",NA,NA,NA,NA,NA,NA,"Shaw_Bessie",NA,NA,NA
+"771",NA,NA,NA,NA,NA,NA,"Purdy_J.D.",NA,NA,NA
+"772",NA,NA,NA,NA,NA,NA,"Mann_Mary C.",NA,NA,NA
+"773",NA,NA,NA,NA,NA,NA,"Spencer_J.A.S.",NA,NA,NA
+"774",NA,NA,NA,NA,NA,NA,"Wilkins_A.",NA,NA,NA
+"775",NA,NA,NA,NA,NA,NA,"Harney_Ben",NA,NA,NA
+"776",NA,NA,NA,NA,NA,NA,"Winger_Betty Bush",NA,NA,NA
+"777",NA,NA,NA,NA,NA,NA,"Abbot_Francis H. (Francis Harris)_1877-1933",NA,NA,NA
+"778",NA,NA,NA,NA,NA,NA,"Mabeary_Mary",NA,NA,NA
+"779",NA,NA,NA,NA,NA,NA,"Buford_Jimmie",NA,NA,NA
+"780",NA,NA,NA,NA,NA,NA,"Strickland_Napoleon",NA,NA,NA
+"781",NA,NA,NA,NA,NA,NA,"Boyce_R.L.",NA,NA,NA
+"782",NA,NA,NA,NA,NA,NA,"Hemphill_Sid_1876-1963",NA,NA,NA
+"783",NA,NA,NA,NA,NA,NA,"Jones_Compton",NA,NA,NA
+"784",NA,NA,NA,NA,NA,NA,"Askew_Alec",NA,NA,NA
+"785",NA,NA,NA,NA,NA,NA,"Smith_Lucius_1889-1980",NA,NA,NA
+"786",NA,NA,NA,NA,NA,NA,"Burnette_Ranie",NA,NA,NA
+"787",NA,NA,NA,NA,NA,NA,"Turner_Othar",NA,NA,NA
+"788",NA,NA,NA,NA,NA,NA,"Turner_Ada",NA,NA,NA
+"789",NA,NA,NA,NA,NA,NA,"Turner_Aleneda",NA,NA,NA
+"790",NA,NA,NA,NA,NA,NA,"Turner_Nettie Mae",NA,NA,NA
+"791",NA,NA,NA,NA,NA,NA,"Tanner_Arthur",NA,NA,NA
+"792",NA,NA,NA,NA,NA,NA,"Johnson_Jennie",NA,NA,NA
+"793",NA,NA,NA,NA,NA,NA,"Tanner_Gordon_1916-1982",NA,NA,NA
+"794",NA,NA,NA,NA,NA,NA,"Naquin_Edius_1901-1985",NA,NA,NA
+"795",NA,NA,NA,NA,NA,NA,"Speckled Red_1892-1973",NA,NA,NA
+"796",NA,NA,NA,NA,NA,NA,"Harton_Curtis",NA,NA,NA
+"797",NA,NA,NA,NA,NA,NA,"Jenkins_Gordon",NA,NA,NA
+"798",NA,NA,NA,NA,NA,NA,"Xavier_Juanita",NA,NA,NA
+"799",NA,NA,NA,NA,NA,NA,"Landress_Uncle Bud",NA,NA,NA
+"800",NA,NA,NA,NA,NA,NA,"Lam_Bela",NA,NA,NA
+"801",NA,NA,NA,NA,NA,NA,"O'Day_Molly_1923-1987",NA,NA,NA
+"802",NA,NA,NA,NA,NA,NA,"Hovington_Frank",NA,NA,NA
+"803",NA,NA,NA,NA,NA,NA,"Beasley_Walter",NA,NA,NA
+"804",NA,NA,NA,NA,NA,NA,"Bowles_Sam (Musician)",NA,NA,NA
+"805",NA,NA,NA,NA,NA,NA,"Davidenko_Joseph",NA,NA,NA
+"806",NA,NA,NA,NA,NA,NA,"Busby_Buzz",NA,NA,NA
+"807",NA,NA,NA,NA,NA,NA,"Ossman_Vess L._1868-1923",NA,NA,NA
+"808",NA,NA,NA,NA,NA,NA,"Sarkisian_Reuben",NA,NA,NA
+"809",NA,NA,NA,NA,NA,NA,"Ardoin_Amadé",NA,NA,NA
+"810",NA,NA,NA,NA,NA,NA,"Johnson_James P. (James Price)_1894-1955",NA,NA,NA
+"811",NA,NA,NA,NA,NA,NA,"Taylor_Montana_1903-1954",NA,NA,NA
+"812",NA,NA,NA,NA,NA,NA,"Cleveland_Big Boy",NA,NA,NA
+"813",NA,NA,NA,NA,NA,NA,"Beck_Elder",NA,NA,NA
+"814",NA,NA,NA,NA,NA,NA,"Forehand_Mamie",NA,NA,NA
+"815",NA,NA,NA,NA,NA,NA,"Murphy_Jimmy",NA,NA,NA
+"816",NA,NA,NA,NA,NA,NA,"Coleman_Dutch",NA,NA,NA
+"817",NA,NA,NA,NA,NA,NA,"Feis_Pasquale",NA,NA,NA
+"818",NA,NA,NA,NA,NA,NA,"Selam_Leroy",NA,NA,NA
+"819",NA,NA,NA,NA,NA,NA,"Wilson_Roma",NA,NA,NA
+"820",NA,NA,NA,NA,NA,NA,"Carson_Fiddlin' John_1868-1949",NA,NA,NA
+"821",NA,NA,NA,NA,NA,NA,"Wells_Kitty",NA,NA,NA
+"822",NA,NA,NA,NA,NA,NA,"Josephs_Noel",NA,NA,NA
+"823",NA,NA,NA,NA,NA,NA,"Wyskowski_Jan",NA,NA,NA
+"824",NA,NA,NA,NA,NA,NA,"Savoy_Marc",NA,NA,NA
+"825",NA,NA,NA,NA,NA,NA,"Courville_Sady",NA,NA,NA
+"826",NA,NA,NA,NA,NA,NA,"Bachleda_Stanislav",NA,NA,NA
+"827",NA,NA,NA,NA,NA,NA,"McNiff-Locke_Margaret",NA,NA,NA
+"828",NA,NA,NA,NA,NA,NA,"Killoran_Patrick",NA,NA,NA
+"829",NA,NA,NA,NA,NA,NA,"Sweeney_Patrick",NA,NA,NA
+"830",NA,NA,NA,NA,NA,NA,"Baxter_L.P.",NA,NA,NA
+"831",NA,NA,NA,NA,NA,NA,"McGhee_John",NA,NA,NA
+"832",NA,NA,NA,NA,NA,NA,"McCain_Jerry_1930-2012",NA,NA,NA
+"833",NA,NA,NA,NA,NA,NA,"Zukowsky_Ewgen",NA,NA,NA
+"834",NA,NA,NA,NA,NA,NA,"McCarn_Dave_1905-1964",NA,NA,NA
+"835",NA,NA,NA,NA,NA,NA,"Brown_Gabriel",NA,NA,NA
+"836",NA,NA,NA,NA,NA,NA,"Cage_Butch",NA,NA,NA
+"837",NA,NA,NA,NA,NA,NA,"Thomas_Willie",NA,NA,NA
+"838",NA,NA,NA,NA,NA,NA,"Lenoir_J. B._1926-1967",NA,NA,NA
+"839",NA,NA,NA,NA,NA,NA,"Tucker_Bessie",NA,NA,NA
+"840",NA,NA,NA,NA,NA,NA,"Roland_Walter",NA,NA,NA
+"841",NA,NA,NA,NA,NA,NA,"Growling Tiger (Calypso singer)_1915-1993",NA,NA,NA
+"842",NA,NA,NA,NA,NA,NA,"Bumble Bee Slim",NA,NA,NA
+"843",NA,NA,NA,NA,NA,NA,"Hendley_Fisher_d. 1964",NA,NA,NA
+"844",NA,NA,NA,NA,NA,NA,"Humeniuk_Pawlo.",NA,NA,NA
+"845",NA,NA,NA,NA,NA,NA,"Johnson_Easy Papa",NA,NA,NA
+"846",NA,NA,NA,NA,NA,NA,"Sykes_Roosevelt",NA,NA,NA
+"847",NA,NA,NA,NA,NA,NA,"Ray_Aulton",NA,NA,NA
+"848",NA,NA,NA,NA,NA,NA,"Wiejski_Grajek",NA,NA,NA
+"849",NA,NA,NA,NA,NA,NA,"Kallini_Jozef",NA,NA,NA
+"850",NA,NA,NA,NA,NA,NA,"Smith_Clara",NA,NA,NA
+"851",NA,NA,NA,NA,NA,NA,"Duffey_John",NA,NA,NA
+"852",NA,NA,NA,NA,NA,NA,"Walsh_Joseph",NA,NA,NA
+"853",NA,NA,NA,NA,NA,NA,"Dolan_Jimmy",NA,NA,NA
+"854",NA,NA,NA,NA,NA,NA,"Trent_Carl",NA,NA,NA
+"855",NA,NA,NA,NA,NA,NA,"Ellis_Wilbert_1914-1977",NA,NA,NA
+"856",NA,NA,NA,NA,NA,NA,"Thompson_Rose",NA,NA,NA
+"857",NA,NA,NA,NA,NA,NA,"Baxter_Jim_musician",NA,NA,NA
+"858",NA,NA,NA,NA,NA,NA,"Baxter_Andrew",NA,NA,NA
+"859",NA,NA,NA,NA,NA,NA,"Reinhart_Dick",NA,NA,NA
+"860",NA,NA,NA,NA,NA,NA,"O'Dell_Doye",NA,NA,NA
+"861",NA,NA,NA,NA,NA,NA,"Magnusson_Otto",NA,NA,NA
+"862",NA,NA,NA,NA,NA,NA,"Baboyan_Reuben",NA,NA,NA
+"863",NA,NA,NA,NA,NA,NA,"Perdicopoulos_D.",NA,NA,NA
+"864",NA,NA,NA,NA,NA,NA,"Weaver_Sylvester",NA,NA,NA
+"865",NA,NA,NA,NA,NA,NA,"Quevedo_Raymond_1892-1962",NA,NA,NA
+"866",NA,NA,NA,NA,NA,NA,"Conder_Alvin",NA,NA,NA
+"867",NA,NA,NA,NA,NA,NA,"Lindsey_W.A.",NA,NA,NA
+"868",NA,NA,NA,NA,NA,NA,"Boone_Claude",NA,NA,NA
+"869",NA,NA,NA,NA,NA,NA,"RudziAnski_Bruno",NA,NA,NA
+"870",NA,NA,NA,NA,NA,NA,"Gardner_Gail I._1892-1988",NA,NA,NA
+"871",NA,NA,NA,NA,NA,NA,"Dereskeviciene_Juze_Mrs.",NA,NA,NA
+"872",NA,NA,NA,NA,NA,NA,"Jackson_Papa Charlie_ca. 1885-1938",NA,NA,NA
+"873",NA,NA,NA,NA,NA,NA,"Byrd_John_1908-",NA,NA,NA
+"874",NA,NA,NA,NA,NA,NA,"Manning_Leola",NA,NA,NA
+"875",NA,NA,NA,NA,NA,NA,"Maya_Jesus",NA,NA,NA
+"876",NA,NA,NA,NA,NA,NA,"Cantú_Timoteo",NA,NA,NA
+"877",NA,NA,NA,NA,NA,NA,"Richards_Dora",NA,NA,NA
+"878",NA,NA,NA,NA,NA,NA,"Bundy_Winifred",NA,NA,NA
+"879",NA,NA,NA,NA,NA,NA,"Coffee_Lester A.",NA,NA,NA
+"880",NA,NA,NA,NA,NA,NA,"Morgan_William J.",NA,NA,NA
+"881",NA,NA,NA,NA,NA,NA,"Rindlisbacher_Iva Kundert_1899-1981",NA,NA,NA
+"882",NA,NA,NA,NA,NA,NA,"Rindlisbacher_Otto_1895-1975",NA,NA,NA
+"883",NA,NA,NA,NA,NA,NA,"De Noyer_Emery",NA,NA,NA
+"884",NA,NA,NA,NA,NA,NA,"Moseley_Arthur",NA,NA,NA
+"885",NA,NA,NA,NA,NA,NA,"Bowlen_Charles",NA,NA,NA
+"886",NA,NA,NA,NA,NA,NA,"Brown_Noble B.",NA,NA,NA
+"887",NA,NA,NA,NA,NA,NA,"Jordan_Lon",NA,NA,NA
+"888",NA,NA,NA,NA,NA,NA,"Bonner_Patrick",NA,NA,NA
+"889",NA,NA,NA,NA,NA,NA,"Cruise_Michael",NA,NA,NA
+"890",NA,NA,NA,NA,NA,NA,"Scott_Ben_Mrs.",NA,NA,NA
+"891",NA,NA,NA,NA,NA,NA,"Wilkinson_Myrtle B.",NA,NA,NA
+"892",NA,NA,NA,NA,NA,NA,"Weeks_L.O.",NA,NA,NA
+"893",NA,NA,NA,NA,NA,NA,"Barton_Elmer",NA,NA,NA
+"894",NA,NA,NA,NA,NA,NA,"Stepp_W.M.",NA,NA,NA
+"895",NA,NA,NA,NA,NA,NA,"Rector_John",NA,NA,NA
+"896",NA,NA,NA,NA,NA,NA,"Tucker_Stephen B.",NA,NA,NA
+"897",NA,NA,NA,NA,NA,NA,"Hatcher_John",NA,NA,NA
+"898",NA,NA,NA,NA,NA,NA,"Perry_Wayne",NA,NA,NA
+"899",NA,NA,NA,NA,NA,NA,"Quinn_John J.",NA,NA,NA
+"900",NA,NA,NA,NA,NA,NA,"Byrne_Jerry",NA,NA,NA
+"901",NA,NA,NA,NA,NA,NA,"Muldowney_James",NA,NA,NA
+"902",NA,NA,NA,NA,NA,NA,"Walsh_Daniel",NA,NA,NA
+"903",NA,NA,NA,NA,NA,NA,"Rada_Andrew",NA,NA,NA
+"904",NA,NA,NA,NA,NA,NA,"Morgan_Albert",NA,NA,NA
+"905",NA,NA,NA,NA,NA,NA,"Jones_Morgan",NA,NA,NA
+"906",NA,NA,NA,NA,NA,NA,"Lomax_Ruby T. (Ruby Terrill)",NA,NA,NA
+"907",NA,NA,NA,NA,NA,NA,"Spivacke_Harold_1904-1977",NA,NA,NA
+"908",NA,NA,NA,NA,NA,NA,"Lee_Joe",NA,NA,NA
+"909",NA,NA,NA,NA,NA,NA,"Sturdivant_Bozie",NA,NA,NA
+"910",NA,NA,NA,NA,NA,NA,"Reed_Dock",NA,NA,NA
+"911",NA,NA,NA,NA,NA,NA,"Griffin_Sin-Killer",NA,NA,NA
+"912",NA,NA,NA,NA,NA,NA,"Brown_Aaron",NA,NA,NA
+"913",NA,NA,NA,NA,NA,NA,"Green_Joe",NA,NA,NA
+"914",NA,NA,NA,NA,NA,NA,"Pace_Kelly_1913-1958",NA,NA,NA
+"915",NA,NA,NA,NA,NA,NA,"Johnson_Turner Junior",NA,NA,NA
+"916",NA,NA,NA,NA,NA,NA,"Smoke_Herbert",NA,NA,NA
+"917",NA,NA,NA,NA,NA,NA,"Hunt_J. M",NA,NA,NA
+"918",NA,NA,NA,NA,NA,NA,"Ball_Orna_1907-2000",NA,NA,NA
+"919",NA,NA,NA,NA,NA,NA,"Willinghan_Thadeus C.",NA,NA,NA
+"920",NA,NA,NA,NA,NA,NA,"Claunch_Earnest_1893-1958",NA,NA,NA
+"921",NA,NA,NA,NA,NA,NA,"Ward_Wade",NA,NA,NA
+"922",NA,NA,NA,NA,NA,NA,"Swann_Wallace",NA,NA,NA
+"923",NA,NA,NA,NA,NA,NA,"Parham_Chub",NA,NA,NA
+"924",NA,NA,NA,NA,NA,NA,"Reed_Henry",NA,NA,NA
+"925",NA,NA,NA,NA,NA,NA,"Williams_Willie_(Singer)",NA,NA,NA
+"926",NA,NA,NA,NA,NA,NA,"Sims_Charlie",NA,NA,NA
+"927",NA,NA,NA,NA,NA,NA,"Dennis_Wash",NA,NA,NA
+"928",NA,NA,NA,NA,NA,NA,"Coleman_Austin",NA,NA,NA
+"929",NA,NA,NA,NA,NA,NA,"Brown_Joe Washington",NA,NA,NA
+"930",NA,NA,NA,NA,NA,NA,"Williams_Ernest",NA,NA,NA
+"931",NA,NA,NA,NA,NA,NA,"Hill_Clyde",NA,NA,NA
+"932",NA,NA,NA,NA,NA,NA,"Webb_Jeff",NA,NA,NA
+"933",NA,NA,NA,NA,NA,NA,"Jordan_Frank",NA,NA,NA
+"934",NA,NA,NA,NA,NA,NA,"Prothero_Allen",NA,NA,NA
+"935",NA,NA,NA,NA,NA,NA,"Baker_James",NA,NA,NA
+"936",NA,NA,NA,NA,NA,NA,"Bell_Arthur",NA,NA,NA
+"937",NA,NA,NA,NA,NA,NA,"Porter_Charlie",NA,NA,NA
+"938",NA,NA,NA,NA,NA,NA,"Truvillion_Henry",NA,NA,NA
+"939",NA,NA,NA,NA,NA,NA,"Hazel_Sam",NA,NA,NA
+"940",NA,NA,NA,NA,NA,NA,"Shores_Joe",NA,NA,NA
+"941",NA,NA,NA,NA,NA,NA,"Marshall_Thomas J.",NA,NA,NA
+"942",NA,NA,NA,NA,NA,NA,"Brooks_Samuel",NA,NA,NA
+"943",NA,NA,NA,NA,NA,NA,"Baker_Mose ""Clear Rock""",NA,NA,NA
+"944",NA,NA,NA,NA,NA,NA,"Crosby_Will",NA,NA,NA
+"945",NA,NA,NA,NA,NA,NA,"Bradley_Jesse",NA,NA,NA
+"946",NA,NA,NA,NA,NA,NA,"Pryor_David",NA,NA,NA
+"947",NA,NA,NA,NA,NA,NA,"Hubbard_Willie_1931-",NA,NA,NA
+"948",NA,NA,NA,NA,NA,NA,"Clem_Harman",NA,NA,NA
+"949",NA,NA,NA,NA,NA,NA,"Mann_Thomas",NA,NA,NA
+"950",NA,NA,NA,NA,NA,NA,"Canoy_Lola",NA,NA,NA
+"951",NA,NA,NA,NA,NA,NA,"Canoy_Tim",NA,NA,NA
+"952",NA,NA,NA,NA,NA,NA,"Meyers_Jim F.",NA,NA,NA
+"953",NA,NA,NA,NA,NA,NA,"Cole_Calvin",NA,NA,NA
+"954",NA,NA,NA,NA,NA,NA,"Tate_Dan_1896-",NA,NA,NA
+"955",NA,NA,NA,NA,NA,NA,"Coffey_O.L.",NA,NA,NA
+"956",NA,NA,NA,NA,NA,NA,"Dalton_Frank",NA,NA,NA
+"957",NA,NA,NA,NA,NA,NA,"Kelly_James",NA,NA,NA
+"958",NA,NA,NA,NA,NA,NA,"Carroll_Tom",NA,NA,NA
+"959",NA,NA,NA,NA,NA,NA,"Reedy_Blair",NA,NA,NA
+"960",NA,NA,NA,NA,NA,NA,"Peters_Homer",NA,NA,NA
+"961",NA,NA,NA,NA,NA,NA,"Harper_Oscar",NA,NA,NA
+"962",NA,NA,NA,NA,NA,NA,"Ruffner_Alva",NA,NA,NA
+"963",NA,NA,NA,NA,NA,NA,"Buckner_Elic",NA,NA,NA
+"964",NA,NA,NA,NA,NA,NA,"Fowler_J.C.",NA,NA,NA
+"965",NA,NA,NA,NA,NA,NA,"Boone_Eva Grace",NA,NA,NA
+"966",NA,NA,NA,NA,NA,NA,"Williams_Anne",NA,NA,NA
+"967",NA,NA,NA,NA,NA,NA,"Maitland_Richard",NA,NA,NA
+"968",NA,NA,NA,NA,NA,NA,"Harris_Joe",NA,NA,NA
+"969",NA,NA,NA,NA,NA,NA,"Hankins_Harry",NA,NA,NA
+"970",NA,NA,NA,NA,NA,NA,"Stubblefield_Blaine",NA,NA,NA
+"971",NA,NA,NA,NA,NA,NA,"Harmon_Austin",NA,NA,NA
+"972",NA,NA,NA,NA,NA,NA,"Wyatt_Clarence H.",NA,NA,NA
+"973",NA,NA,NA,NA,NA,NA,"White_Mr.",NA,NA,NA
+"974",NA,NA,NA,NA,NA,NA,"Wise_Russell",NA,NA,NA
+"975",NA,NA,NA,NA,NA,NA,"Kilgore_Esco",NA,NA,NA
+"976",NA,NA,NA,NA,NA,NA,"Wright_Will",NA,NA,NA
+"977",NA,NA,NA,NA,NA,NA,"Lovell_Merle",NA,NA,NA
+"978",NA,NA,NA,NA,NA,NA,"Holbert_Jim",NA,NA,NA
+"979",NA,NA,NA,NA,NA,NA,"West_Kid",NA,NA,NA
+"980",NA,NA,NA,NA,NA,NA,"Lay_George",NA,NA,NA
+"981",NA,NA,NA,NA,NA,NA,"Martin_E.M.",NA,NA,NA
+"982",NA,NA,NA,NA,NA,NA,"Johns_Pearline",NA,NA,NA
+"983",NA,NA,NA,NA,NA,NA,"Sandburg_Carl_1878-1967",NA,NA,NA
+"984",NA,NA,NA,NA,NA,NA,"Appleton_Clyde",NA,NA,NA
+"985",NA,NA,NA,NA,NA,NA,"Abrams_Bob",NA,NA,NA
+"986",NA,NA,NA,NA,NA,NA,"Mote_Steve",NA,NA,NA
+"987",NA,NA,NA,NA,NA,NA,"Rhines_Marie",NA,NA,NA
+"988",NA,NA,NA,NA,NA,NA,"Andersen_Eric",NA,NA,NA
+"989",NA,NA,NA,NA,NA,NA,"Jones_Bob_1937-",NA,NA,NA
+"990",NA,NA,NA,NA,NA,NA,"McDonald_Jacqueline",NA,NA,NA
+"991",NA,NA,NA,NA,NA,NA,"O'Donnell_Bridie",NA,NA,NA
+"992",NA,NA,NA,NA,NA,NA,"Wagner_Bodie",NA,NA,NA
+"993",NA,NA,NA,NA,NA,NA,"Sky_Patrick",NA,NA,NA
