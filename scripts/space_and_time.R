@@ -9,7 +9,7 @@ library(tidygraph)
 library(DescTools)
 library(plotly)
 library(gganimate)
-
+library(ggraph)
 
 # data --------------------------------------------------------------------
 
@@ -34,7 +34,8 @@ rinz_gen <- rinz %>%
   mutate(is_bill = str_detect(names, "Monroe_Bill")) %>% 
   mutate(is_molly = str_detect(names, "Jackson_Aunt")) %>% 
   mutate(is_ernest = str_detect(names, "Stoneman_Ernest")) %>% 
-  mutate(is_any_seeger = str_detect(names, "Seeger"))
+  mutate(is_any_seeger = str_detect(names, "Seeger")) %>% 
+  mutate(is_black = str_detect(subjects, "African American"))
 
 time <- rinz_gen %>% 
   filter(date != "" & is.na(date) == F) %>% 
@@ -259,3 +260,232 @@ geo_net <- ggraph(biggies_geo_net, layout = layout_sf) +
   geom_sf(data = basemap) +
   geom_node_point() +
   geom_edge_link(aes(color = is_bluegrass))
+
+
+# the black web -----------------------------------------------------------
+
+rinz_black <- rinz_gen %>% 
+  filter(is_black == T)
+
+black_time <- rinz_black %>% 
+  filter(date != "" & is.na(date) == F) %>% 
+  mutate(date = ifelse(date == "196x", 1960, date),
+         date = ifelse(date == "195x", 1950, date),
+         date = ifelse(date == "197x", 1970, date),
+         date = ifelse(date == "198x", 1978, date),
+         date = str_remove_all(date, "[^0-9]"),
+         date = str_trunc(date, 4), 
+         date = as.Date(ISOdate(date, 1, 1)))
+
+black_collabs <- black_time %>% 
+  separate_wider_delim(cols = names, 
+                       delim = ",",
+                       names_sep = ".",
+                       names_repair = "unique",
+                       too_few = "align_start") %>% 
+  select(starts_with("names"), subjects, date)
+
+black_combos <- as.data.frame(matrix(nrow=1, ncol=4))
+colnames(black_combos) <- c("V1", "V2", "V3", "V4")
+
+for(i in 1:nrow(black_collabs)){
+  active_list <- black_collabs[i, 1:29]
+  active_subjects <- black_collabs$subjects[i]
+  active_date <- black_collabs$date[i]
+  row_vec <- unique(discard(as.vector(active_list), is.na))
+  if(length(row_vec) >= 2){
+    active_df <- as.data.frame(CombSet(row_vec, 2, repl=F, ord=F))
+    active_df <- active_df %>% 
+      mutate(V3 = active_subjects) %>% 
+      mutate(V4 = active_date) 
+    black_combos <- rbind(black_combos, active_df)
+  }
+}
+
+
+
+black_edges <- name_combos_2 %>% 
+  mutate(from_label = as.character(V1),
+         to_label = as.character(V2), 
+         subjects = V3) %>% 
+  select(-starts_with("V")) %>% 
+  mutate(is_folk = str_detect(subjects, regex("folk", ignore_case = T))) %>% 
+  mutate(is_bluegrass = str_detect(subjects, regex("bluegrass", ignore_case = T))) %>% 
+  mutate(is_blues = str_detect(subjects, regex("blues", ignore_case = T))) %>% 
+  mutate(is_country = str_detect(subjects, regex("country", ignore_case = T))) %>% 
+  mutate(is_jazz = str_detect(subjects, regex("jazz", ignore_case = T))) %>% 
+  na.omit() %>% 
+  left_join(all_nodes, by = c("from_label" = "text_id")) %>% 
+  mutate(from = as.character(id)) %>% 
+  select(-id) %>% 
+  left_join(all_nodes, by = c("to_label" = "text_id")) %>% 
+  mutate(to = as.character(id)) %>% 
+  select(-id) 
+
+black_nodes <- all_nodes %>% 
+  filter(id %in% black_edges$from | id %in% black_edges$to) %>% 
+  mutate(is_ralph = str_detect(text_id, "Rinzler_Ralph")) 
+
+black_net <- tbl_graph(nodes = black_nodes,
+                       edges = black_edges,
+                       directed = F,
+                       node_key = "id") 
+
+black_net_stats <- net_stats(black_net) 
+
+black_graph <- ggraph(black_net, layout = "stress") +
+  geom_node_point() +
+  geom_edge_density(aes(color))
+
+color_define <- function(df){
+  for(i in 1:nrow(df)){
+    if(df$is_folk[i] == T & df$is_country[i] == F & df$is_blues[i] == F & df$is_bluegrass == F){
+      # FOLK ALONE
+      df$color[i] <- "yellow"
+    } 
+    else if(df$is_folk[i] == T & df$is_country[i] == T & df$is_blues[i] == F){
+      # FOLK AND COUNTRY
+      df$color[i] <- "darkorange1"
+    }
+    else if(df$is_folk[i] == T & df$is_country[i] == F & df$is_blues[i] == T){
+      # FOLK AND BLUES
+      df$color[i] <- "darkslategray3"
+    }
+    else if(df$is_folk[i] == T & df$is_bluegrass[i] == T){
+      # FOLK AND BLUEGRASS
+      df$color[i] <- "darkolivegreen1"
+    } 
+    else if(df$is_folk[i] == T & df$is_blues[i] == T & df$is_country[i] == T){
+      # FOLK AND COUNTRY AND BLUES
+      df$color[i] <- "chocolate4"
+    }
+    else if(df$is_folk[i] == F & df$is_blues[i] == T & df$is_country[i] == T){
+      # COUNTRY AND BLUES
+      df$color[i] <- "blueviolet"
+    }
+    else if(df$is_folk[i] == F & df$is_blues[i] == T & df$is_country[i] == F){
+      # BLUES ALONE
+      df$color[i] <- "blue"
+    }
+    else if(df$is_folk[i] == F & df$is_blues[i] == F & df$is_country[i] == T){
+      # COUNTRY ALONE
+      df$color[i] <- "brown2"
+    }
+    else if(df$is_folk[i] == F & df$is_bluegrass[i] == T){
+      # BLUEGRASS ALONE
+      df$color[i] <- "darkgreen"
+    }
+    else if(df$is_jazz[i] == T){
+      df$color[i] <- "deeppink"
+    }
+  }
+} 
+
+black_edges_colored <- color_define(black_edges)
+df <- black_edges %>% 
+  mutate(color = "")
+
+df <- for(i in 1:nrow(df)){
+  if(df$is_folk[i] == T & df$is_country[i] == F & df$is_blues[i] == F & df$is_bluegrass[i] == F){
+    # FOLK ALONE
+    df$color[i] <- "yellow"
+  } 
+  else if(df$is_folk[i] == T & df$is_country[i] == T & df$is_blues[i] == F){
+    # FOLK AND COUNTRY
+    df$color[i] <- "darkorange1"
+  }
+  else if(df$is_folk[i] == T & df$is_country[i] == F & df$is_blues[i] == T){
+    # FOLK AND BLUES
+    df$color[i] <- "darkslategray3"
+  }
+  else if(df$is_folk[i] == T & df$is_bluegrass[i] == T){
+    # FOLK AND BLUEGRASS
+    df$color[i] <- "darkolivegreen1"
+  } 
+  else if(df$is_folk[i] == T & df$is_blues[i] == T & df$is_country[i] == T){
+    # FOLK AND COUNTRY AND BLUES
+    df$color[i] <- "chocolate4"
+  }
+  else if(df$is_folk[i] == F & df$is_blues[i] == T & df$is_country[i] == T){
+    # COUNTRY AND BLUES
+    df$color[i] <- "blueviolet"
+  }
+  else if(df$is_folk[i] == F & df$is_blues[i] == T & df$is_country[i] == F){
+    # BLUES ALONE
+    df$color[i] <- "blue"
+  }
+  else if(df$is_folk[i] == F & df$is_blues[i] == F & df$is_country[i] == T){
+    # COUNTRY ALONE
+    df$color[i] <- "brown2"
+  }
+  else if(df$is_folk[i] == F & df$is_bluegrass[i] == T){
+    # BLUEGRASS ALONE
+    df$color[i] <- "darkgreen"
+  }
+  else if(df$is_jazz[i] == T){
+    df$color[i] <- "deeppink"
+  } else{
+    df$color[i] <- NA
+  }
+}
+
+
+black_edges_colored <- df %>% 
+  filter(is.na(color) == F & color != "") %>% 
+  select(-subjects, -starts_with("is")) %>% 
+  distinct(from, to, color, .keep_all=T)
+
+color_nodes <- all_nodes %>% 
+  filter(id %in% black_edges_colored$from | id %in% black_edges_colored$to)
+
+
+color_graph <- tbl_graph(nodes = color_nodes,
+                         edges = black_edges_colored,
+                         node_key = "id",
+                         directed = F)
+
+color_graph_vis <- ggraph(color_graph, layout = "stress") +
+  geom_node_point() +
+  geom_edge_link(aes(color = color)) +
+  scale_edge_color_manual(
+    values = c("yellow" = "yellow",
+               "darkorange1"="darkorange1",
+               "darkslategray3"="darkslategray3",
+               "darkolivegreen1"="darkolivegreen1",
+               "chocolate4"="chocolate4",
+               "blueviolet"="blueviolet",
+               "blue"="blue",
+               "brown2"="brown2",
+               "darkgreen"="darkgreen",
+               "deeppink"="deeppink")
+  )
+
+
+# COLOR KEY
+c("folk" = "yellow",
+  "folk-country" = "darkorange1",
+  "folk-blues" = "darkslategray3",
+  "folk-bg" = "darkolivegreen1",
+  "folk-country-blues" = "chocolate4",
+  "country-blues" = "blueviolet",
+  "blues" = "blue",
+  "country" = "brown2",
+  "bg" = "darkgreen",
+  "jazz" = "deeppink",
+  "folk-jazz" = "lightcoral",
+  "country-bg" = "olivedrab",
+  "country-jazz" = "coral4",
+  "blues-jazz" = "darkmagenta",
+  "blues-bg" = "darkcyan",
+  "folk-country-blues" = "cadetblue4",
+  "folk-country-jazz" = "chocolate2",
+  "folk-country-bg" = "darkgoldenrod4",
+  "folk-bg-blues" = "darkseagreen",
+  "folk-bg-jazz" = "darkkhaki",
+  "folk-blues-jazz" = "coral3",
+  "country-blues-jazz" = "darkred",
+  "country-bg-blues" = "darkslategray",
+  "country-bg-jazz" = "brown3",
+  "blues-bg-jazz" = "darkslateblue",
+  "folk-country-blues-bg" = "cornsilk4")
+  

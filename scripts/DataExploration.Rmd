@@ -716,7 +716,7 @@ ggraph(geo_net, layout = "stress") +
   geom_sf(data = world) +
   geom_node_point(aes(x = node.info.geo$lon, y = node.info.geo$lat, color = type), size = 0.5) +
   geom_edge_density() +
-  coord_sf(xlim = c(-180, -30), ylim = c(10, 90), expand = FALSE)
+  coord_sf(xlim = c(-90, -70), ylim = c(10, 90), expand = FALSE)
 ```
 
 ```{r sfnetwork}

@@ -81,12 +81,13 @@ subj_map <- function(subject, df_title, map_title){
 }
 
 blues_map <- subj_map("Blues", blues_df, blues_map)
-country_map <- subj_map("Country", country_df, country_map)
+bcountry_map <- subj_map("Country", country_df, country_map)
 jazz_map <- subj_map("Jazz", jazz_df, jazz_map)
 cowboy_map <- subj_map("cowboy", cowboy_df, cowboy_map)
 black_map <- subj_map("African american", black_df, black_map)
 cajun_map <- subj_map("cajun", cajun_df, cajun_map)
-
+bluegrass_map <- subj_map("bluegrass", bg_df, bg_map)
+folk_map <- subj_map("folk", folk_df, folk_map)
 
 # re-construct networks from non-state data -------------------------------
 
@@ -270,29 +271,29 @@ blues_net <- genre_net("blues")
 
 ## TEST
 
-genre_test <- "blues"
+# genre_test <- "blues"
 
-gen_edges_df <- name_combos %>% 
-  filter(str_detect(subjects, regex(genre_test, ignore_case = T))) %>% 
-  left_join(all_nodes, by = c("from" = "text_id")) %>% 
-  mutate(from_label = from,
-         from = as.character(id)) %>% 
-  select(-id) %>% 
-  left_join(all_nodes, by = c("to" = "text_id")) %>% 
-  mutate(to_label = to, 
-         to = as.character(id)) %>% 
-  select(from, from_label,
-         to, to_label) %>% 
-  na.omit()
+# gen_edges_df <- name_combos %>% 
+#   filter(str_detect(subjects, regex(genre_test, ignore_case = T))) %>% 
+#   left_join(all_nodes, by = c("from" = "text_id")) %>% 
+#   mutate(from_label = from,
+#          from = as.character(id)) %>% 
+#   select(-id) %>% 
+#   left_join(all_nodes, by = c("to" = "text_id")) %>% 
+#   mutate(to_label = to, 
+#          to = as.character(id)) %>% 
+#   select(from, from_label,
+#          to, to_label) %>% 
+#   na.omit()
 
-gen_nodes_df <- all_nodes %>% 
-  filter(id %in% gen_edges_df$from | id %in% gen_edges_df$to) %>% 
-  mutate(id = as.character(id))
-
-gen_net_test <- tbl_graph(nodes = gen_nodes_df,
-                     edges = gen_edges_df,
-                     directed = FALSE,
-                     node_key = "id")
+# gen_nodes_df <- all_nodes %>% 
+#   filter(id %in% gen_edges_df$from | id %in% gen_edges_df$to) %>% 
+#   mutate(id = as.character(id))
+# 
+# gen_net_test <- tbl_graph(nodes = gen_nodes_df,
+#                      edges = gen_edges_df,
+#                      directed = FALSE,
+#                      node_key = "id")
 
 
 # Function to generate table of network stats
@@ -485,3 +486,5 @@ central_nodes <- deg %>%
   mutate(eig_count = count) %>% 
   select(-count) %>% 
   mutate(total = select(., ends_with("count")) %>% rowSums(na.rm=T))
+
+
