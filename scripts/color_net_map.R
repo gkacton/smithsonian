@@ -236,7 +236,7 @@ edges <- edges_colored %>%
          to = as.character(id)) %>% 
   select(from, from_label,
          to, to_label,
-         color_key)
+         color_key) 
 
 nodes <- nodes %>% 
   filter(id %in% edges$from | id %in% edges$to) %>% 
@@ -560,231 +560,40 @@ net <- ggraph(full_color_net, layout = layout_sf) +
   ) +
   coord_sf(xlim = c(-130, -60), ylim = c(25,55), expand = FALSE)
 
-bg_graph <- ggraph(bg_net, layout = layout_sf) +
-  geom_sf(data = states_map, fill = "white") +
-  geom_edge_density(aes(fill = color_key),
-                    n = 500) +
-  scale_edge_fill_manual(values =
-                           c("folk-bg" = "darkolivegreen1",
-                             "bg" = "darkgreen",
-                             "country-bg" = "darkgoldenrod1",
-                             "blues-bg" = "deepskyblue3",
-                             "folk-country-bg" = "chartreuse",
-                             "folk-bg-blues" = "darkseagreen",
-                             "folk-bg-jazz" = "darkred",
-                             "country-bg-blues" = "darkslategray",
-                             "country-bg-jazz" = "brown3",
-                             "blues-bg-jazz" = "darkslateblue",
-                             "folk-country-blues-bg" = "black")
-  ) +
-  coord_sf(xlim = c(-130, -60), ylim = c(25,55), expand = FALSE)
 
-folk_graph <- ggraph(folk_net, layout = layout_sf) +
-  geom_sf(data = states_map, fill = "white") +
-  geom_edge_density(aes(fill = color_key),
-                    n = 100) +
-  scale_edge_fill_manual(values =
-                           c("folk" = "yellow",
-                             "folk-country" = "darkorange1",
-                             "folk-blues" = "darkslategray3",
-                             "folk-bg" = "darkolivegreen1",
-                             "folk-country-blues" = "chocolate4",
-                             "folk-jazz" = "magenta",
-                             "folk-country-blues" = "darkblue",
-                             "folk-country-jazz" = "chocolate2",
-                             "folk-country-bg" = "darkgreen",
-                             "folk-bg-blues" = "darkseagreen1",
-                             "folk-bg-jazz" = "purple",
-                             "folk-country-blues-bg" = "black")
-  ) +
-  coord_sf(xlim = c(-130, -60), ylim = c(25,55), expand = FALSE)
-
-country_graph <- ggraph(country_net, layout = layout_sf) +
-  geom_sf(data = states_map, fill = "white") +
-  geom_edge_density(aes(fill = color_key),
-                    n = 500) +
-  scale_edge_fill_manual(values =
-                           c("folk-country" = "firebrick1",
-                             "country-blues" = "blueviolet",
-                             "country" = "red3",
-                             "country-bg" = "olivedrab",
-                             "folk-country-blues" = "cadetblue4",
-                             "folk-country-bg" = "chartreuse",
-                             "folk-country-blues-bg" = "cornsilk4")
-  ) +
-  coord_sf(xlim = c(-130, -60), ylim = c(25,55), expand = FALSE)
-
-blues_graph <- ggraph(blues_net, layout = layout_sf) +
-  geom_sf(data = states_map, fill = "white") +
-  geom_edge_density(aes(fill = color_key),
-                    n = 500) +
-  scale_edge_fill_manual(values =
-                           c("folk-blues" = "darkslategray3",
-                               "folk-country-blues" = "chocolate4",
-                               "country-blues" = "blueviolet",
-                               "blues" = "blue",
-                               "blues-jazz" = "magenta",
-                               "blues-bg" = "darkgreen",
-                               "folk-country-blues" = "cadetblue4",
-                               "folk-bg-blues" = "chartreuse",
-                               "folk-country-blues-bg" = "cornsilk4")
-  ) +
-  coord_sf(xlim = c(-130, -60), ylim = c(25,55), expand = FALSE)
-
-jazz_graph <- ggraph(jazz_net, layout = layout_sf) +
-  geom_sf(data = states_map, fill = "white") +
-  geom_edge_density(aes(fill = color_key),
-                    n=500) +
-  scale_edge_fill_manual(values =
-                           c(
-                             "jazz" = "deeppink",
-                             "folk-jazz" = "lightcoral",
-                             "country-jazz" = "coral4",
-                             "blues-jazz" = "darkmagenta",
-                             "folk-country-jazz" = "chocolate2",
-                             "folk-bg-jazz" = "darkkhaki",
-                             "folk-blues-jazz" = "coral3",
-                             "country-blues-jazz" = "darkred",
-                             "country-bg-jazz" = "brown3",
-                             "blues-bg-jazz" = "darkslateblue")
-  ) +
-  coord_sf(xlim = c(-130, -60), ylim = c(25,55), expand = FALSE)
-# density experiment
-
-color_net_multiple <- sfnetwork(nodes = full_net_nodes_multiple,
-                              edges = full_net_edges_multiple,
-                              directed = F,
-                              node_key = "id")
-
-net <- ggraph(color_net_multiple, layout = layout_sf) +
-  geom_sf(data = states_map, fill = "white") +
-  geom_edge_density(aes(fill = color_key)) +
-  scale_edge_fill_manual(values =
-                           c("folk" = "yellow",
-                             "folk-country" = "darkorange1",
-                             "folk-blues" = "darkslategray3",
-                             "folk-bg" = "darkolivegreen2",
-                             "folk-country-blues" = "chocolate4",
-                             "country-blues" = "blueviolet",
-                             "blues" = "blue",
-                             "country" = "red2",
-                             "bg" = "darkgreen",
-                             "jazz" = "pink",
-                             "folk-jazz" = "lightcoral",
-                             "country-bg" = "olivedrab",
-                             "country-jazz" = "coral4",
-                             "blues-jazz" = "darkmagenta",
-                             "blues-bg" = "darkcyan",
-                             "folk-country-jazz" = "chocolate2",
-                             "folk-country-bg" = "darkolivegreen3",
-                             "folk-bg-blues" = "cadetblue4",
-                             "folk-bg-jazz" = "tan",
-                             "blues-bg-jazz" = "darkslateblue",
-                             "folk-country-blues-bg" = "black")
-  ) +
-  coord_sf(xlim = c(-100, -60), ylim = c(25,55), expand = FALSE)
-
-place_graph <- ggraph(place_net, layout = layout_sf) +
-  geom_sf(data = states_map, fill = "white") +
-  geom_edge_density(aes(fill = color_key),
-                    n = 1000) +
-  scale_edge_fill_manual(values =
-                           c("folk" = "yellow",
-                             "folk-country" = "darkorange1",
-                             "folk-blues" = "darkslategray3",
-                             "folk-bg" = "darkolivegreen1",
-                             "folk-country-blues" = "chocolate4",
-                             "country-blues" = "blueviolet",
-                             "blues" = "blue",
-                             "country" = "red2",
-                             "bg" = "darkgreen",
-                             "jazz" = "deeppink",
-                             "folk-jazz" = "lightcoral",
-                             "country-bg" = "olivedrab",
-                             "country-jazz" = "coral4",
-                             "blues-jazz" = "darkmagenta",
-                             "blues-bg" = "darkcyan",
-                             "folk-country-blues" = "cadetblue4",
-                             "folk-country-jazz" = "chocolate2",
-                             "folk-country-bg" = "chartreuse",
-                             "folk-bg-blues" = "darkseagreen",
-                             "folk-bg-jazz" = "darkkhaki",
-                             "folk-blues-jazz" = "coral3",
-                             "country-blues-jazz" = "darkred",
-                             "country-bg-blues" = "darkslategray",
-                             "country-bg-jazz" = "brown3",
-                             "blues-bg-jazz" = "darkslateblue",
-                             "folk-country-blues-bg" = "cornsilk4")
-  ) +
-  coord_sf(xlim = c(-130, -60), ylim = c(25,55), expand = FALSE)
-
-place_graph_lines <- ggraph(place_net, layout = layout_sf) +
-  geom_sf(data = states_map, fill = "white") +
-  geom_edge_link(aes(color = color_key),
-                 width = 2,
-                 alpha = 0.01) +
-  scale_edge_color_manual(values =
-                           c("folk" = "yellow",
-                             "folk-country" = "darkorange1",
-                             "folk-blues" = "darkslategray3",
-                             "folk-bg" = "darkolivegreen1",
-                             "folk-country-blues" = "chocolate4",
-                             "country-blues" = "blueviolet",
-                             "blues" = "blue",
-                             "country" = "red2",
-                             "bg" = "darkgreen",
-                             "jazz" = "deeppink",
-                             "folk-jazz" = "lightcoral",
-                             "country-bg" = "olivedrab",
-                             "country-jazz" = "coral4",
-                             "blues-jazz" = "darkmagenta",
-                             "blues-bg" = "darkcyan",
-                             "folk-country-blues" = "cadetblue4",
-                             "folk-country-jazz" = "chocolate2",
-                             "folk-country-bg" = "chartreuse",
-                             "folk-bg-blues" = "darkseagreen",
-                             "folk-bg-jazz" = "darkkhaki",
-                             "folk-blues-jazz" = "coral3",
-                             "country-blues-jazz" = "darkred",
-                             "country-bg-blues" = "darkslategray",
-                             "country-bg-jazz" = "brown3",
-                             "blues-bg-jazz" = "darkslateblue",
-                             "folk-country-blues-bg" = "cornsilk4")
-  ) +
-  coord_sf(xlim = c(-130, -60), ylim = c(25,55), expand = FALSE)
-
-graph_noUSA <- ggraph(net_noUSA, layout = layout_sf) +
-  geom_sf(data = states_map, fill = "white") +
-  geom_edge_density(aes(fill = color_key)) +
-  scale_edge_fill_manual(values =
-                            c("folk" = "yellow",
-                              "folk-country" = "darkorange1",
-                              "folk-blues" = "darkslategray3",
-                              "folk-bg" = "darkolivegreen1",
-                              "folk-country-blues" = "chocolate4",
-                              "country-blues" = "blueviolet",
-                              "blues" = "blue",
-                              "country" = "red2",
-                              "bg" = "darkgreen",
-                              "jazz" = "deeppink",
-                              "folk-jazz" = "lightcoral",
-                              "country-bg" = "olivedrab",
-                              "country-jazz" = "coral4",
-                              "blues-jazz" = "darkmagenta",
-                              "blues-bg" = "darkcyan",
-                              "folk-country-blues" = "cadetblue4",
-                              "folk-country-jazz" = "chocolate2",
-                              "folk-country-bg" = "chartreuse",
-                              "folk-bg-blues" = "darkseagreen",
-                              "folk-bg-jazz" = "darkkhaki",
-                              "folk-blues-jazz" = "coral3",
-                              "country-blues-jazz" = "darkred",
-                              "country-bg-blues" = "darkslategray",
-                              "country-bg-jazz" = "brown3",
-                              "blues-bg-jazz" = "darkslateblue",
-                              "folk-country-blues-bg" = "cornsilk4")
-  ) +
-  coord_sf(xlim = c(-130, -60), ylim = c(25,55), expand = FALSE)
+## unnecessary bc I removed the "United States" node from the regular net
+# graph_noUSA <- ggraph(net_noUSA, layout = layout_sf) +
+#   geom_sf(data = states_map, fill = "white") +
+#   geom_edge_density(aes(fill = color_key)) +
+#   scale_edge_fill_manual(values =
+#                             c("folk" = "yellow",
+#                               "folk-country" = "darkorange1",
+#                               "folk-blues" = "darkslategray3",
+#                               "folk-bg" = "darkolivegreen1",
+#                               "folk-country-blues" = "chocolate4",
+#                               "country-blues" = "blueviolet",
+#                               "blues" = "blue",
+#                               "country" = "red2",
+#                               "bg" = "darkgreen",
+#                               "jazz" = "deeppink",
+#                               "folk-jazz" = "lightcoral",
+#                               "country-bg" = "olivedrab",
+#                               "country-jazz" = "coral4",
+#                               "blues-jazz" = "darkmagenta",
+#                               "blues-bg" = "darkcyan",
+#                               "folk-country-blues" = "cadetblue4",
+#                               "folk-country-jazz" = "chocolate2",
+#                               "folk-country-bg" = "chartreuse",
+#                               "folk-bg-blues" = "darkseagreen",
+#                               "folk-bg-jazz" = "darkkhaki",
+#                               "folk-blues-jazz" = "coral3",
+#                               "country-blues-jazz" = "darkred",
+#                               "country-bg-blues" = "darkslategray",
+#                               "country-bg-jazz" = "brown3",
+#                               "blues-bg-jazz" = "darkslateblue",
+#                               "folk-country-blues-bg" = "cornsilk4")
+#   ) +
+#   coord_sf(xlim = c(-130, -60), ylim = c(25,55), expand = FALSE)
 
 # central figures as needed -----------------------------------------------
 
@@ -893,34 +702,7 @@ noKerrville_noJazz <- no_kerrville %>%
 graph_noKerrville_noJazz <- ggraph(noKerrville_noJazz, layout = layout_sf) +
   geom_sf(data = states_map, fill = "white") +
   geom_edge_density(aes(fill = color_key)) +
-  scale_edge_fill_manual(values =
-                           c("folk" = "yellow",
-                             "folk-country" = "darkorange1",
-                             "folk-blues" = "darkslategray3",
-                             "folk-bg" = "darkolivegreen1",
-                             "folk-country-blues" = "chocolate4",
-                             "country-blues" = "blueviolet",
-                             "blues" = "blue",
-                             "country" = "red2",
-                             "bg" = "darkgreen",
-                             "jazz" = "deeppink",
-                             "folk-jazz" = "lightcoral",
-                             "country-bg" = "olivedrab",
-                             "country-jazz" = "coral4",
-                             "blues-jazz" = "darkmagenta",
-                             "blues-bg" = "darkcyan",
-                             "folk-country-blues" = "cadetblue4",
-                             "folk-country-jazz" = "chocolate2",
-                             "folk-country-bg" = "chartreuse",
-                             "folk-bg-blues" = "darkseagreen",
-                             "folk-bg-jazz" = "darkkhaki",
-                             "folk-blues-jazz" = "coral3",
-                             "country-blues-jazz" = "darkred",
-                             "country-bg-blues" = "darkslategray",
-                             "country-bg-jazz" = "brown3",
-                             "blues-bg-jazz" = "darkslateblue",
-                             "folk-country-blues-bg" = "cornsilk4")
-  ) +
+  scale_edge_fill_manual(values = colors_MASTER) +
   coord_sf(xlim = c(-130, -60), ylim = c(25,55), expand = FALSE)
 
 folk_noKerrville <- no_kerrville %>% 
@@ -1031,53 +813,57 @@ bAj_viz <- ggraph(bAj_plotable, layout = "linear", circular = T) +
 
 # DAWG net ----------------------------------------------------------------
 
-dawg_edges <- full_net_edges %>% 
-  filter(from_label == "Grisman_David" | to_label == "Grisman_David") 
+# dawg_edges <- full_net_edges %>% 
+#   filter(from_label == "Grisman_David" | to_label == "Grisman_David") 
+# 
+# dawg_nodes <- full_net_nodes %>% 
+#   filter(id %in% dawg_edges$from | id %in% dawg_edges$to)
+# 
+# dawg_net <- sfnetwork(nodes = dawg_nodes,
+#                       edges = dawg_edges,
+#                       directed = T,
+#                       node_key = "id")
+#  
+# dawg_stats <- net_stats(dawg_net)
+# 
+# dawg_net <- ggraph(dawg, layout = "kk") +
+#   geom_node_point() +
+#   geom_edge_density(aes(fill = color_key)) +
+#   scale_edge_fill_manual(values = colors_MASTER)
+# 
+# ## Expanded dawg net
+# 
+# dawg_ex_edges <- full_net_edges %>% 
+#   filter(from %in% dawg_edges$from |
+#            from %in% dawg_edges$to |
+#            to %in% dawg_edges$to |
+#            to %in% dawg_edges$to)
+# 
+# dawg_ex_nodes <- full_net_nodes %>% 
+#   filter(id %in% dawg_ex_edges$from | id %in% dawg_ex_edges$to)
+# 
+# dawg_ex_net <- sfnetwork(nodes = dawg_ex_nodes,
+#                       edges = dawg_ex_edges,
+#                       directed = T,
+#                       node_key = "id")
+# 
+# dawg_ex_stats <- net_stats(dawg_ex_net)
+# 
+# dawg_ex_viz <- ggraph(dawg_ex_net, layout = "kk") +
+#   geom_edge_link(width = 0.1, alpha = 0.5) +
+#   geom_node_point(aes(color = text_id)) +
+#   geom_edge_density(aes(fill = color_key)) +
+#   scale_edge_fill_manual(values = colors_MASTER) +
+#   scale_color_manual(values = c("Watson_Doc" = "green",
+#                                 "Rinzler_Ralph" = "red",
+#                                 "McCoury_Del_1939-" = "blue",
+#                                 "Grisman_David" = "yellow"),
+#                      na.value = "grey80") +
+#   theme_void()
 
-dawg_nodes <- full_net_nodes %>% 
-  filter(id %in% dawg_edges$from | id %in% dawg_edges$to)
 
-dawg_net <- sfnetwork(nodes = dawg_nodes,
-                      edges = dawg_edges,
-                      directed = T,
-                      node_key = "id")
- 
-dawg_stats <- net_stats(dawg_net)
+# get stats for full net --------------------------------------------------
 
-dawg_net <- ggraph(dawg, layout = "kk") +
-  geom_node_point() +
-  geom_edge_density(aes(fill = color_key)) +
-  scale_edge_fill_manual(values = colors_MASTER)
-
-## Expanded dawg net
-
-dawg_ex_edges <- full_net_edges %>% 
-  filter(from %in% dawg_edges$from |
-           from %in% dawg_edges$to |
-           to %in% dawg_edges$to |
-           to %in% dawg_edges$to)
-
-dawg_ex_nodes <- full_net_nodes %>% 
-  filter(id %in% dawg_ex_edges$from | id %in% dawg_ex_edges$to)
-
-dawg_ex_net <- sfnetwork(nodes = dawg_ex_nodes,
-                      edges = dawg_ex_edges,
-                      directed = T,
-                      node_key = "id")
-
-dawg_ex_stats <- net_stats(dawg_ex_net)
-
-dawg_ex_viz <- ggraph(dawg_ex_net, layout = "kk") +
-  geom_edge_link(width = 0.1, alpha = 0.5) +
-  geom_node_point(aes(color = text_id)) +
-  geom_edge_density(aes(fill = color_key)) +
-  scale_edge_fill_manual(values = colors_MASTER) +
-  scale_color_manual(values = c("Watson_Doc" = "green",
-                                "Rinzler_Ralph" = "red",
-                                "McCoury_Del_1939-" = "blue",
-                                "Grisman_David" = "yellow"),
-                     na.value = "grey80") +
-  theme_void()
 
 full_stats <- net_stats(full_color_net)
 
@@ -1106,7 +892,7 @@ bg_people_key <- ppl_graph %>%
 
 bg_people_only <- ppl_graph %>% 
   activate(nodes) %>% 
-  filter(id %in% bg_people$from | id %in% bg_people$to)
+  filter(id %in% bg_people_key$from | id %in% bg_people_key$to)
 
 bg_ppl_stats <- net_stats(bg_people_only)
 
@@ -1192,3 +978,207 @@ folk_net_viz <- net <- ggraph(folk_net, layout = layout_sf) +
                     n = 250) +
   scale_edge_fill_manual(values = colors_highlight_folk) +
   coord_sf(xlim = c(-130, -60), ylim = c(25,55), expand = FALSE)
+
+
+# additional graphs -------------------------------------------------------
+
+folk_graph <- ggraph(folk_net, layout = layout_sf) +
+  geom_sf(data = states_map, fill = "white") +
+  geom_edge_density(aes(fill = color_key),
+                    n = 100) +
+  scale_edge_fill_manual(values =
+                           c("folk" = "yellow",
+                             "folk-country" = "darkorange1",
+                             "folk-blues" = "darkslategray3",
+                             "folk-bg" = "darkolivegreen1",
+                             "folk-country-blues" = "chocolate4",
+                             "folk-jazz" = "magenta",
+                             "folk-country-blues" = "darkblue",
+                             "folk-country-jazz" = "chocolate2",
+                             "folk-country-bg" = "darkgreen",
+                             "folk-bg-blues" = "darkseagreen1",
+                             "folk-bg-jazz" = "purple",
+                             "folk-country-blues-bg" = "black")
+  ) +
+  coord_sf(xlim = c(-130, -60), ylim = c(25,55), expand = FALSE)
+
+country_graph <- ggraph(country_net, layout = layout_sf) +
+  geom_sf(data = states_map, fill = "white") +
+  geom_edge_density(aes(fill = color_key),
+                    n = 500) +
+  scale_edge_fill_manual(values =
+                           c("folk-country" = "firebrick1",
+                             "country-blues" = "blueviolet",
+                             "country" = "red3",
+                             "country-bg" = "olivedrab",
+                             "folk-country-blues" = "cadetblue4",
+                             "folk-country-bg" = "chartreuse",
+                             "folk-country-blues-bg" = "cornsilk4")
+  ) +
+  coord_sf(xlim = c(-130, -60), ylim = c(25,55), expand = FALSE) +
+  theme_void() +
+  labs(title = "Country Genre Overlaps",
+       subtitle = "From Ralph Rinzler's Audio Collection",
+       fill = "Color Key") 
+  
+
+blues_graph <- ggraph(blues_net, layout = layout_sf) +
+  geom_sf(data = states_map, fill = "white") +
+  geom_edge_density(aes(fill = color_key),
+                    n = 500) +
+  scale_edge_fill_manual(values =
+                           c("folk-blues" = "darkslategray3",
+                             "folk-country-blues" = "chocolate4",
+                             "country-blues" = "blueviolet",
+                             "blues" = "blue",
+                             "blues-jazz" = "magenta",
+                             "blues-bg" = "darkgreen",
+                             "folk-country-blues" = "cadetblue4",
+                             "folk-bg-blues" = "chartreuse",
+                             "folk-country-blues-bg" = "cornsilk4")
+  ) +
+  coord_sf(xlim = c(-130, -60), ylim = c(25,55), expand = FALSE)
+
+jazz_graph <- ggraph(jazz_net, layout = layout_sf) +
+  geom_sf(data = states_map, fill = "white") +
+  geom_edge_density(aes(fill = color_key),
+                    n=500) +
+  scale_edge_fill_manual(values =
+                           c(
+                             "jazz" = "deeppink",
+                             "folk-jazz" = "lightcoral",
+                             "country-jazz" = "coral4",
+                             "blues-jazz" = "darkmagenta",
+                             "folk-country-jazz" = "chocolate2",
+                             "folk-bg-jazz" = "darkkhaki",
+                             "folk-blues-jazz" = "coral3",
+                             "country-blues-jazz" = "darkred",
+                             "country-bg-jazz" = "brown3",
+                             "blues-bg-jazz" = "darkslateblue")
+  ) +
+  coord_sf(xlim = c(-130, -60), ylim = c(25,55), expand = FALSE)
+
+
+place_graph <- ggraph(place_net, layout = layout_sf) +
+  geom_sf(data = states_map, fill = "white") +
+  geom_edge_density(aes(fill = color_key),
+                    n = 1000) +
+  scale_edge_fill_manual(values =
+                           c("folk" = "yellow",
+                             "folk-country" = "darkorange1",
+                             "folk-blues" = "darkslategray3",
+                             "folk-bg" = "darkolivegreen1",
+                             "folk-country-blues" = "chocolate4",
+                             "country-blues" = "blueviolet",
+                             "blues" = "blue",
+                             "country" = "red2",
+                             "bg" = "darkgreen",
+                             "jazz" = "deeppink",
+                             "folk-jazz" = "lightcoral",
+                             "country-bg" = "olivedrab",
+                             "country-jazz" = "coral4",
+                             "blues-jazz" = "darkmagenta",
+                             "blues-bg" = "darkcyan",
+                             "folk-country-blues" = "cadetblue4",
+                             "folk-country-jazz" = "chocolate2",
+                             "folk-country-bg" = "chartreuse",
+                             "folk-bg-blues" = "darkseagreen",
+                             "folk-bg-jazz" = "darkkhaki",
+                             "folk-blues-jazz" = "coral3",
+                             "country-blues-jazz" = "darkred",
+                             "country-bg-blues" = "darkslategray",
+                             "country-bg-jazz" = "brown3",
+                             "blues-bg-jazz" = "darkslateblue",
+                             "folk-country-blues-bg" = "cornsilk4")
+  ) +
+  coord_sf(xlim = c(-130, -60), ylim = c(25,55), expand = FALSE)
+
+place_graph_lines <- ggraph(place_net, layout = layout_sf) +
+  geom_sf(data = states_map, fill = "white") +
+  geom_edge_link(aes(color = color_key),
+                 width = 2,
+                 alpha = 0.01) +
+  scale_edge_color_manual(values =
+                            c("folk" = "yellow",
+                              "folk-country" = "darkorange1",
+                              "folk-blues" = "darkslategray3",
+                              "folk-bg" = "darkolivegreen1",
+                              "folk-country-blues" = "chocolate4",
+                              "country-blues" = "blueviolet",
+                              "blues" = "blue",
+                              "country" = "red2",
+                              "bg" = "darkgreen",
+                              "jazz" = "deeppink",
+                              "folk-jazz" = "lightcoral",
+                              "country-bg" = "olivedrab",
+                              "country-jazz" = "coral4",
+                              "blues-jazz" = "darkmagenta",
+                              "blues-bg" = "darkcyan",
+                              "folk-country-blues" = "cadetblue4",
+                              "folk-country-jazz" = "chocolate2",
+                              "folk-country-bg" = "chartreuse",
+                              "folk-bg-blues" = "darkseagreen",
+                              "folk-bg-jazz" = "darkkhaki",
+                              "folk-blues-jazz" = "coral3",
+                              "country-blues-jazz" = "darkred",
+                              "country-bg-blues" = "darkslategray",
+                              "country-bg-jazz" = "brown3",
+                              "blues-bg-jazz" = "darkslateblue",
+                              "folk-country-blues-bg" = "cornsilk4")
+  ) +
+  coord_sf(xlim = c(-130, -60), ylim = c(25,55), expand = FALSE)
+
+bg_graph <- ggraph(bg_net, layout = layout_sf) +
+  geom_sf(data = states_map, fill = "white") +
+  geom_edge_density(aes(fill = color_key),
+                    n = 500) +
+  scale_edge_fill_manual(values =
+                           c("folk-bg" = "darkolivegreen1",
+                             "bg" = "darkgreen",
+                             "country-bg" = "darkgoldenrod1",
+                             "blues-bg" = "deepskyblue3",
+                             "folk-country-bg" = "chartreuse",
+                             "folk-bg-blues" = "darkseagreen",
+                             "folk-bg-jazz" = "darkred",
+                             "country-bg-blues" = "darkslategray",
+                             "country-bg-jazz" = "brown3",
+                             "blues-bg-jazz" = "darkslateblue",
+                             "folk-country-blues-bg" = "black")
+  ) +
+  coord_sf(xlim = c(-130, -60), ylim = c(25,55), expand = FALSE)
+
+
+# compile genres ----------------------------------------------------------
+
+
+df_summary <- function(df){
+  df_summary <- df %>% 
+    arrange(desc(between)) %>% 
+    mutate(btwn_rank = 1:nrow(df)) %>% 
+    arrange(desc(eigen)) %>% 
+    mutate(eig_rank = 1:nrow(df)) %>% 
+    arrange(desc(degree)) %>% 
+    mutate(deg_rank = 1:nrow(df)) %>% 
+    select(text_id, deg_rank, btwn_rank, eig_rank) %>% 
+    group_by(text_id) %>% 
+    summarise(total_score = sum(deg_rank, btwn_rank, eig_rank),
+              deg_rank = deg_rank,
+              btwn_rank = btwn_rank,
+              eig_rank = eig_rank) %>% 
+    arrange(total_score)
+  
+  return(df_summary)
+}
+
+bg_summary <- df_summary(bg_stats)
+folk_summary <- df_summary(folk_stats)
+country_summary <- df_summary(country_stats)
+blues_summary <- df_summary(blues_stats)
+jazz_summary <- df_summary(jazz_stats)
+
+combined <- left_join(bg_summary, folk_summary, by = c("text_id")) %>% 
+  left_join(country_summary, by = c("text_id")) %>% 
+  left_join(blues_summary, by = c("text_id")) %>% 
+  left_join(jazz_summary, by = c("text_id")) %>% 
+  group_by(text_id) %>% 
+  summarise(combined_total = sum(across(starts_with("total_score"))))
