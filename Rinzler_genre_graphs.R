@@ -235,26 +235,26 @@ assign_color <- function(df){
       # OLDTIME AND BLUES
       df$color_key[i] <- "oldtime-blues"
     } 
-    else if(df$is_folk[i] == T & df$is_country[i] == F & df$is_blues[i] == T & df$is_bluegrass[i] == F & df$is_jazz[i] == F & df$is_ot[i] == T){
-      # OLDTIME AND FOLK AND BLUES 
-      df$color_key[i] <- "oldtime-folk-blues"
-    } 
-    else if(df$is_folk[i] == T & df$is_country[i] == T & df$is_blues[i] == F & df$is_bluegrass[i] == F & df$is_jazz[i] == F & df$is_ot[i] == T){
-      # OLDTIME AND FOLK AND COUNTRY 
-      df$color_key[i] <- "oldtime-folk-blues"
-    } 
-    else if(df$is_folk[i] == T & df$is_country[i] == F & df$is_blues[i] == F & df$is_bluegrass[i] == T & df$is_jazz[i] == F & df$is_ot[i] == T){
-      # OLDTIME AND FOLK AND BLUEGRASS
-      df$color_key[i] <- "oldtime-folk-blues"
-    } 
-    else if(df$is_folk[i] == T & df$is_country[i] == T & df$is_blues[i] == T & df$is_bluegrass[i] == F & df$is_jazz[i] == F & df$is_ot[i] == T){
-      # OLDTIME AND COUNTRY AND BLUES 
-      df$color_key[i] <- "oldtime-folk-blues"
-    } 
-    else if(df$is_folk[i] == T & df$is_country[i] == T & df$is_blues[i] == F & df$is_bluegrass[i] == T & df$is_jazz[i] == F & df$is_ot[i] == T){
-      # OLDTIME AND COUNTRY AND BLUEGRASS 
-      df$color_key[i] <- "oldtime-folk-blues"
-    } 
+    # else if(df$is_folk[i] == T & df$is_country[i] == F & df$is_blues[i] == T & df$is_bluegrass[i] == F & df$is_jazz[i] == F & df$is_ot[i] == T){
+    #   # OLDTIME AND FOLK AND BLUES 
+    #   df$color_key[i] <- "oldtime-folk-blues"
+    # } 
+    # else if(df$is_folk[i] == T & df$is_country[i] == T & df$is_blues[i] == F & df$is_bluegrass[i] == F & df$is_jazz[i] == F & df$is_ot[i] == T){
+    #   # OLDTIME AND FOLK AND COUNTRY 
+    #   df$color_key[i] <- "oldtime-folk-blues"
+    # } 
+    # else if(df$is_folk[i] == T & df$is_country[i] == F & df$is_blues[i] == F & df$is_bluegrass[i] == T & df$is_jazz[i] == F & df$is_ot[i] == T){
+    #   # OLDTIME AND FOLK AND BLUEGRASS
+    #   df$color_key[i] <- "oldtime-folk-blues"
+    # } 
+    # else if(df$is_folk[i] == T & df$is_country[i] == T & df$is_blues[i] == T & df$is_bluegrass[i] == F & df$is_jazz[i] == F & df$is_ot[i] == T){
+    #   # OLDTIME AND COUNTRY AND BLUES 
+    #   df$color_key[i] <- "oldtime-folk-blues"
+    # } 
+    # else if(df$is_folk[i] == T & df$is_country[i] == T & df$is_blues[i] == F & df$is_bluegrass[i] == T & df$is_jazz[i] == F & df$is_ot[i] == T){
+    #   # OLDTIME AND COUNTRY AND BLUEGRASS 
+    #   df$color_key[i] <- "oldtime-folk-blues"
+    #} 
     else{
       df$color_key[i] <- NA
     }
@@ -346,8 +346,7 @@ name_combos <- name_combos %>%
   mutate(is_blues = str_detect(subjects, regex("blues", ignore_case = T))) %>% 
   mutate(is_country = str_detect(subjects, regex("country", ignore_case = T))) %>% 
   mutate(is_jazz = str_detect(subjects, regex("jazz", ignore_case = T))) %>% 
-  # mutate(is_ot = str_detect(subjects, regex("old-time", ignore_case = T))) %>% 
-  mutate(is_ot = F) %>% 
+  mutate(is_ot = str_detect(subjects, regex("old-time", ignore_case = T))) %>% 
   na.omit()
 
 name_combos_colored <- assign_color(name_combos)
@@ -365,8 +364,7 @@ connections <- country %>%
   mutate(is_blues = str_detect(subjects, regex("blues", ignore_case = T))) %>% 
   mutate(is_country = str_detect(subjects, regex("country", ignore_case = T))) %>% 
   mutate(is_jazz = str_detect(subjects, regex("jazz", ignore_case = T))) %>% 
-  # mutate(is_ot = str_detect(subjects, regex("old-time", ignore_case = T))) %>% 
-  mutate(is_ot = F) %>% 
+  mutate(is_ot = str_detect(subjects, regex("old-time", ignore_case = T))) %>% 
   mutate(from = place,
          to = names)
 
@@ -416,8 +414,8 @@ place_edges <- place_combos %>%
   mutate(is_blues = str_detect(subjects, regex("blues", ignore_case = T))) %>% 
   mutate(is_country = str_detect(subjects, regex("country", ignore_case = T))) %>% 
   mutate(is_jazz = str_detect(subjects, regex("jazz", ignore_case = T))) %>% 
-  # mutate(is_ot = str_detect(subjects, regex("old-time", ignore_case = T)))
-  mutate(is_ot = F)
+  mutate(is_ot = str_detect(subjects, regex("old-time", ignore_case = T)))
+
 
 place_edges_colored <- assign_color(place_edges)
 
@@ -507,8 +505,9 @@ layout_sf = function(graph){
 
 country_graph <- ggraph(country_net, layout = layout_sf) +
   geom_sf(data = states_map, fill = "white") +
-  geom_edge_density(aes(fill = color_key)) +
-  scale_edge_fill_manual(values = country_colors, na.value = "white") +
+  geom_edge_density(aes(fill = color_key),
+                    n = 300) +
+  scale_edge_fill_manual(values = colors_master, na.value = "white") +
   coord_sf(xlim = c(-130, -60), ylim = c(25,55), expand = FALSE) +
   theme_void() +
   labs(title = "Country Genre Overlaps",
@@ -738,7 +737,6 @@ rinz_black_net <- sfnetwork(nodes = nodes,
 
 # color list --------------------------------------------------------------
 
-# country = red, oldtime = blue, blues = gray, bluegrass = green, folk = pink 
 colors_master <- c("folk" = "yellow",
                    "folk-country" = "darkorange1",
                    "folk-blues" = "darkslategray3",
@@ -765,7 +763,9 @@ colors_master <- c("folk" = "yellow",
                    "country-bg-jazz" = "brown3",
                    "blues-bg-jazz" = "darkslateblue",
                    "folk-country-blues-bg" = "cornsilk4",
-                   "oldtime" = "tan"
+                   "oldtime" = "tan", 
+                   "oldtime-country" = "coral3",
+                   "oldtime-folk" = "lightgoldenrod"
 )
 
 
